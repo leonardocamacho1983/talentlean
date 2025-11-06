@@ -16,22 +16,14 @@ import {
   CheckCircle2,
   Briefcase,
   UsersRound,
-  Calculator,
-  Sparkles,
-  FileText,
-  TrendingUp,
-  Award
+  Calculator // Added Calculator icon
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
-import { base44 } from "@/api/base44Client";
+import { Link } from "react-router-dom"; // Added Link for routing
+import { createPageUrl } from "@/utils"; // Added createPageUrl utility
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [hoveredCard, setHoveredCard] = React.useState(null);
-  const [hoveredCaseStudy, setHoveredCaseStudy] = React.useState(null);
-  const [enhancedContent, setEnhancedContent] = React.useState(null);
-  const [isLoadingContent, setIsLoadingContent] = React.useState(false);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -39,120 +31,6 @@ export default function Home() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
-  // Generate AI-enhanced marketing content
-  const generateEnhancedContent = async () => {
-    setIsLoadingContent(true);
-    try {
-      const response = await base44.integrations.Core.InvokeLLM({
-        prompt: `As a B2B SaaS marketing expert specializing in HR tech and global hiring, create compelling marketing content for Project X - a global tech talent platform. Generate:
-
-1. An expanded "Why We Exist" section (2-3 paragraphs) that:
-   - Explains the pain points of global hiring (compliance, vetting, hidden costs)
-   - Positions Project X as the intelligent solution
-   - Uses emotional, trust-building language
-   - Focuses on transformation and peace of mind
-
-2. Three "What Makes Us Different" benefit descriptions (each 2-3 sentences):
-   - AI Precision: How our AI vetting is smarter and more accurate
-   - Compliance First: Why our legal infrastructure is bulletproof
-   - Human Partnership: The value of dedicated support
-
-3. Three compelling case study summaries (each with company type, challenge, solution, results):
-   - A SaaS startup scaling from 5 to 50 developers
-   - An enterprise migrating contractors to compliant employees
-   - A fintech company hiring in regulated markets
-
-4. Five blog post ideas about global tech hiring trends (title + 2-sentence description each)
-
-Format the response as JSON with this structure:
-{
-  "whyWeExist": {
-    "paragraph1": "...",
-    "paragraph2": "..."
-  },
-  "differentiators": {
-    "aiPrecision": "...",
-    "complianceFirst": "...",
-    "humanPartnership": "..."
-  },
-  "caseStudies": [
-    {
-      "company": "...",
-      "industry": "...",
-      "challenge": "...",
-      "solution": "...",
-      "results": "..."
-    }
-  ],
-  "blogIdeas": [
-    {
-      "title": "...",
-      "description": "..."
-    }
-  ]
-}`,
-        response_json_schema: {
-          type: "object",
-          properties: {
-            whyWeExist: {
-              type: "object",
-              properties: {
-                paragraph1: { type: "string" },
-                paragraph2: { type: "string" }
-              }
-            },
-            differentiators: {
-              type: "object",
-              properties: {
-                aiPrecision: { type: "string" },
-                complianceFirst: { type: "string" },
-                humanPartnership: { type: "string" }
-              }
-            },
-            caseStudies: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  company: { type: "string" },
-                  industry: { type: "string" },
-                  challenge: { type: "string" },
-                  solution: { type: "string" },
-                  results: { type: "string" }
-                },
-                required: ["company", "industry", "challenge", "solution", "results"] // Ensure all properties are present
-              }
-            },
-            blogIdeas: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  title: { type: "string" },
-                  description: { type: "string" }
-                },
-                required: ["title", "description"] // Ensure all properties are present
-              }
-            }
-          },
-          required: ["whyWeExist", "differentiators", "caseStudies", "blogIdeas"] // Ensure all top-level properties are present
-        }
-      });
-
-      setEnhancedContent(response);
-    } catch (error) {
-      console.error("Error generating content:", error);
-      // Optionally reset enhancedContent or set a flag to show an error message on UI
-    } finally {
-      setIsLoadingContent(false);
-    }
-  };
-
-  // Load enhanced content on mount
-  React.useEffect(() => {
-    generateEnhancedContent();
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
@@ -239,7 +117,7 @@ Format the response as JSON with this structure:
         </div>
       </section>
 
-      {/* Why We Exist - Enhanced with AI */}
+      {/* Why We Exist */}
       <section id="why-projectx" className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -249,40 +127,15 @@ Format the response as JSON with this structure:
               </div>
             </div>
             <div className="flex-1">
-              <div className="flex items-center gap-2 mb-4">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  The world has talent. You just need the system to hire it right.
-                </h2>
-                {isLoadingContent && (
-                  <Sparkles className="w-6 h-6 text-teal-600 animate-pulse" />
-                )}
-              </div>
-              
-              {isLoadingContent ? (
-                <div className="space-y-4">
-                  <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
-                  <div className="h-4 bg-gray-200 rounded animate-pulse w-5/6"></div>
-                  <div className="h-4 bg-gray-200 rounded animate-pulse w-4/6"></div>
-                </div>
-              ) : enhancedContent?.whyWeExist ? (
-                <>
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    {enhancedContent.whyWeExist.paragraph1}
-                  </p>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    {enhancedContent.whyWeExist.paragraph2}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Global hiring is complex—slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
-                  </p>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant employment infrastructure.
-                  </p>
-                </>
-              )}
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                The world has talent. You just need the system to hire it right.
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Global hiring is complex—slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant employment infrastructure.
+              </p>
             </div>
           </div>
         </div>
@@ -477,14 +330,15 @@ Format the response as JSON with this structure:
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8"> {/* Changed mb-16 to mb-8 */}
             Transparent, predictable, and fair—always.
           </h2>
+          {/* New paragraph for calculator */}
           <p className="text-center text-lg text-gray-600 mb-12">
             Get an instant estimate with our interactive pricing calculator
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12"> {/* Added mb-12 to the grid */}
             <Card
               onMouseEnter={() => setHoveredCard('staffing')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -542,6 +396,7 @@ Format the response as JSON with this structure:
             </Card>
           </div>
 
+          {/* New CTA to Calculator */}
           <div className="text-center">
             <Link to={createPageUrl("Pricing")}>
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
@@ -557,85 +412,12 @@ Format the response as JSON with this structure:
         </div>
       </section>
 
-      {/* Case Studies - AI Generated */}
-      {enhancedContent?.caseStudies && enhancedContent.caseStudies.length > 0 && (
-        <section className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 mb-6">
-                <Award className="w-8 h-8 text-teal-600" />
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Success Stories
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                See how companies like yours are transforming global hiring with Project X
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {enhancedContent.caseStudies.map((caseStudy, index) => (
-                <Card
-                  key={index}
-                  onMouseEnter={() => setHoveredCaseStudy(index)}
-                  onMouseLeave={() => setHoveredCaseStudy(null)}
-                  className={`border-2 transition-all duration-300 ${
-                    hoveredCaseStudy === index
-                      ? 'border-teal-600 shadow-xl -translate-y-2'
-                      : 'border-gray-200'
-                  }`}
-                >
-                  <CardContent className="p-8">
-                    <div className="mb-4">
-                      <div className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-2">
-                        {caseStudy.industry}
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
-                        {caseStudy.company}
-                      </h3>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div>
-                        <div className="text-sm font-semibold text-gray-500 mb-1">Challenge</div>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {caseStudy.challenge}
-                        </p>
-                      </div>
-
-                      <div>
-                        <div className="text-sm font-semibold text-gray-500 mb-1">Solution</div>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {caseStudy.solution}
-                        </p>
-                      </div>
-
-                      <div className="pt-4 border-t border-gray-200">
-                        <div className="text-sm font-semibold text-teal-600 mb-1">Results</div>
-                        <p className="text-gray-900 font-semibold text-sm">
-                          {caseStudy.results}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Why Different - Enhanced with AI */}
-      <section id="why-different" className="py-24 px-6 lg:px-8 bg-white">
+      {/* Why Different */}
+      <section id="why-different" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why companies choose Project X
-            </h2>
-            {isLoadingContent && (
-              <Sparkles className="w-6 h-6 text-teal-600 animate-pulse mx-auto" />
-            )}
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+            Why companies choose Project X
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
@@ -644,16 +426,7 @@ Format the response as JSON with this structure:
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Precision</h3>
               <p className="text-gray-600 leading-relaxed">
-                {isLoadingContent ? (
-                  <>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse mb-2"></span>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse w-5/6 mx-auto"></span>
-                  </>
-                ) : enhancedContent?.differentiators?.aiPrecision ? (
-                  enhancedContent.differentiators.aiPrecision
-                ) : (
-                  "Custom-trained models that understand your technical and cultural needs."
-                )}
+                Custom-trained models that understand your technical and cultural needs.
               </p>
             </div>
 
@@ -663,16 +436,7 @@ Format the response as JSON with this structure:
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance First</h3>
               <p className="text-gray-600 leading-relaxed">
-                {isLoadingContent ? (
-                  <>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse mb-2"></span>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse w-5/6 mx-auto"></span>
-                  </>
-                ) : enhancedContent?.differentiators?.complianceFirst ? (
-                  enhancedContent.differentiators.complianceFirst
-                ) : (
-                  "Global payroll, contracts, and legal protection built-in by default."
-                )}
+                Global payroll, contracts, and legal protection built-in by default.
               </p>
             </div>
 
@@ -682,71 +446,12 @@ Format the response as JSON with this structure:
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Human Partnership</h3>
               <p className="text-gray-600 leading-relaxed">
-                {isLoadingContent ? (
-                  <>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse mb-2"></span>
-                    <span className="block h-3 bg-gray-200 rounded animate-pulse w-5/6 mx-auto"></span>
-                  </>
-                ) : enhancedContent?.differentiators?.humanPartnership ? (
-                  enhancedContent.differentiators.humanPartnership
-                ) : (
-                  "Dedicated account managers ensuring long-term success for both clients and developers."
-                )}
+                Dedicated account managers ensuring long-term success for both clients and developers.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Blog Ideas - AI Generated */}
-      {enhancedContent?.blogIdeas && enhancedContent.blogIdeas.length > 0 && (
-        <section className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 mb-6">
-                <FileText className="w-8 h-8 text-teal-600" />
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Global Hiring Insights
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Stay ahead of the curve with our latest thoughts on tech talent and global hiring
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {enhancedContent.blogIdeas.slice(0, 6).map((blog, index) => (
-                <Card
-                  key={index}
-                  className="border-2 border-gray-200 hover:border-teal-600 transition-all duration-300 hover:shadow-lg cursor-pointer"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-3 mb-3">
-                      <TrendingUp className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                      <h3 className="text-lg font-bold text-gray-900 leading-tight">
-                        {blog.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {blog.description}
-                    </p>
-                    <button className="text-teal-600 font-semibold text-sm mt-4 hover:text-teal-700 transition-colors flex items-center gap-1">
-                      Read more <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Button variant="outline" className="rounded-full px-8">
-                View All Articles
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Final CTA */}
       <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
