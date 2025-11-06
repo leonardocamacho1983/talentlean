@@ -12,12 +12,15 @@ import {
   Search,
   ArrowRight,
   Cpu,
-  CheckCircle2
+  CheckCircle2,
+  Briefcase,
+  UsersRound,
+  Sparkles
 } from "lucide-react";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
-  const [hoveredOption, setHoveredOption] = React.useState(null);
+  const [hoveredCard, setHoveredCard] = React.useState(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -27,38 +30,56 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9]">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900">
-              Project <span className="text-teal-600">X</span>
+            <div className="text-2xl font-bold" style={{ color: '#0E1F3D' }}>
+              Project <span style={{ color: '#00A8E8' }}>X</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <button 
-                onClick={() => scrollToSection('how-it-works')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+                onClick={() => scrollToSection('hero')}
+                className="text-sm font-medium transition-colors hover:opacity-70"
+                style={{ color: '#6F6F6F' }}
               >
-                How It Works
+                Home
+              </button>
+              <button 
+                onClick={() => scrollToSection('staffing')}
+                className="text-sm font-medium transition-colors hover:opacity-70"
+                style={{ color: '#6F6F6F' }}
+              >
+                Staffing Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('augmentation')}
+                className="text-sm font-medium transition-colors hover:opacity-70"
+                style={{ color: '#6F6F6F' }}
+              >
+                Staff Augmentation
               </button>
               <button 
                 onClick={() => scrollToSection('pricing')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+                className="text-sm font-medium transition-colors hover:opacity-70"
+                style={{ color: '#6F6F6F' }}
               >
                 Pricing
               </button>
               <button 
-                onClick={() => scrollToSection('options')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+                onClick={() => scrollToSection('why-different')}
+                className="text-sm font-medium transition-colors hover:opacity-70"
+                style={{ color: '#6F6F6F' }}
               >
-                Options
+                About
               </button>
               <Button 
                 onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
+                className="rounded-lg px-7 py-5 shadow-sm transition-all hover:shadow-md"
+                style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
               >
-                Get Started
+                Contact
               </Button>
             </div>
           </div>
@@ -66,94 +87,219 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-            Build your global tech team—
-            <span className="text-teal-600"> intelligently</span>, transparently, and compliantly.
+      <section id="hero" className="relative overflow-hidden pt-24 pb-32 px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-[1280px] mx-auto text-center">
+          <div className="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+            <Globe2 className="w-8 h-8" style={{ color: '#00A8E8' }} />
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+            Build and scale your tech team—
+            <span style={{ color: '#00A8E8' }}> intelligently</span>, transparently, and globally.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            AI‑optimized vetting meets human orchestration. Hire exceptional developers as full employees—anywhere in the world—without legal risk or operational drag.
+          <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+            Staffing and Staff Augmentation powered by AI, human expertise, and global compliance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              onClick={() => scrollToSection('cta')}
+              onClick={() => scrollToSection('staffing')}
               size="lg" 
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="rounded-lg px-7 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
             >
               Hire Talent
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
-              onClick={() => scrollToSection('cta')}
+              onClick={() => scrollToSection('augmentation')}
               size="lg" 
               variant="outline" 
-              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
+              className="rounded-lg px-7 py-6 text-lg font-semibold transition-all duration-300 border-2"
+              style={{ borderColor: '#0E1F3D', color: '#0E1F3D' }}
             >
-              Migrate My Team
+              Scale My Team
             </Button>
           </div>
-          <p className="text-sm text-gray-500">
-            From recruitment to payroll, Project X makes global hiring seamless—and human.
-          </p>
         </div>
       </section>
 
-      {/* Why We Exist */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12 items-start">
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center">
-                <Globe2 className="w-8 h-8 text-teal-600" />
+      {/* Why Project X */}
+      <section id="why-projectx" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#F9FAFB' }}>
+        <div className="max-w-[1280px] mx-auto text-center">
+          <div className="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+            <Globe2 className="w-8 h-8" style={{ color: '#00A8E8' }} />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 max-w-4xl mx-auto" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+            The world has talent. You just need the system to hire it right.
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#6F6F6F', lineHeight: '1.6' }}>
+              Global hiring is complex—slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
+            </p>
+            <p className="text-lg leading-relaxed" style={{ color: '#6F6F6F', lineHeight: '1.6' }}>
+              Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant employment infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Staffing Services */}
+      <section id="staffing" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-lg" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                <Search className="w-8 h-8" style={{ color: '#00A8E8' }} />
               </div>
-            </div>
-            <div className="flex-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                The world has talent. You just need the system to hire it right.
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+                Staffing Services
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Global hiring is broken. Companies struggle with inconsistent vetting, opaque compliance requirements, and hidden costs that make international expansion feel like a gamble rather than a strategy.
+              <p className="text-xl mb-6" style={{ color: '#00A8E8', fontFamily: 'IBM Plex Sans, sans-serif', fontWeight: '600' }}>
+                Precision sourcing for contract or permanent hires.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Project X solves this by combining AI precision with human judgment and legal certainty. We don't just find talent—we build the infrastructure for you to employ them properly, compliantly, and transparently, anywhere in the world.
+              <p className="text-lg mb-8 leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                Project X's Staffing Services deliver top tech candidates fast. Our proprietary AI ranks and pre-vets talent, while our experts handpick matches aligned with your culture and goals.
               </p>
+              <Button 
+                onClick={() => scrollToSection('cta')}
+                className="rounded-lg px-7 py-5 shadow-md hover:shadow-lg transition-all"
+                style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
+              >
+                Request Candidates
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+            <div>
+              <Card className="border-2 shadow-lg" style={{ borderColor: '#F9FAFB', borderRadius: '8px' }}>
+                <CardContent className="p-8">
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        AI-optimized sourcing and ranking
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Human-led final curation
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Placement fee: 1× first-month salary
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Speed: candidates delivered within days
+                      </span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Staff Augmentation */}
+      <section id="augmentation" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#F9FAFB' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <Card className="border-2 shadow-lg" style={{ borderColor: '#FFFFFF', borderRadius: '8px' }}>
+                <CardContent className="p-8">
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Fully compliant EOR model
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Developers as direct employees, not contractors
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Transparent billing: Salary + 20% + USD 1,000/month
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#00A8E8' }} />
+                      <span className="text-lg" style={{ color: '#2A2A2A', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                        Convert to direct hire after 6 months, no fee
+                      </span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-lg" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                <Users className="w-8 h-8" style={{ color: '#00A8E8' }} />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+                Staff Augmentation
+              </h2>
+              <p className="text-xl mb-6" style={{ color: '#00A8E8', fontFamily: 'IBM Plex Sans, sans-serif', fontWeight: '600' }}>
+                Build long-term, compliant, remote teams with confidence.
+              </p>
+              <p className="text-lg mb-8 leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                Hire full-time remote developers under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every jurisdiction — so you can focus on scaling your business.
+              </p>
+              <Button 
+                onClick={() => scrollToSection('cta')}
+                className="rounded-lg px-7 py-5 shadow-md hover:shadow-lg transition-all"
+                style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
+              >
+                Scale My Team
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            How It Works
+      <section id="how-it-works" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+            The future of hiring is intelligent orchestration.
           </h2>
+          <p className="text-center text-lg mb-16 max-w-3xl mx-auto" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+            Four seamless steps from candidate discovery to compliant employment.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Brain,
                 number: "1",
                 title: "AI Vetting Engine",
-                description: "Advanced algorithms screen and rank candidates based on technical skills, cultural fit, and project requirements."
+                description: "Machine learning ranks talent based on skill, performance, and cultural fit."
               },
               {
                 icon: Users,
                 number: "2",
                 title: "Human Orchestration",
-                description: "Expert recruiters validate AI recommendations and manage the entire hiring process with personal touch."
+                description: "Our experts refine the match through interviews and alignment checks."
               },
               {
                 icon: Building2,
                 number: "3",
-                title: "Direct Employment",
-                description: "We handle all legal entities, payroll, benefits, and compliance so your hires are full employees."
+                title: "Employment & Compliance",
+                description: "We handle contracts, payroll, benefits, and taxes globally."
               },
               {
                 icon: RefreshCw,
                 number: "4",
                 title: "Flexible Ownership",
-                description: "Start with our infrastructure, migrate to your own entity when ready—we support both paths seamlessly."
+                description: "Hire directly after 6 months or migrate your existing team to us."
               }
             ].map((step, index) => (
               <Card 
@@ -161,20 +307,25 @@ export default function Home() {
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
                 className={`border-2 transition-all duration-300 cursor-pointer ${
-                  hoveredStep === index 
-                    ? 'border-teal-600 shadow-lg -translate-y-2' 
-                    : 'border-gray-200 hover:border-gray-300'
+                  hoveredStep === index ? 'shadow-xl -translate-y-2' : 'shadow-sm'
                 }`}
+                style={{ 
+                  borderColor: hoveredStep === index ? '#00A8E8' : '#F9FAFB',
+                  borderRadius: '8px'
+                }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 font-bold text-xl mb-6 mx-auto">
+                <CardContent className="p-8 text-center">
+                  <div 
+                    className="flex items-center justify-center w-12 h-12 rounded-full font-bold text-xl mb-6 mx-auto"
+                    style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
+                  >
                     {step.number}
                   </div>
-                  <step.icon className="w-10 h-10 text-gray-900 mb-4 mx-auto" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                  <step.icon className="w-10 h-10 mb-4 mx-auto" style={{ color: '#0E1F3D' }} />
+                  <h3 className="text-xl font-bold mb-3" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
+                  <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
                     {step.description}
                   </p>
                 </CardContent>
@@ -185,195 +336,123 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">
+      <section id="pricing" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#F9FAFB' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
             Transparent, predictable, and fair—always.
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
-            No hidden fees. No surprises. Just honest pricing that scales with your team.
-          </p>
           
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                  Developer Salary
-                </div>
-                <div className="text-3xl font-bold text-gray-900">USD Amount</div>
-                <p className="text-sm text-gray-600 mt-2">Market-rate compensation</p>
-              </div>
-              <div className="text-center">
-                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                  + Operational Fee
-                </div>
-                <div className="text-3xl font-bold text-teal-600">20%</div>
-                <p className="text-sm text-gray-600 mt-2">AI infrastructure & HR orchestration</p>
-              </div>
-              <div className="text-center">
-                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                  + Monthly Retainer
-                </div>
-                <div className="text-3xl font-bold text-gray-900">USD 1,000</div>
-                <p className="text-sm text-gray-600 mt-2">Compliance, payroll & benefits</p>
-              </div>
-            </div>
-            
-            <div className="border-t border-gray-300 pt-8">
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-gray-900 mb-1">Operational Fee</div>
-                    <div className="text-sm text-gray-600">Covers AI vetting platform, recruitment management, and ongoing HR support.</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-gray-900 mb-1">Compliance Retainer</div>
-                    <div className="text-sm text-gray-600">Includes all taxes, statutory benefits, payroll processing, and legal infrastructure.</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <div className="font-semibold text-gray-900 mb-1">Advance Salary</div>
-                    <div className="text-sm text-gray-600">Refundable insurance deposit equal to one month's salary, returned when engagement ends.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Engagement Options */}
-      <section id="options" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            Two paths. One ecosystem.
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card 
-              onMouseEnter={() => setHoveredOption('hire')}
-              onMouseLeave={() => setHoveredOption(null)}
+              onMouseEnter={() => setHoveredCard('staffing')}
+              onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
-                hoveredOption === 'hire' 
-                  ? 'border-teal-600 shadow-xl -translate-y-2' 
-                  : 'border-gray-200'
+                hoveredCard === 'staffing' ? 'shadow-xl -translate-y-2' : 'shadow-md'
               }`}
+              style={{ 
+                borderColor: hoveredCard === 'staffing' ? '#00A8E8' : '#FFFFFF',
+                borderRadius: '8px',
+                backgroundColor: '#FFFFFF'
+              }}
             >
               <CardContent className="p-10">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
-                  <Search className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                  <Briefcase className="w-7 h-7" style={{ color: '#00A8E8' }} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Hire through Project X
+                <h3 className="text-2xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
+                  Staffing Services
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Let us find, vet, and employ top-tier developers for you. Our AI recruitment engine identifies the best candidates while we handle all compliance, payroll, and benefits administration.
+                <div className="mb-6">
+                  <div className="text-4xl font-bold mb-2" style={{ color: '#00A8E8', fontFamily: 'Inter, sans-serif' }}>
+                    1× first-month salary
+                  </div>
+                  <p className="text-sm" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                    One-time recruitment fee
+                  </p>
+                </div>
+                <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                  One-time recruitment fee for AI + human curated placements. Fast, precise, and aligned with your needs.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">AI-powered candidate sourcing and vetting</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Full employment as direct hires</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Complete payroll and compliance management</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Ongoing HR support and administration</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
 
             <Card 
-              onMouseEnter={() => setHoveredOption('migrate')}
-              onMouseLeave={() => setHoveredOption(null)}
+              onMouseEnter={() => setHoveredCard('augmentation')}
+              onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
-                hoveredOption === 'migrate' 
-                  ? 'border-teal-600 shadow-xl -translate-y-2' 
-                  : 'border-gray-200'
+                hoveredCard === 'augmentation' ? 'shadow-xl -translate-y-2' : 'shadow-md'
               }`}
+              style={{ 
+                borderColor: hoveredCard === 'augmentation' ? '#00A8E8' : '#FFFFFF',
+                borderRadius: '8px',
+                backgroundColor: '#FFFFFF'
+              }}
             >
               <CardContent className="p-10">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
-                  <RefreshCw className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                  <UsersRound className="w-7 h-7" style={{ color: '#00A8E8' }} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Migrate your existing team
+                <h3 className="text-2xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
+                  Staff Augmentation
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Already have remote developers? Bring Your Own Talent (BYOT) to Project X and let us absorb all the operational complexity—HR, payroll, compliance, and benefits administration.
+                <div className="mb-6">
+                  <div className="text-4xl font-bold mb-2" style={{ color: '#00A8E8', fontFamily: 'Inter, sans-serif' }}>
+                    Salary + 20% + $1,000
+                  </div>
+                  <p className="text-sm" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif' }}>
+                    Per month per developer
+                  </p>
+                </div>
+                <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                  Ongoing management covering payroll, compliance, and HR infrastructure. Full transparency, no hidden costs.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Seamless transition of existing contractors</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Full legal entity management</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Unified payroll and benefits platform</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Path to your own entity when ready</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* What Makes Us Different */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            We merge technology with trust.
+      {/* Why Different */}
+      <section id="why-different" className="py-24 px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+            Why companies choose Project X
           </h2>
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <Cpu className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 mx-auto" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                <Cpu className="w-10 h-10" style={{ color: '#00A8E8' }} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Precision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our proprietary AI vetting engine analyzes thousands of data points to match you with candidates who have the exact skills and mindset you need.
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
+                AI Precision
+              </h3>
+              <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                Custom-trained models that understand your technical and cultural needs.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <Shield className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 mx-auto" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                <Shield className="w-10 h-10" style={{ color: '#00A8E8' }} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Compliance</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We navigate complex international employment law, tax regulations, and benefits requirements—so you never have to worry about legal risks.
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
+                Compliance First
+              </h3>
+              <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                Global payroll, contracts, and legal protection built-in by default.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <MessageCircle className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 mx-auto" style={{ backgroundColor: '#00A8E8', opacity: 0.1 }}>
+                <MessageCircle className="w-10 h-10" style={{ color: '#00A8E8' }} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Human Connection</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Behind every algorithm is a team of expert recruiters and HR professionals who ensure every hire is the right cultural and technical fit.
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif' }}>
+                Human Partnership
+              </h3>
+              <p className="leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+                Dedicated account managers ensuring long-term success for both clients and developers.
               </p>
             </div>
           </div>
@@ -381,56 +460,63 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
+      <section id="cta" className="py-32 px-6 lg:px-8" style={{ backgroundColor: '#F9FAFB' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to scale your global tech team?
+          <h2 className="text-4xl md:text-6xl font-bold mb-6" style={{ color: '#0E1F3D', fontFamily: 'Inter, sans-serif', fontWeight: '700' }}>
+            Let's build your next great team.
           </h2>
-          <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
-            Join forward-thinking companies that trust Project X to build their global workforce—intelligently, transparently, and compliantly.
+          <p className="text-xl md:text-2xl mb-12 leading-relaxed" style={{ color: '#6F6F6F', fontFamily: 'IBM Plex Sans, sans-serif', lineHeight: '1.6' }}>
+            Hire smarter, scale faster, and manage globally with clarity and confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="rounded-lg px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ backgroundColor: '#00A8E8', color: '#FFFFFF' }}
             >
-              Hire Talent Now
+              Hire Developers
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
+              className="rounded-lg px-8 py-6 text-lg font-semibold transition-all duration-300 border-2"
+              style={{ borderColor: '#0E1F3D', color: '#0E1F3D' }}
             >
-              Migrate My Team
+              Talk to an Expert
             </Button>
-            <button className="text-white hover:text-gray-100 underline underline-offset-4 text-lg font-medium transition-colors">
-              Talk to an Expert →
-            </button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <footer className="py-12 px-6 lg:px-8" style={{ backgroundColor: '#0E1F3D' }}>
+        <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
-              <div className="text-xl font-bold text-white mb-2">
-                Project <span className="text-teal-500">X</span>
+              <div className="text-xl font-bold mb-2" style={{ color: '#FFFFFF', fontFamily: 'Inter, sans-serif' }}>
+                Project <span style={{ color: '#00A8E8' }}>X</span>
               </div>
-              <p className="text-sm">The Human Intelligence Behind Global Hiring.</p>
+              <p className="text-sm" style={{ color: '#6F6F6F' }}>
+                The Human Intelligence Behind Global Hiring.
+              </p>
             </div>
             <div className="flex gap-8 text-sm">
-              <button className="hover:text-white transition-colors">About Us</button>
-              <button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">
+              <button className="transition-colors" style={{ color: '#6F6F6F' }}>
+                About Us
+              </button>
+              <button onClick={() => scrollToSection('pricing')} className="transition-colors" style={{ color: '#6F6F6F' }}>
                 Pricing
               </button>
-              <button className="hover:text-white transition-colors">Careers</button>
-              <button className="hover:text-white transition-colors">Contact</button>
+              <button className="transition-colors" style={{ color: '#6F6F6F' }}>
+                Careers
+              </button>
+              <button onClick={() => scrollToSection('cta')} className="transition-colors" style={{ color: '#6F6F6F' }}>
+                Contact
+              </button>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+          <div className="border-t mt-8 pt-8 text-center text-sm" style={{ borderColor: '#2A2A2A', color: '#6F6F6F' }}>
             <p>© 2025 Project X. All rights reserved.</p>
           </div>
         </div>
