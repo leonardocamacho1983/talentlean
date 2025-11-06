@@ -1,13 +1,14 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Brain, 
-  Users, 
-  Building2, 
-  RefreshCw, 
-  Globe2, 
-  Shield, 
+import {
+  Brain,
+  Users,
+  Building2,
+  RefreshCw,
+  Globe2,
+  Shield,
   MessageCircle,
   Search,
   ArrowRight,
@@ -38,37 +39,37 @@ export default function Home() {
               Project <span className="text-teal-600">X</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <button 
+              <button
                 onClick={() => scrollToSection('hero')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('staffing')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Staffing Services
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('augmentation')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Staff Augmentation
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('pricing')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Pricing
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('why-different')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 About
               </button>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
               >
@@ -83,25 +84,25 @@ export default function Home() {
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-            Build and scale your tech team—
+            Build and scale your tech team
             <span className="text-teal-600"> intelligently</span>, transparently, and globally.
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Staffing and Staff Augmentation powered by AI, human expertise, and global compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Button 
+            <Button
               onClick={() => scrollToSection('staffing')}
-              size="lg" 
+              size="lg"
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Hire Talent
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button 
+            <Button
               onClick={() => scrollToSection('augmentation')}
-              size="lg" 
-              variant="outline" 
+              size="lg"
+              variant="outline"
               className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
             >
               Scale My Team
@@ -154,7 +155,7 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Project X's Staffing Services deliver top tech candidates fast. Our proprietary AI ranks and pre-vets talent, while our experts handpick matches aligned with your culture and goals.
               </p>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
               >
@@ -247,7 +248,7 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Hire full-time remote developers under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every jurisdiction — so you can focus on scaling your business.
               </p>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
               >
@@ -295,13 +296,13 @@ export default function Home() {
                 description: "Hire directly after 6 months or migrate your existing team to us."
               }
             ].map((step, index) => (
-              <Card 
+              <Card
                 key={index}
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
                 className={`border-2 transition-all duration-300 cursor-pointer ${
-                  hoveredStep === index 
-                    ? 'border-teal-600 shadow-lg -translate-y-2' 
+                  hoveredStep === index
+                    ? 'border-teal-600 shadow-lg -translate-y-2'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
@@ -329,9 +330,9 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
             Transparent, predictable, and fair—always.
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
-            <Card 
+            <Card
               onMouseEnter={() => setHoveredCard('staffing')}
               onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
@@ -359,7 +360,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card 
+            <Card
               onMouseEnter={() => setHoveredCard('augmentation')}
               onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
@@ -396,7 +397,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
             Why companies choose Project X
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
@@ -407,7 +408,7 @@ export default function Home() {
                 Custom-trained models that understand your technical and cultural needs.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
                 <Shield className="w-10 h-10 text-teal-600" />
@@ -417,7 +418,7 @@ export default function Home() {
                 Global payroll, contracts, and legal protection built-in by default.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
                 <MessageCircle className="w-10 h-10 text-teal-600" />
@@ -441,16 +442,16 @@ export default function Home() {
             Hire smarter, scale faster, and manage globally with clarity and confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Hire Developers
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
             >
               Talk to an Expert
