@@ -14,7 +14,9 @@ import {
   ArrowRight,
   TrendingUp,
   Briefcase,
-  UsersRound
+  UsersRound,
+  BadgeCheck,
+  Info
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -81,10 +83,20 @@ export default function Pricing() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Pricing Calculator
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
             Customize your requirements and get an instant estimate for Project X's services. 
-            Transparent pricing with no hidden fees.
+            Complete transparency with detailed cost breakdowns.
           </p>
+          
+          {/* Transparency Message */}
+          <div className="bg-teal-50 border border-teal-200 rounded-lg p-4 max-w-2xl mx-auto flex items-start gap-3">
+            <Info className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+            <div className="text-left">
+              <p className="text-sm text-gray-700">
+                <strong>Full Cost Breakdown:</strong> Every invoice itemizes salary, fixed fees, taxes, benefits, and service margins separately—no hidden costs.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -95,7 +107,7 @@ export default function Pricing() {
             <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 mb-12 h-14">
               <TabsTrigger value="staffing" className="text-lg">
                 <Briefcase className="w-5 h-5 mr-2" />
-                Staffing Services
+                LatAm Staffing
               </TabsTrigger>
               <TabsTrigger value="augmentation" className="text-lg">
                 <UsersRound className="w-5 h-5 mr-2" />
@@ -175,15 +187,19 @@ export default function Pricing() {
                       <ul className="space-y-2 text-sm text-gray-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          AI-powered candidate sourcing & vetting
+                          AI-powered LatAm candidate sourcing & vetting
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Expert human curation & interviews
+                          Expert human curation with regional expertise
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
                           Guaranteed cultural & technical fit
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
+                          Time-zone aligned candidates
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
@@ -228,9 +244,20 @@ export default function Pricing() {
                         </div>
                       </div>
 
+                      {/* Money-Back Guarantee */}
+                      <div className="bg-green-50 border-2 border-green-300 rounded-lg p-4 flex items-start gap-3">
+                        <BadgeCheck className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-bold text-gray-900 mb-1">30-Day Money-Back Guarantee</div>
+                          <div className="text-sm text-gray-700">
+                            If the match doesn't work out within the first month, we'll refund your fee—no questions asked.
+                          </div>
+                        </div>
+                      </div>
+
                       {/* Savings Info */}
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-start gap-3">
-                        <TrendingUp className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
+                        <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="font-semibold text-gray-900 mb-1">Cost-Effective Hiring</div>
                           <div className="text-sm text-gray-600">
@@ -350,7 +377,7 @@ export default function Pricing() {
                       <ul className="space-y-2 text-sm text-gray-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Full EOR compliance & legal protection
+                          Full EOR compliance across all LatAm countries
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
@@ -362,7 +389,11 @@ export default function Pricing() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Dedicated HR support & administration
+                          Dedicated account manager support
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
+                          Typical response time: one business day
                         </li>
                       </ul>
                     </div>
@@ -376,6 +407,19 @@ export default function Pricing() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="space-y-6">
+                      {/* Transparent Cost Breakdown */}
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                        <div className="flex items-start gap-2">
+                          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-gray-900 text-sm mb-1">Complete Transparency</h4>
+                            <p className="text-xs text-gray-600">
+                              All costs broken down by: Salary • Operational Fee (20%) • Compliance Retainer • Taxes • Benefits
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
                       {/* Cost Breakdown */}
                       <div className="space-y-4">
                         <div className="flex justify-between items-center py-3 border-b border-gray-200">
@@ -387,11 +431,11 @@ export default function Pricing() {
                           <span className="font-semibold text-gray-900">{formatCurrency(developerSalary)}</span>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Operational Fee (20%)</span>
+                          <span className="text-gray-600">Service Margin (20%)</span>
                           <span className="font-semibold text-gray-900">{formatCurrency(developerSalary * 0.20)}</span>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Compliance Retainer</span>
+                          <span className="text-gray-600">Compliance & HR Fee</span>
                           <span className="font-semibold text-gray-900">$1,000</span>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b-2 border-gray-300">
@@ -424,7 +468,7 @@ export default function Pricing() {
                         </div>
                       </div>
 
-                      {/* Savings Info */}
+                      {/* Conversion Info */}
                       <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-start gap-3">
                         <TrendingUp className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                         <div>
@@ -455,11 +499,11 @@ export default function Pricing() {
             Questions about pricing?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Our team is here to help you find the perfect solution for your hiring needs.
+            Your dedicated account manager is here to help you find the perfect solution for your hiring needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
-              Schedule a Call
+              Talk to Your Account Manager
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8">
               View FAQ
@@ -476,7 +520,7 @@ export default function Pricing() {
               <div className="text-xl font-bold text-white mb-2">
                 Project <span className="text-teal-500">X</span>
               </div>
-              <p className="text-sm">The Human Intelligence Behind Global Hiring.</p>
+              <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>

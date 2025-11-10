@@ -1,7 +1,7 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Brain,
   Users,
@@ -16,10 +16,14 @@ import {
   CheckCircle2,
   Briefcase,
   UsersRound,
-  Calculator // Added Calculator icon
+  Calculator,
+  BadgeCheck,
+  Clock,
+  MapPin,
+  UserCheck
 } from "lucide-react";
-import { Link } from "react-router-dom"; // Added Link for routing
-import { createPageUrl } from "@/utils"; // Added createPageUrl utility
+import { Link } from "react-router-dom";
+import { createPageUrl } from "@/utils";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -52,13 +56,19 @@ export default function Home() {
                 onClick={() => scrollToSection('staffing')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
-                Staffing Services
+                LatAm Staffing
               </button>
               <button
                 onClick={() => scrollToSection('augmentation')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Staff Augmentation
+              </button>
+              <button
+                onClick={() => scrollToSection('byot')}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+              >
+                Migrate Your Team
               </button>
               <button
                 onClick={() => scrollToSection('pricing')}
@@ -87,11 +97,11 @@ export default function Home() {
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-            Build and scale your tech team
-            <span className="text-teal-600"> intelligently</span>, transparently, and globally.
+            Build and scale your LatAm tech team
+            <span className="text-teal-600"> intelligently</span>, transparently, and compliantly.
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Staffing and Staff Augmentation powered by AI, human expertise, and global compliance.
+            LatAm Staffing and Staff Augmentation powered by AI, human expertise, and full legal compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Button
@@ -99,20 +109,27 @@ export default function Home() {
               size="lg"
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              Hire Talent
+              Hire LatAm Talent
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
-              onClick={() => scrollToSection('augmentation')}
+              onClick={() => scrollToSection('byot')}
               size="lg"
               variant="outline"
               className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
             >
-              Scale My Team
+              Migrate Your Team
             </Button>
           </div>
+          
+          {/* Money-Back Guarantee Badge */}
+          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-4">
+            <BadgeCheck className="w-5 h-5 text-green-600" />
+            <span className="text-sm font-semibold text-green-900">30-Day Money-Back Guarantee</span>
+          </div>
+          
           <p className="text-sm text-gray-500">
-            From recruitment to payroll, Project X makes global hiring seamless—and human.
+            From recruitment to payroll, Project X makes LatAm hiring seamless—and human.
           </p>
         </div>
       </section>
@@ -123,25 +140,25 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center">
-                <Globe2 className="w-8 h-8 text-teal-600" />
+                <MapPin className="w-8 h-8 text-teal-600" />
               </div>
             </div>
             <div className="flex-1">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                The world has talent. You just need the system to hire it right.
+                LatAm has world-class talent. You just need the right system to hire it.
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Global hiring is complex—slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
+                Hiring from Latin America is complex—slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant employment infrastructure.
+                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure—with perfect time-zone alignment and regional expertise.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Staffing Services */}
+      {/* LatAm Staffing Services */}
       <section id="staffing" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -150,14 +167,26 @@ export default function Home() {
                 <Search className="w-8 h-8 text-teal-600" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Staffing Services
+                LatAm Staffing Services
               </h2>
               <p className="text-xl text-teal-600 font-semibold mb-6">
-                Precision sourcing for contract or permanent hires.
+                Precision sourcing of top LatAm talent for contract or permanent hires.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Project X's Staffing Services deliver top tech candidates fast. Our proprietary AI ranks and pre-vets talent, while our experts handpick matches aligned with your culture and goals.
+                Project X's LatAm Staffing Services deliver top tech candidates from Latin America—fast. Our proprietary AI ranks and pre-vets regional talent, while our experts handpick matches aligned with your culture, goals, and time-zone requirements.
               </p>
+              
+              {/* Money-Back Guarantee */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-start gap-3">
+                <BadgeCheck className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-semibold text-gray-900 mb-1">30-Day Money-Back Guarantee</div>
+                  <div className="text-sm text-gray-600">
+                    If the match doesn't work out within the first month, we'll refund your fee—no questions asked.
+                  </div>
+                </div>
+              </div>
+              
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
@@ -173,13 +202,19 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        AI-optimized sourcing and ranking
+                        AI-optimized sourcing and ranking of LatAm talent
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Human-led final curation
+                        Human-led final curation with regional expertise
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                      <span className="text-lg text-gray-700">
+                        Perfect time-zone alignment with US and Canada
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -202,7 +237,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Staff Augmentation */}
+      {/* Staff Augmentation for LatAm */}
       <section id="augmentation" className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -213,7 +248,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Fully compliant EOR model
+                        Fully compliant EOR model across all LatAm countries
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -225,7 +260,13 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Transparent billing: Salary + 20% + USD 1,000/month
+                        Complete transparency: Salary + 20% + USD 1,000/month
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                      <span className="text-lg text-gray-700">
+                        Time-zone advantage: overlapping work hours
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -243,19 +284,133 @@ export default function Home() {
                 <Users className="w-8 h-8 text-teal-600" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Staff Augmentation
+                Staff Augmentation for LatAm
               </h2>
               <p className="text-xl text-teal-600 font-semibold mb-6">
-                Build long-term, compliant, remote teams with confidence.
+                Build long-term, compliant, remote LatAm teams with confidence.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Hire full-time remote developers under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every jurisdiction — so you can focus on scaling your business.
+                Hire full-time remote developers from Latin America under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
               >
                 Scale My Team
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BYOT - Bring Your Own Talent */}
+      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6">
+              <Globe2 className="w-8 h-8 text-teal-600" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Bring Your Own Talent
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Global migration service for your existing team
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <Card className="border-2 border-white shadow-xl bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Migrate Your Existing Developers
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Have a brilliant developer working for an outsourcing company that you can't bring closer? We build the bridge with our Staff Augmentation infrastructure and offer reduced pricing. We favor people's freedom and help you hire the experts your team deserves.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer of Employment</h4>
+                      <p className="text-sm text-gray-600">We handle all legal documentation and compliance for smooth transition worldwide.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Payroll & Benefits Setup</h4>
+                      <p className="text-sm text-gray-600">Complete payroll infrastructure with local benefits and compliance management.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
+                      <p className="text-sm text-gray-600">Special rates for BYOT migrations—lower than net-new hires.</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-6">
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <UserCheck className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
+                      <p className="text-gray-600">
+                        While our sourcing specializes in LatAm, our BYOT service works worldwide. Migrate developers from any country onto our compliant EOR platform.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Shield className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
+                      <p className="text-gray-600">
+                        We assume all employment liability and ensure 100% legal compliance in the developer's home country.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Special BYOT Guarantee</h4>
+                      <p className="text-gray-600">
+                        Seamless transition or full refund within 30 days—no questions asked.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Button 
+                onClick={() => scrollToSection('cta')}
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+              >
+                Migrate Your Team
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
@@ -278,19 +433,19 @@ export default function Home() {
                 icon: Brain,
                 number: "1",
                 title: "AI Vetting Engine",
-                description: "Machine learning ranks talent based on skill, performance, and cultural fit."
+                description: "Machine learning ranks LatAm talent based on skill, performance, and cultural fit."
               },
               {
                 icon: Users,
                 number: "2",
                 title: "Human Orchestration",
-                description: "Our experts refine the match through interviews and alignment checks."
+                description: "Our regional experts refine the match through interviews and alignment checks."
               },
               {
                 icon: Building2,
                 number: "3",
                 title: "Employment & Compliance",
-                description: "We handle contracts, payroll, benefits, and taxes globally."
+                description: "We handle contracts, payroll, benefits, and taxes across all LatAm countries."
               },
               {
                 icon: RefreshCw,
@@ -330,15 +485,17 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8"> {/* Changed mb-16 to mb-8 */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">
             Transparent, predictable, and fair—always.
           </h2>
-          {/* New paragraph for calculator */}
-          <p className="text-center text-lg text-gray-600 mb-12">
-            Get an instant estimate with our interactive pricing calculator
+          <p className="text-center text-lg text-gray-600 mb-4">
+            We believe in complete pricing transparency. Every invoice shows the full breakdown:
+          </p>
+          <p className="text-center text-base text-gray-500 mb-12 max-w-3xl mx-auto">
+            <strong>Salary</strong> • <strong>Fixed Fee</strong> • <strong>Taxes</strong> • <strong>Benefits</strong> • <strong>Service Margin</strong> — all itemized separately so you know exactly what you're paying for.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12"> {/* Added mb-12 to the grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card
               onMouseEnter={() => setHoveredCard('staffing')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -351,7 +508,7 @@ export default function Home() {
                   <Briefcase className="w-7 h-7 text-teal-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Staffing Services
+                  LatAm Staffing Services
                 </h3>
                 <div className="mb-6">
                   <div className="text-4xl font-bold text-teal-600 mb-2">
@@ -361,9 +518,13 @@ export default function Home() {
                     One-time recruitment fee
                   </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   One-time recruitment fee for AI + human curated placements. Fast, precise, and aligned with your needs.
                 </p>
+                <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+                  <BadgeCheck className="w-4 h-4" />
+                  <span className="font-medium">30-day money-back guarantee</span>
+                </div>
               </CardContent>
             </Card>
 
@@ -390,23 +551,23 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  Ongoing management covering payroll, compliance, and HR infrastructure. Full transparency, no hidden costs.
+                  Ongoing management covering payroll, compliance, and HR infrastructure. Full cost breakdown on every invoice—no hidden fees.
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* New CTA to Calculator */}
+          {/* CTA to Calculator */}
           <div className="text-center">
             <Link to={createPageUrl("Pricing")}>
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
                 <Calculator className="w-5 h-5 mr-2" />
-                Try Our Interactive Pricing Calculator
+                See Your Full Cost Breakdown
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <p className="text-sm text-gray-500 mt-4">
-              Get instant cost estimates customized to your needs
+              Interactive calculator with detailed pricing transparency
             </p>
           </div>
         </div>
@@ -426,7 +587,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Precision</h3>
               <p className="text-gray-600 leading-relaxed">
-                Custom-trained models that understand your technical and cultural needs.
+                Custom-trained models that understand your technical needs and LatAm talent landscape.
               </p>
             </div>
 
@@ -436,17 +597,17 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance First</h3>
               <p className="text-gray-600 leading-relaxed">
-                Global payroll, contracts, and legal protection built-in by default.
+                LatAm payroll, contracts, and legal protection built-in by default across all countries.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <MessageCircle className="w-10 h-10 text-teal-600" />
+                <UserCheck className="w-10 h-10 text-teal-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Human Partnership</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Dedicated Account Manager</h3>
               <p className="text-gray-600 leading-relaxed">
-                Dedicated account managers ensuring long-term success for both clients and developers.
+                Your direct point of contact for onboarding, compliance questions, and ongoing support. Typical response time: one business day.
               </p>
             </div>
           </div>
@@ -457,7 +618,7 @@ export default function Home() {
       <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Let's build your next great team.
+            Let's build your next great LatAm team.
           </h2>
           <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
             Hire smarter, scale faster, and manage globally with clarity and confidence.
@@ -475,7 +636,7 @@ export default function Home() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
             >
-              Talk to an Expert
+              Talk to Your Account Manager
             </Button>
           </div>
         </div>
@@ -489,14 +650,16 @@ export default function Home() {
               <div className="text-xl font-bold text-white mb-2">
                 Project <span className="text-teal-500">X</span>
               </div>
-              <p className="text-sm">The Human Intelligence Behind Global Hiring.</p>
+              <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
             <div className="flex gap-8 text-sm">
               <button className="hover:text-white transition-colors">About Us</button>
               <button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">
                 Pricing
               </button>
-              <button className="hover:text-white transition-colors">Careers</button>
+              <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
+                Migrate Team
+              </button>
               <button onClick={() => scrollToSection('cta')} className="hover:text-white transition-colors">
                 Contact
               </button>
