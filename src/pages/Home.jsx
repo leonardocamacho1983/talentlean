@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -550,9 +551,13 @@ export default function Home() {
                     Per month per developer
                   </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   Ongoing management covering payroll, compliance, and HR infrastructure. Full cost breakdown on every invoice—no hidden fees.
                 </p>
+                <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+                  <BadgeCheck className="w-4 h-4" />
+                  <span className="font-medium">30-day money-back guarantee</span>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -633,8 +638,7 @@ export default function Home() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
+              className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300"
             >
               Talk to Your Account Manager
             </Button>
