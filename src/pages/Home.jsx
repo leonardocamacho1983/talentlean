@@ -151,7 +151,7 @@ export default function Home() {
                 Hiring from Latin America is complex. Slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure. with perfect time-zone alignment and regional expertise.
+                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure, with perfect time-zone alignment and regional expertise.
               </p>
             </div>
           </div>
