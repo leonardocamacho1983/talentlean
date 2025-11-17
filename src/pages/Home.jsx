@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +20,8 @@ import {
   BadgeCheck,
   Clock,
   MapPin,
-  UserCheck
+  UserCheck,
+  Zap
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -261,7 +261,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Salary + 20% + USD 1,000/month
+                        Complete transparency: Salary + USD 1,500/month
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -293,6 +293,18 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Hire full-time remote developers from Latin America under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
+              
+              {/* Launch Promotion Badge */}
+              <div className="bg-red-50 border-2 border-red-300 rounded-lg p-4 mb-6 flex items-start gap-3">
+                <Zap className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-bold text-red-900 mb-1">🎉 Launch Promotion: Save $500/month</div>
+                  <div className="text-sm text-gray-700">
+                    <span className="line-through text-gray-500">$2,000/month</span> → <span className="font-bold text-red-700">$1,500/month</span> per developer. Limited time offer!
+                  </div>
+                </div>
+              </div>
+              
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
@@ -489,11 +501,8 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">
             Transparent, predictable, and fair—always.
           </h2>
-          <p className="text-center text-lg text-gray-600 mb-4">
-            We believe in complete pricing transparency. Every invoice shows the full breakdown:
-          </p>
-          <p className="text-center text-base text-gray-500 mb-12 max-w-3xl mx-auto">
-            <strong>Salary</strong> • <strong>Fixed Fee</strong> • <strong>Taxes</strong> • <strong>Benefits</strong> • <strong>Service Margin</strong> — all itemized separately so you know exactly what you're paying for.
+          <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            No hidden fees. No surprises. You define the salary, we handle everything else.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -543,16 +552,21 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Staff Augmentation
                 </h3>
-                <div className="mb-6">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">
-                    Salary + 20% + $1,000
+                <div className="mb-4">
+                  <div className="flex items-baseline gap-3 mb-2">
+                    <span className="text-2xl text-gray-400 line-through">$2,000</span>
+                    <span className="text-4xl font-bold text-red-600">$1,500</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-3 py-1 mb-2">
+                    <Zap className="w-4 h-4 text-red-600" />
+                    <span className="text-xs font-bold text-red-700">LAUNCH PROMO</span>
                   </div>
                   <p className="text-sm text-gray-500">
-                    Per month per developer
+                    Per month per developer + Salary (you define)
                   </p>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Ongoing management covering payroll, compliance, and HR infrastructure. Full cost breakdown on every invoice—no hidden fees.
+                  Simple, transparent pricing. You define the developer's salary—we add our flat monthly fee. No percentages, no hidden costs, complete clarity.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
                   <BadgeCheck className="w-4 h-4" />
@@ -567,12 +581,12 @@ export default function Home() {
             <Link to={createPageUrl("Pricing")}>
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
                 <Calculator className="w-5 h-5 mr-2" />
-                See Your Full Cost Breakdown
+                Calculate Your Costs
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <p className="text-sm text-gray-500 mt-4">
-              Interactive calculator with detailed pricing transparency
+              Interactive calculator with complete pricing transparency
             </p>
           </div>
         </div>
