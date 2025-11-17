@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -98,8 +99,7 @@ export default function Home() {
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-            Build and scale your LatAm tech team
-            <span className="text-teal-600"> intelligently</span>, transparently, and compliantly.
+            Build and Scale your LatAm tech team with <span className="text-teal-600">intelligence</span>, price transparency and compliance.
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             LatAm Staffing and Staff Augmentation powered by AI, human expertise, and full legal compliance.
