@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +16,8 @@ import {
   Briefcase,
   UsersRound,
   BadgeCheck,
-  Info
+  Info,
+  Zap
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -44,8 +44,11 @@ export default function Pricing() {
     return staffingHires * avgSalary;
   };
 
+  const PROMO_FEE = 1500;
+  const STANDARD_FEE = 2000;
+
   const calculateAugmentationMonthlyCost = () => {
-    const perDeveloperCost = developerSalary + (developerSalary * 0.20) + 1000;
+    const perDeveloperCost = developerSalary + PROMO_FEE;
     return perDeveloperCost * augmentationHires;
   };
 
@@ -99,7 +102,7 @@ export default function Pricing() {
             <Info className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
             <div className="text-left">
               <p className="text-sm text-gray-700">
-                <strong>Full Cost Breakdown:</strong> Every invoice itemizes salary, fixed fees, taxes, benefits, and service margins separately—no hidden costs.
+                <strong>Simple & Transparent:</strong> You define the salary—we add our flat fee. No percentages, no hidden costs, complete clarity.
               </p>
             </div>
           </div>
@@ -347,6 +350,9 @@ export default function Pricing() {
                         step={500}
                         className="w-full"
                       />
+                      <p className="text-sm text-gray-600 italic">
+                        You define the salary—complete flexibility and control
+                      </p>
                     </div>
 
                     {/* Contract Duration */}
@@ -413,14 +419,25 @@ export default function Pricing() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="space-y-6">
+                      {/* Launch Promotion Alert */}
+                      <div className="bg-red-50 border-2 border-red-300 rounded-lg p-4 flex items-start gap-3">
+                        <Zap className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-bold text-red-900 mb-1">🎉 Launch Promotion: Save $500/month</div>
+                          <div className="text-sm text-gray-700">
+                            <span className="line-through text-gray-500">${STANDARD_FEE}/month</span> → <span className="font-bold text-red-700">${PROMO_FEE}/month</span> per developer
+                          </div>
+                        </div>
+                      </div>
+
                       {/* Transparent Cost Breakdown */}
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                         <div className="flex items-start gap-2">
                           <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                           <div>
-                            <h4 className="font-semibold text-gray-900 text-sm mb-1">Complete Transparency</h4>
+                            <h4 className="font-semibold text-gray-900 text-sm mb-1">Simple Formula</h4>
                             <p className="text-xs text-gray-600">
-                              All costs broken down by: Salary • Operational Fee (20%) • Compliance Retainer • Taxes • Benefits
+                              Salary (you define) + ${PROMO_FEE} flat fee. No percentages, no surprises.
                             </p>
                           </div>
                         </div>
@@ -437,17 +454,16 @@ export default function Pricing() {
                           <span className="font-semibold text-gray-900">{formatCurrency(developerSalary)}</span>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Service Margin (20%)</span>
-                          <span className="font-semibold text-gray-900">{formatCurrency(developerSalary * 0.20)}</span>
-                        </div>
-                        <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Compliance & HR Fee</span>
-                          <span className="font-semibold text-gray-900">$1,000</span>
+                          <span className="text-gray-600">Project X Fee (promo)</span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-gray-400 line-through">${STANDARD_FEE}</span>
+                            <span className="font-semibold text-red-600">${PROMO_FEE}</span>
+                          </div>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b-2 border-gray-300">
                           <span className="text-gray-900 font-semibold">Cost per Developer/Month</span>
                           <span className="font-bold text-teal-600 text-lg">
-                            {formatCurrency(developerSalary + (developerSalary * 0.20) + 1000)}
+                            {formatCurrency(developerSalary + PROMO_FEE)}
                           </span>
                         </div>
                       </div>
