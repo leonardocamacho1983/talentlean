@@ -25,6 +25,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import { ThemeProvider } from "../components/ThemeProvider";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -38,15 +40,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9]">
+    <ThemeProvider>
+    <div className="min-h-screen bg-[#FAFAF9] dark:bg-gray-900">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900">
+            <div className="text-2xl font-bold text-gray-900 dark:text-white">
               Talent<span className="text-teal-600">Lean</span>
             </div>
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
+              <ThemeSwitcher />
               <button
                 onClick={() => scrollToSection('hero')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
@@ -688,5 +692,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </ThemeProvider>
   );
 }
