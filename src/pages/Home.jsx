@@ -21,8 +21,8 @@ import {
   Clock,
   MapPin,
   UserCheck,
-  Zap
-} from "lucide-react";
+  Zap } from
+"lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
@@ -49,38 +49,38 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection('hero')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
                 Home
               </button>
 
               <button
                 onClick={() => scrollToSection('augmentation')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
                 Staff Augmentation
               </button>
               <button
                 onClick={() => scrollToSection('byot')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
                 Migrate Your Team
               </button>
               <Link to={createPageUrl("Pricing")}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
                 Pricing
               </Link>
               <button
                 onClick={() => scrollToSection('why-different')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
                 About
               </button>
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
-              >
+                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6">
+
                 Talk to our Founder
               </Button>
             </div>
@@ -101,8 +101,8 @@ export default function Home() {
             <Button
               onClick={() => scrollToSection('cta')}
               size="lg"
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+
               Talk to our Founder
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -110,8 +110,8 @@ export default function Home() {
               onClick={() => scrollToSection('byot')}
               size="lg"
               variant="outline"
-              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
-            >
+              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300">
+
               Migrate Your Team
             </Button>
           </div>
@@ -229,8 +229,8 @@ export default function Home() {
               
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
-              >
+                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all">
+
                 Talk to our Founder
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -341,10 +341,10 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Button 
+              <Button
                 onClick={() => scrollToSection('cta')}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-              >
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+
                 Talk to our Founder
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -364,41 +364,41 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: Brain,
-                number: "1",
-                title: "AI Vetting Engine",
-                description: "Machine learning ranks LatAm talent based on skill, performance, and cultural fit."
-              },
-              {
-                icon: Users,
-                number: "2",
-                title: "Human Orchestration",
-                description: "Our regional experts refine the match through interviews and alignment checks."
-              },
-              {
-                icon: Building2,
-                number: "3",
-                title: "Employment & Compliance",
-                description: "We handle contracts, payroll, benefits, and taxes across all LatAm countries."
-              },
-              {
-                icon: RefreshCw,
-                number: "4",
-                title: "Flexible Ownership",
-                description: "Hire directly after 6 months or migrate your existing team to us."
-              }
-            ].map((step, index) => (
-              <Card
-                key={index}
-                onMouseEnter={() => setHoveredStep(index)}
-                onMouseLeave={() => setHoveredStep(null)}
-                className={`border-2 transition-all duration-300 cursor-pointer ${
-                  hoveredStep === index
-                    ? 'border-teal-600 shadow-lg -translate-y-2'
-                    : 'border-gray-200 hover:border-gray-300'
-                }`}
-              >
+            {
+              icon: Brain,
+              number: "1",
+              title: "AI Vetting Engine",
+              description: "Machine learning ranks LatAm talent based on skill, performance, and cultural fit."
+            },
+            {
+              icon: Users,
+              number: "2",
+              title: "Human Orchestration",
+              description: "Our regional experts refine the match through interviews and alignment checks."
+            },
+            {
+              icon: Building2,
+              number: "3",
+              title: "Employment & Compliance",
+              description: "We handle contracts, payroll, benefits, and taxes across all LatAm countries."
+            },
+            {
+              icon: RefreshCw,
+              number: "4",
+              title: "Flexible Ownership",
+              description: "Hire directly after 6 months or migrate your existing team to us."
+            }].
+            map((step, index) =>
+            <Card
+              key={index}
+              onMouseEnter={() => setHoveredStep(index)}
+              onMouseLeave={() => setHoveredStep(null)}
+              className={`border-2 transition-all duration-300 cursor-pointer ${
+              hoveredStep === index ?
+              'border-teal-600 shadow-lg -translate-y-2' :
+              'border-gray-200 hover:border-gray-300'}`
+              }>
+
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 font-bold text-xl mb-6 mx-auto">
                     {step.number}
@@ -412,7 +412,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -432,9 +432,9 @@ export default function Home() {
               onMouseEnter={() => setHoveredCard('augmentation')}
               onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
-                hoveredCard === 'augmentation' ? 'border-teal-600 shadow-xl -translate-y-2' : 'border-gray-200'
-              }`}
-            >
+              hoveredCard === 'augmentation' ? 'border-teal-600 shadow-xl -translate-y-2' : 'border-gray-200'}`
+              }>
+
               <CardContent className="p-10">
                 <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
                   <UsersRound className="w-7 h-7 text-teal-600" />
@@ -467,7 +467,7 @@ export default function Home() {
           </div>
 
           {/* CTA to Calculator */}
-          <div className="text-center">
+          <div className="my-5 text-center">
             <Link to={createPageUrl("Pricing")}>
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
                 <Calculator className="w-5 h-5 mr-2" />
@@ -534,8 +534,8 @@ export default function Home() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
+            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+
             Talk to our Founder
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
@@ -570,6 +570,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
