@@ -338,10 +338,8 @@ export default function Pricing() {
                   </CardContent>
                 </Card>
               </div>
-            </div>
           </div>
         </div>
-      </div>
       </section>
 
       {/* Additional Info Section */}
