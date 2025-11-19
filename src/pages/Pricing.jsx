@@ -112,10 +112,7 @@ export default function Pricing() {
       {/* Calculator Section */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <Tabs value={serviceType} onValueChange={setServiceType} className="w-full">
-
-
-            <div>
+          <div className="w-full">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Input Section */}
                 <Card className="border-2 border-gray-200 shadow-lg">
@@ -342,6 +339,7 @@ export default function Pricing() {
                 </Card>
               </div>
             </div>
+          </div>
         </div>
       </section>
 
