@@ -72,7 +72,7 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to={createPageUrl("Home")} className="text-2xl font-bold text-gray-900">
-              Project <span className="text-teal-600">X</span>
+              Talent<span className="text-teal-600">Lean</span>
             </Link>
             <Link to={createPageUrl("Home")}>
               <Button variant="outline" className="rounded-full">
@@ -93,7 +93,7 @@ export default function Pricing() {
             Pricing Calculator
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-            Customize your requirements and get an instant estimate for Project X's services. 
+            Customize your requirements and get an instant estimate for TalentLean's services.
             Complete transparency with detailed cost breakdowns.
           </p>
           
@@ -454,7 +454,7 @@ export default function Pricing() {
                           <span className="font-semibold text-gray-900">{formatCurrency(developerSalary)}</span>
                         </div>
                         <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Project X Fee (promo)</span>
+                          <span className="text-gray-600">TalentLean Fee (promo)</span>
                           <div className="flex items-center gap-2">
                             <span className="text-sm text-gray-400 line-through">${STANDARD_FEE}</span>
                             <span className="font-semibold text-red-600">${PROMO_FEE}</span>
@@ -540,7 +540,7 @@ export default function Pricing() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <div className="text-xl font-bold text-white mb-2">
-                Project <span className="text-teal-500">X</span>
+                Talent<span className="text-teal-500">Lean</span>
               </div>
               <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
@@ -551,7 +551,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-            <p>© 2025 Project X. All rights reserved.</p>
+            <p>© 2025 TalentLean. All rights reserved.</p>
           </div>
         </div>
       </footer>
