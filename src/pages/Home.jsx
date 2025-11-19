@@ -177,7 +177,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Salary + USD 1,500/month
+                        Complete transparency: Salary + <span className="font-bold text-red-600">USD 1,500/month</span> <span className="text-sm bg-red-50 text-red-700 px-2 py-1 rounded-full font-semibold">Launch Promo</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
