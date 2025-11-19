@@ -25,8 +25,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ThemeProvider } from "../components/ThemeProvider";
-import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -40,29 +38,22 @@ export default function Home() {
   };
 
   return (
-    <ThemeProvider>
-    <div className="min-h-screen bg-[#FAFAF9] dark:bg-gray-900">
+    <div className="min-h-screen bg-[#FAFAF9]">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="text-2xl font-bold text-gray-900">
               Talent<span className="text-teal-600">Lean</span>
             </div>
-            <div className="hidden md:flex items-center gap-6">
-              <ThemeSwitcher />
+            <div className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection('hero')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Home
               </button>
-              <button
-                onClick={() => scrollToSection('staffing')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
-                LatAm Staffing
-              </button>
+
               <button
                 onClick={() => scrollToSection('augmentation')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
@@ -75,12 +66,11 @@ export default function Home() {
               >
                 Migrate Your Team
               </button>
-              <button
-                onClick={() => scrollToSection('pricing')}
+              <Link to={createPageUrl("Pricing")}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 Pricing
-              </button>
+              </Link>
               <button
                 onClick={() => scrollToSection('why-different')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
@@ -91,7 +81,7 @@ export default function Home() {
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
               >
-                Contact
+                Talk to our Founder
               </Button>
             </div>
           </div>
@@ -109,11 +99,11 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Button
-              onClick={() => scrollToSection('staffing')}
+              onClick={() => scrollToSection('cta')}
               size="lg"
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              Hire LatAm Talent
+              Talk to our Founder
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
@@ -162,84 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LatAm Staffing Services */}
-      <section id="staffing" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100">
-                <Search className="w-8 h-8 text-teal-600" />
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                LatAm Staffing Services
-              </h2>
-              <p className="text-xl text-teal-600 font-semibold mb-6">
-                Precision sourcing of top LatAm talent for contract or permanent hires.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                TalentLean's LatAm Staffing Services deliver top tech candidates from Latin America—fast. Our proprietary AI ranks and pre-vets regional talent, while our experts handpick matches aligned with your culture, goals, and time-zone requirements.
-              </p>
-              
-              {/* Money-Back Guarantee */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-start gap-3">
-                <BadgeCheck className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-gray-900 mb-1">30-Day Money-Back Guarantee</div>
-                  <div className="text-sm text-gray-600">
-                    If the match doesn't work out within the first month, we'll refund your fee—no questions asked.
-                  </div>
-                </div>
-              </div>
-              
-              <Button
-                onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
-              >
-                Request Candidates
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </div>
-            <div>
-              <Card className="border-2 border-gray-100 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8">
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        AI-optimized sourcing and ranking of LatAm talent
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        Human-led final curation with regional expertise
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        Perfect time-zone alignment with US and Canada
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        Placement fee: 1× first-month salary
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        Speed: candidates delivered within days
-                      </span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Staff Augmentation for LatAm */}
       <section id="augmentation" className="py-24 px-6 lg:px-8 bg-white">
@@ -279,6 +192,12 @@ export default function Home() {
                         Convert to direct hire after 6 months, no fee
                       </span>
                     </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                      <span className="text-lg text-gray-700">
+                        No upfront payment, no hiring fees
+                      </span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -312,7 +231,7 @@ export default function Home() {
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
               >
-                Scale My Team
+                Talk to our Founder
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
@@ -426,7 +345,7 @@ export default function Home() {
                 onClick={() => scrollToSection('cta')}
                 className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
               >
-                Migrate Your Team
+                Talk to our Founder
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
@@ -508,39 +427,7 @@ export default function Home() {
             No hidden fees. No surprises. You define the salary, we handle everything else.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card
-              onMouseEnter={() => setHoveredCard('staffing')}
-              onMouseLeave={() => setHoveredCard(null)}
-              className={`border-2 transition-all duration-300 ${
-                hoveredCard === 'staffing' ? 'border-teal-600 shadow-xl -translate-y-2' : 'border-gray-200'
-              }`}
-            >
-              <CardContent className="p-10">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
-                  <Briefcase className="w-7 h-7 text-teal-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  LatAm Staffing Services
-                </h3>
-                <div className="mb-6">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">
-                    1× first-month salary
-                  </div>
-                  <p className="text-sm text-gray-500">
-                    One-time recruitment fee
-                  </p>
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  One-time recruitment fee for AI + human curated placements. Fast, precise, and aligned with your needs.
-                </p>
-                <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
-                  <BadgeCheck className="w-4 h-4" />
-                  <span className="font-medium">30-day money-back guarantee</span>
-                </div>
-              </CardContent>
-            </Card>
-
+          <div className="max-w-md mx-auto">
             <Card
               onMouseEnter={() => setHoveredCard('augmentation')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -645,21 +532,13 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
             Hire smarter, scale faster, and manage globally with clarity and confidence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Hire Developers
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg transition-all duration-300"
-            >
-              Talk to Your Account Manager
-            </Button>
-          </div>
+          <Button
+            size="lg"
+            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            Talk to our Founder
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </section>
 
@@ -682,7 +561,7 @@ export default function Home() {
                 Migrate Team
               </button>
               <button onClick={() => scrollToSection('cta')} className="hover:text-white transition-colors">
-                Contact
+                Talk to our Founder
               </button>
             </div>
           </div>
@@ -692,6 +571,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-    </ThemeProvider>
   );
 }

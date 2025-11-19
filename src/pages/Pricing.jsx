@@ -113,181 +113,9 @@ export default function Pricing() {
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <Tabs value={serviceType} onValueChange={setServiceType} className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 mb-12 h-14">
-              <TabsTrigger value="staffing" className="text-lg">
-                <Briefcase className="w-5 h-5 mr-2" />
-                LatAm Staffing
-              </TabsTrigger>
-              <TabsTrigger value="augmentation" className="text-lg">
-                <UsersRound className="w-5 h-5 mr-2" />
-                Staff Augmentation
-              </TabsTrigger>
-            </TabsList>
 
-            {/* Staffing Services Calculator */}
-            <TabsContent value="staffing">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Input Section */}
-                <Card className="border-2 border-gray-200 shadow-lg">
-                  <CardHeader className="border-b bg-gradient-to-r from-teal-50 to-teal-100/50">
-                    <CardTitle className="text-2xl text-gray-900">Configure Your Hiring</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-8 space-y-8">
-                    {/* Number of Hires */}
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center">
-                        <Label className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                          <Users className="w-5 h-5 text-teal-600" />
-                          Number of Hires
-                        </Label>
-                        <div className="flex items-center gap-2">
-                          <Input 
-                            type="number"
-                            value={staffingHires}
-                            onChange={(e) => setStaffingHires(Math.max(1, parseInt(e.target.value) || 1))}
-                            className="w-20 text-center font-bold text-lg"
-                            min="1"
-                          />
-                          <span className="text-gray-500 text-sm">hires</span>
-                        </div>
-                      </div>
-                      <Slider
-                        value={[staffingHires]}
-                        onValueChange={(value) => setStaffingHires(value[0])}
-                        min={1}
-                        max={50}
-                        step={1}
-                        className="w-full"
-                      />
-                    </div>
 
-                    {/* Average Monthly Salary */}
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center">
-                        <Label className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                          <DollarSign className="w-5 h-5 text-teal-600" />
-                          Average Monthly Salary
-                        </Label>
-                        <div className="flex items-center gap-2">
-                          <span className="text-gray-500">$</span>
-                          <Input 
-                            type="number"
-                            value={avgSalary}
-                            onChange={(e) => setAvgSalary(Math.max(1000, parseInt(e.target.value) || 1000))}
-                            className="w-32 text-center font-bold text-lg"
-                            min="1000"
-                            step="500"
-                          />
-                        </div>
-                      </div>
-                      <Slider
-                        value={[avgSalary]}
-                        onValueChange={(value) => setAvgSalary(value[0])}
-                        min={1000}
-                        max={20000}
-                        step={500}
-                        className="w-full"
-                      />
-                    </div>
-
-                    {/* Info Box */}
-                    <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">What's Included:</h4>
-                      <ul className="space-y-2 text-sm text-gray-700">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          AI-powered LatAm candidate sourcing & vetting
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Expert human curation with regional expertise
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Guaranteed cultural & technical fit
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Time-zone aligned candidates
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
-                          Delivery within days, not weeks
-                        </li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Results Section */}
-                <Card className="border-2 border-teal-200 shadow-xl bg-gradient-to-br from-white to-teal-50/30">
-                  <CardHeader className="border-b bg-teal-600 text-white">
-                    <CardTitle className="text-2xl">Your Investment</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      {/* Cost Breakdown */}
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Hires</span>
-                          <span className="font-semibold text-gray-900">{staffingHires}</span>
-                        </div>
-                        <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Avg. Monthly Salary</span>
-                          <span className="font-semibold text-gray-900">{formatCurrency(avgSalary)}</span>
-                        </div>
-                        <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                          <span className="text-gray-600">Fee per Hire</span>
-                          <span className="font-semibold text-gray-900">{formatCurrency(avgSalary)} (1× salary)</span>
-                        </div>
-                      </div>
-
-                      {/* Total Cost */}
-                      <div className="bg-teal-600 text-white rounded-xl p-6 mt-8">
-                        <div className="text-sm font-medium mb-2 opacity-90">Total One-Time Fee</div>
-                        <div className="text-5xl font-bold mb-2">
-                          {formatCurrency(calculateStaffingCost())}
-                        </div>
-                        <div className="text-sm opacity-90">
-                          For {staffingHires} developer{staffingHires !== 1 ? 's' : ''}
-                        </div>
-                      </div>
-
-                      {/* Money-Back Guarantee */}
-                      <div className="bg-green-50 border-2 border-green-300 rounded-lg p-4 flex items-start gap-3">
-                        <BadgeCheck className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-bold text-gray-900 mb-1">30-Day Money-Back Guarantee</div>
-                          <div className="text-sm text-gray-700">
-                            If the match doesn't work out within the first month, we'll refund your fee—no questions asked.
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Savings Info */}
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
-                        <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-semibold text-gray-900 mb-1">Cost-Effective Hiring</div>
-                          <div className="text-sm text-gray-600">
-                            Traditional recruitment agencies charge 15-25% of annual salary. 
-                            Our AI-powered approach saves you up to 50%.
-                          </div>
-                        </div>
-                      </div>
-
-                      <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                        Get Started
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-
-            {/* Staff Augmentation Calculator */}
-            <TabsContent value="augmentation">
+            <div>
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Input Section */}
                 <Card className="border-2 border-gray-200 shadow-lg">
@@ -407,6 +235,10 @@ export default function Pricing() {
                           <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
                           Typical response time: one business day
                         </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
+                          No upfront payment, no hiring fees
+                        </li>
                       </ul>
                     </div>
                   </CardContent>
@@ -502,15 +334,14 @@ export default function Pricing() {
                       </div>
 
                       <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                        Get Started
+                        Talk to our Founder
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </div>
                   </CardContent>
                 </Card>
               </div>
-            </TabsContent>
-          </Tabs>
+            </div>
         </div>
       </section>
 
@@ -525,7 +356,7 @@ export default function Pricing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
-              Talk to Your Account Manager
+              Talk to our Founder
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8">
               View FAQ
@@ -547,7 +378,7 @@ export default function Pricing() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button className="hover:text-white transition-colors">Contact</button>
+              <button className="hover:text-white transition-colors">Talk to our Founder</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
