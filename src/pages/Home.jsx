@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,7 +44,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-2xl font-bold text-gray-900">
-              Project <span className="text-teal-600">X</span>
+              Talent<span className="text-teal-600">Lean</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <button
@@ -130,7 +129,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-gray-500">
-            From recruitment to payroll, Project X makes LatAm hiring seamless—and human.
+            From recruitment to payroll, TalentLean makes LatAm hiring seamless—and human.
           </p>
         </div>
       </section>
@@ -152,7 +151,7 @@ export default function Home() {
                 Hiring from Latin America is complex. Slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Project X eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure, with perfect time-zone alignment and regional expertise.
+                TalentLean eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure, with perfect time-zone alignment and regional expertise.
               </p>
             </div>
           </div>
@@ -174,7 +173,7 @@ export default function Home() {
                 Precision sourcing of top LatAm talent for contract or permanent hires.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Project X's LatAm Staffing Services deliver top tech candidates from Latin America—fast. Our proprietary AI ranks and pre-vets regional talent, while our experts handpick matches aligned with your culture, goals, and time-zone requirements.
+                TalentLean's LatAm Staffing Services deliver top tech candidates from Latin America—fast. Our proprietary AI ranks and pre-vets regional talent, while our experts handpick matches aligned with your culture, goals, and time-zone requirements.
               </p>
               
               {/* Money-Back Guarantee */}
@@ -291,7 +290,7 @@ export default function Home() {
                 Build long-term, compliant, remote LatAm teams with confidence.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Hire full-time remote developers from Latin America under Project X's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
+                Hire full-time remote developers from Latin America under TalentLean's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
               
               {/* Launch Promotion Badge */}
@@ -596,7 +595,7 @@ export default function Home() {
       <section id="why-different" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            Why companies choose Project X
+            Why companies choose TalentLean
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -666,7 +665,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <div className="text-xl font-bold text-white mb-2">
-                Project <span className="text-teal-500">X</span>
+                Talent<span className="text-teal-500">Lean</span>
               </div>
               <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
@@ -684,7 +683,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-            <p>© 2025 Project X. All rights reserved.</p>
+            <p>© 2025 TalentLean. All rights reserved.</p>
           </div>
         </div>
       </footer>
