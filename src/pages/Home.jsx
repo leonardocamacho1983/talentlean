@@ -421,7 +421,7 @@ export default function Home() {
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">
-            Transparent, predictable, and fair—always.
+            Transparent, predictable, and fail. Always!
           </h2>
           <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
             No hidden fees. No surprises. You define the salary, we handle everything else.
