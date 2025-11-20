@@ -21,7 +21,8 @@ import {
   Clock,
   MapPin,
   UserCheck,
-  Zap } from
+  Zap,
+  TrendingUp } from
 "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
