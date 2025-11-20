@@ -25,6 +25,7 @@ import {
 "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -175,12 +176,16 @@ export default function Home() {
       </script>
       
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900">
+            <Link 
+              to={createPageUrl("Home")} 
+              className="text-2xl font-bold text-gray-900"
+              aria-label="TalentLean Home"
+            >
               Talent<span className="text-teal-600">Lean</span>
-            </div>
+            </Link>
             <div className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection('hero')}
@@ -214,17 +219,19 @@ export default function Home() {
               </button>
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6">
+                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
+                aria-label="Contact founder">
 
                 Talk to our Founder
               </Button>
             </div>
+            <MobileMenu onNavigate={scrollToSection} />
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
+      <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8" aria-label="Hero section">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
             Build and Scale Your <span className="text-teal-600">LatAm Tech Team</span> with Intelligence, Price Transparency and Compliance
@@ -236,16 +243,18 @@ export default function Home() {
             <Button
               onClick={() => scrollToSection('cta')}
               size="lg"
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              aria-label="Contact our founder to get started">
 
               Talk to our Founder
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
             <Button
               onClick={() => scrollToSection('byot')}
               size="lg"
               variant="outline"
-              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300">
+              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
+              aria-label="Learn about migrating your existing team">
 
               Migrate Your Team
             </Button>
@@ -264,7 +273,7 @@ export default function Home() {
       </section>
 
       {/* Why We Exist */}
-      <section id="why-projectx" className="py-24 px-6 lg:px-8 bg-white">
+      <section id="why-projectx" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="why-exist-heading">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-shrink-0">
@@ -273,7 +282,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h2 id="why-exist-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 LatAm Has World-Class Talent. You Just Need the Right System to Hire It.
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -290,7 +299,7 @@ export default function Home() {
 
 
       {/* Staff Augmentation for LatAm */}
-      <section id="augmentation" className="py-24 px-6 lg:px-8 bg-white">
+      <section id="augmentation" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="augmentation-heading">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -338,10 +347,10 @@ export default function Home() {
               </Card>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100" aria-hidden="true">
                 <Users className="w-8 h-8 text-teal-600" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 id="augmentation-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Staff Augmentation for LatAm
               </h2>
               <p className="text-xl text-teal-600 font-semibold mb-6">
@@ -364,10 +373,11 @@ export default function Home() {
               
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all">
+                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
+                aria-label="Contact our founder about staff augmentation">
 
                 Talk to our Founder
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
           </div>
@@ -375,13 +385,13 @@ export default function Home() {
       </section>
 
       {/* BYOT - Bring Your Own Talent */}
-      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50">
+      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
               <Globe2 className="w-8 h-8 text-teal-600" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Bring Your Own Talent
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -478,10 +488,11 @@ export default function Home() {
 
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                aria-label="Contact our founder about team migration">
 
                 Talk to our Founder
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
           </div>
@@ -489,9 +500,9 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
+      <section id="how-it-works" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]" aria-labelledby="how-it-works-heading">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
+          <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
             The future of hiring is intelligent orchestration.
           </h2>
           <p className="text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
@@ -553,9 +564,9 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 px-6 lg:px-8 bg-white">
+      <section id="pricing" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair. Always!
+          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair. Always!
 
           </h2>
           <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
@@ -604,10 +615,10 @@ export default function Home() {
           {/* CTA to Calculator */}
           <div className="my-5 text-center">
             <Link to={createPageUrl("Pricing")}>
-              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
-                <Calculator className="w-5 h-5 mr-2" />
+              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all" aria-label="Calculate your hiring costs">
+                <Calculator className="w-5 h-5 mr-2" aria-hidden="true" />
                 Calculate Your Costs
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </Link>
             <p className="text-sm text-gray-500 mt-4">
@@ -618,9 +629,9 @@ export default function Home() {
       </section>
 
       {/* Why Different */}
-      <section id="why-different" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]">
+      <section id="why-different" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]" aria-labelledby="why-different-heading">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+          <h2 id="why-different-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
             Why companies choose TalentLean
           </h2>
 
@@ -659,9 +670,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
+      <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 id="cta-heading" className="text-4xl md:text-6xl font-bold mb-6">
             Let's build your next great LatAm team.
           </h2>
           <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
@@ -669,16 +680,17 @@ export default function Home() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            aria-label="Get started - contact our founder">
 
             Talk to our Founder
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-6 lg:px-8">
+      <footer className="bg-gray-900 text-gray-400 py-12 px-6 lg:px-8" role="contentinfo" aria-label="Site footer">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
