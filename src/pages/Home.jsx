@@ -35,8 +35,8 @@ export default function Home() {
   // SEO: Set document title and meta tags
   React.useEffect(() => {
     // Set page title
-    document.title = "TalentLean - LatAm Staff Augmentation | Hire Remote Developers with EOR Compliance";
-    
+    document.title = "TalentLean - LatAm Staff Augmentation | Hire Remote Developers with Full Compliance";
+
     // Set or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -44,7 +44,7 @@ export default function Home() {
       metaDescription.name = 'description';
       document.head.appendChild(metaDescription);
     }
-    metaDescription.content = "Build and scale your LatAm tech team with TalentLean's AI-powered staff augmentation. Full EOR compliance, transparent pricing ($1,500/month promo), and 30-day money-back guarantee. Hire remote developers from Latin America with perfect time-zone alignment.";
+    metaDescription.content = "Build and scale your LatAm tech team with TalentLean's AI-powered staff augmentation. Full compliance, transparent pricing ($1,500/month promo), and 30-day money-back guarantee. Hire remote developers from Latin America with perfect time-zone alignment.";
     
     // Set or update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -53,7 +53,7 @@ export default function Home() {
       metaKeywords.name = 'keywords';
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.content = "LatAm developers, staff augmentation, Latin America hiring, remote developers, EOR compliance, payroll services, hire developers, LatAm tech talent, offshore development, nearshore staffing";
+    metaKeywords.content = "LatAm developers, staff augmentation, Latin America hiring, remote developers, payroll services, hire developers, LatAm tech talent, offshore development, nearshore staffing";
     
     // Open Graph tags
     let ogTitle = document.querySelector('meta[property="og:title"]');
@@ -97,7 +97,7 @@ export default function Home() {
         "name": "TalentLean",
         "url": "https://talentlean.com",
         "logo": "https://talentlean.com/logo.png",
-        "description": "AI-powered LatAm staff augmentation and EOR services for hiring remote developers with full compliance.",
+        "description": "AI-powered LatAm staff augmentation services for hiring remote developers with full compliance.",
         "foundingDate": "2025",
         "contactPoint": {
           "@type": "ContactPoint",
@@ -110,7 +110,7 @@ export default function Home() {
       {
         "@type": "WebPage",
         "name": "TalentLean - LatAm Staff Augmentation",
-        "description": "Build and scale your LatAm tech team with intelligence, price transparency and compliance. AI-powered staffing with full EOR support.",
+        "description": "Build and scale your LatAm tech team with intelligence, price transparency and compliance. AI-powered staffing with full compliance support.",
         "url": "https://talentlean.com",
         "mainEntity": {
           "@type": "Service",
@@ -123,7 +123,7 @@ export default function Home() {
             "@type": "Place",
             "name": "Latin America"
           },
-          "description": "Hire full-time remote developers from Latin America with complete EOR compliance, payroll management, and legal protection.",
+          "description": "Hire full-time remote developers from Latin America with complete compliance, payroll management, and legal protection.",
           "offers": {
             "@type": "Offer",
             "price": "1500",
@@ -145,25 +145,17 @@ export default function Home() {
             "name": "What is TalentLean's pricing model?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TalentLean charges a flat fee of $1,500/month per developer (launch promo price, regular $2,000) plus the developer's salary that you define. Complete transparency with no hidden costs or percentages."
+              "text": "TalentLean charges a flat fee of $1,500/month per developer (launch promo price, regular $2,000) plus the developer's compensation that you define. Complete transparency with no hidden costs or percentages."
             }
-          },
+            },
           {
             "@type": "Question",
             "name": "What countries does TalentLean operate in?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TalentLean provides fully compliant EOR services across all Latin American countries, with expertise in hiring developers from Mexico, Brazil, Argentina, Colombia, Chile, and other LatAm nations."
+              "text": "TalentLean provides fully compliant employment services across all Latin American countries, with expertise in hiring developers from Mexico, Brazil, Argentina, Colombia, Chile, and other LatAm nations."
             }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I convert staff augmentation developers to direct hires?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, after 6 months you can convert developers to direct hires with zero conversion fees."
             }
-          }
         ]
       }
     ]
@@ -312,7 +304,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Fully compliant EOR model across all LatAm countries
+                        Fully compliant employment model across all LatAm countries
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -324,7 +316,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Salary + <span className="font-bold text-red-600">USD 1,500/month</span> <span className="text-sm bg-red-50 text-red-700 px-2 py-1 rounded-full font-semibold">Launch Promo</span>
+                        Complete transparency: Compensation + <span className="font-bold text-red-600">USD 1,500/month</span> <span className="text-sm bg-red-50 text-red-700 px-2 py-1 rounded-full font-semibold">Launch Promo</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -333,12 +325,7 @@ export default function Home() {
                         Time-zone advantage: overlapping work hours
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
-                      <span className="text-lg text-gray-700">
-                        Convert to direct hire after 6 months, no fee
-                      </span>
-                    </li>
+
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
@@ -360,7 +347,7 @@ export default function Home() {
                 Build long-term, compliant, remote LatAm teams with confidence.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Hire full-time remote developers from Latin America under TalentLean's EOR structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
+                Hire full-time remote developers from Latin America under TalentLean's compliant employment structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
               
               {/* Launch Promotion Badge */}
@@ -398,7 +385,7 @@ export default function Home() {
               Bring Your Own Talent
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Global migration service for your existing team
+              Global migration and compliance infrastructure for your existing team
             </p>
           </div>
 
@@ -406,40 +393,53 @@ export default function Home() {
             <Card className="border-2 border-white shadow-xl bg-white">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Migrate Your Existing Developers
+                  Migrate & Consolidate Your Direct Hires
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Have a brilliant developer working for an outsourcing company that you can't bring closer? We build the bridge with our Staff Augmentation infrastructure and offer reduced pricing. We favor people's freedom and help you hire the experts your team deserves.
+                  Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn. Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
                 </p>
-                
+                <p className="text-lg text-gray-900 font-semibold mb-6">
+                  You keep the people you trust. We take over everything else.
+                </p>
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
                       <span className="text-teal-600 font-bold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer of Employment</h4>
-                      <p className="text-sm text-gray-600">We handle all legal documentation and compliance for smooth transition worldwide.</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
+                      <p className="text-sm text-gray-600">We handle full employment transfer for your current direct hires and developers from outsourcing vendors, ensuring legally sound transitions in any country.</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
                       <span className="text-teal-600 font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Payroll & Benefits Setup</h4>
-                      <p className="text-sm text-gray-600">Complete payroll infrastructure with local benefits and compliance management.</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Complete Payroll & Benefits Administration</h4>
+                      <p className="text-sm text-gray-600">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
                       <span className="text-teal-600 font-bold text-sm">3</span>
                     </div>
                     <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Zero-Overhead Operations</h4>
+                      <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">4</span>
+                    </div>
+                    <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
-                      <p className="text-sm text-gray-600">Special rates for BYOT migrations—lower than net-new hires.</p>
+                      <p className="text-sm text-gray-600">Special pricing for BYOT consolidations, significantly lower than hiring net-new developers.</p>
                     </div>
                   </div>
                 </div>
@@ -454,7 +454,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
                       <p className="text-gray-600">
-                        While our sourcing specializes in LatAm, our BYOT service works worldwide. Migrate developers from any country onto our compliant EOR platform.
+                        While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
                       </p>
                     </div>
                   </div>
@@ -468,7 +468,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
                       <p className="text-gray-600">
-                        We assume all employment liability and ensure 100% legal compliance in the developer's home country.
+                        We assume employment liability and guarantee full compliance in every developer's home country.
                       </p>
                     </div>
                   </div>
@@ -480,7 +480,7 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Special BYOT Guarantee</h4>
+                      <h4 className="font-bold text-gray-900 mb-2">30-Day Money-Back Guarantee</h4>
                       <p className="text-gray-600">
                         Seamless transition or full refund within 30 days—no questions asked.
                       </p>
@@ -605,7 +605,7 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Simple, transparent pricing. You define the developer's salary—we add our flat monthly fee. No percentages, no hidden costs, complete clarity.
+                  Simple, transparent pricing. You define the developer's compensation—we add our flat monthly fee. No percentages, no hidden costs, complete clarity.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
                   <BadgeCheck className="w-4 h-4" />
@@ -655,7 +655,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance First</h3>
               <p className="text-gray-600 leading-relaxed">
-                LatAm payroll, contracts, and legal protection built-in by default across all countries.
+                LatAm payroll, contracts, and legal protection built-in across all countries.
               </p>
             </div>
 
