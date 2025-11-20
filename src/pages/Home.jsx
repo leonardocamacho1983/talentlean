@@ -432,16 +432,6 @@ export default function Home() {
                       <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                      <span className="text-teal-600 font-bold text-sm">4</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
-                      <p className="text-sm text-gray-600">Special pricing for BYOT consolidations, significantly lower than hiring net-new developers.</p>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
