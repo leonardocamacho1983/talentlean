@@ -375,30 +375,30 @@ export default function Home() {
       </section>
 
       {/* BYOT - Bring Your Own Talent */}
-      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
+      <section id="byot" className="py-16 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
-              <Globe2 className="w-8 h-8 text-teal-600" />
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-lg mb-4" aria-hidden="true">
+              <Globe2 className="w-7 h-7 text-teal-600" />
             </div>
-            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 id="byot-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Bring Your Own Talent
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Global migration and compliance infrastructure for your existing team
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <Card className="border-2 border-white shadow-xl bg-white">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="grid lg:grid-cols-5 gap-8 items-start">
+            <Card className="lg:col-span-3 border-2 border-white shadow-xl bg-white">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Migrate & Consolidate Your Direct Hires
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-base text-gray-600 mb-4 leading-relaxed">
                   Managing distributed developers creates hidden operational work. Payroll. Contracts. Local compliance. Administrative noise. Our BYOT service removes all of it. Consolidate your already-hired developers under TalentLean's compliant infrastructure and operate with zero overhead.
                 </p>
-                <p className="text-lg text-gray-900 font-semibold mb-6">
+                <p className="text-base text-gray-900 font-semibold mb-4">
                   You keep the people you trust. We take over everything else.
                 </p>
 
@@ -446,9 +446,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <div className="space-y-6">
+            <div className="lg:col-span-2 space-y-4">
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <div className="flex items-start gap-4">
                     <UserCheck className="w-8 h-8 text-teal-600 flex-shrink-0" />
                     <div>
@@ -462,7 +462,7 @@ export default function Home() {
               </Card>
 
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <div className="flex items-start gap-4">
                     <Shield className="w-8 h-8 text-teal-600 flex-shrink-0" />
                     <div>
@@ -476,7 +476,7 @@ export default function Home() {
               </Card>
 
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <div className="flex items-start gap-4">
                     <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
                     <div>
@@ -491,11 +491,11 @@ export default function Home() {
 
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
                 aria-label="Meet an expert about team migration">
 
                 Meet an Expert
-                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
               </Button>
             </div>
           </div>
