@@ -21,8 +21,7 @@ import {
   Clock,
   MapPin,
   UserCheck,
-  Zap,
-  TrendingUp } from
+  Zap } from
 "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -377,8 +376,8 @@ export default function Home() {
 
       {/* BYOT - Bring Your Own Talent */}
       <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
               <Globe2 className="w-8 h-8 text-teal-600" />
             </div>
@@ -390,146 +389,115 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Visual Metaphor */}
-          <div className="flex justify-center mb-16">
-            <div className="relative">
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="w-16 h-16 rounded-full bg-blue-200/60 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-blue-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <Card className="border-2 border-white shadow-xl bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Migrate & Consolidate Your Direct Hires
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn. Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
+                </p>
+                <p className="text-lg text-gray-900 font-semibold mb-6">
+                  You keep the people you trust. We take over everything else.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
+                      <p className="text-sm text-gray-600">We handle full employment transfer for your current direct hires and developers from outsourcing vendors, ensuring legally sound transitions in any country.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Complete Payroll & Benefits Administration</h4>
+                      <p className="text-sm text-gray-600">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Zero-Overhead Operations</h4>
+                      <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                      <span className="text-teal-600 font-bold text-sm">4</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
+                      <p className="text-sm text-gray-600">Special pricing for BYOT consolidations, significantly lower than hiring net-new developers.</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-purple-200/60 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-purple-600" />
-                </div>
-                <div className="w-16 h-16 rounded-full bg-pink-200/60 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-pink-600" />
-                </div>
-              </div>
-              <div className="flex justify-center mb-4">
-                <ArrowRight className="w-12 h-12 text-teal-600 transform rotate-90" />
-              </div>
-              <div className="flex justify-center">
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-xl">
-                  <Shield className="w-12 h-12 text-white" />
-                </div>
-              </div>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-6">
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <UserCheck className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
+                      <p className="text-gray-600">
+                        While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Shield className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
+                      <p className="text-gray-600">
+                        We assume employment liability and guarantee full compliance in every developer's home country.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-white shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">30-Day Money-Back Guarantee</h4>
+                      <p className="text-gray-600">
+                        Seamless transition or full refund within 30 days—no questions asked.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Button
+                onClick={() => scrollToSection('cta')}
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                aria-label="Meet an expert about team migration">
+
+                Meet an Expert
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+              </Button>
             </div>
-          </div>
-
-          {/* Main Narrative Block */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Migrate & Consolidate Your Direct Hires
-            </h3>
-            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn.
-            </p>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
-            </p>
-            <p className="text-xl text-gray-900 font-bold">
-              You keep the people you trust. We take over everything else.
-            </p>
-          </div>
-
-          {/* Feature Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {/* Card 1 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <Briefcase className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Legal Transfer & Consolidation</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Full employment transfer for direct hires and vendor developers with legally sound transitions.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Card 2 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <Calculator className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Complete Payroll & Benefits</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  We manage payroll, taxes, and country-specific compliance so your team stays protected.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Card 3 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Zero-Overhead Operations</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  No more contracts, compliance monitoring, or payroll cycles. We absorb the entire burden.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Card 4 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Reduced Migration Pricing</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Special pricing for BYOT consolidations, significantly lower than net-new hires.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Card 5 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <Globe2 className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Global Coverage</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  BYOT migrations cover any region. Consolidate developers from any country worldwide.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Card 6 */}
-            <Card className="border-2 border-white shadow-lg bg-white hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-                  <UserCheck className="w-7 h-7 text-teal-600" />
-                </div>
-                <h4 className="font-bold text-xl text-gray-900 mb-3">Full Compliance Protection</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  We assume employment liability and guarantee full compliance in every country.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Money-Back Guarantee Badge */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center gap-3 bg-green-50 border-2 border-green-200 rounded-full px-8 py-4 shadow-md">
-              <BadgeCheck className="w-6 h-6 text-green-600" />
-              <span className="text-base font-bold text-green-900">30-Day Money-Back Guarantee</span>
-            </div>
-          </div>
-
-          {/* Strengthened CTA */}
-          <div className="text-center">
-            <Button
-              onClick={() => scrollToSection('cta')}
-              size="lg"
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-10 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              aria-label="Meet an expert about team migration">
-              Meet an Expert
-              <ArrowRight className="ml-3 w-6 h-6" aria-hidden="true" />
-            </Button>
           </div>
         </div>
       </section>
