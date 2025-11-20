@@ -26,6 +26,7 @@ import {
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import MobileMenu from "../components/MobileMenu";
+import Favicon from "../components/Favicon";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -170,6 +171,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
+      <Favicon />
+
       {/* Structured Data for SEO */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
