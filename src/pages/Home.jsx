@@ -396,7 +396,7 @@ export default function Home() {
                   Migrate & Consolidate Your Direct Hires
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn. Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
+                  Managing distributed developers creates hidden operational work. Payroll. Contracts. Local compliance. Administrative noise. Our BYOT service removes all of it. Consolidate your already-hired developers under TalentLean's compliant infrastructure and operate with zero overhead.
                 </p>
                 <p className="text-lg text-gray-900 font-semibold mb-6">
                   You keep the people you trust. We take over everything else.
@@ -409,7 +409,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
-                      <p className="text-sm text-gray-600">We handle full employment transfer for your current direct hires and developers from outsourcing vendors, ensuring legally sound transitions in any country.</p>
+                      <p className="text-sm text-gray-600">We manage the full employment transfer for your direct hires or vendor-based developers, ensuring compliant transitions in any country.</p>
                     </div>
                   </div>
 
@@ -419,7 +419,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Complete Payroll & Benefits Administration</h4>
-                      <p className="text-sm text-gray-600">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
+                      <p className="text-sm text-gray-600">We run payroll, taxes, benefits, and country-specific compliance so your team stays aligned with local regulations.</p>
                     </div>
                   </div>
 
@@ -429,7 +429,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Zero-Overhead Operations</h4>
-                      <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
+                      <p className="text-sm text-gray-600">Your team no longer handles contracts, payroll cycles, compliance checks, or local legal risk. We absorb all operational load.</p>
                     </div>
                   </div>
 
@@ -439,7 +439,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
-                      <p className="text-sm text-gray-600">Special pricing for BYOT consolidations, significantly lower than hiring net-new developers.</p>
+                      <p className="text-sm text-gray-600">Preferential pricing for BYOT migrations. Lower cost than hiring net-new developers.</p>
                     </div>
                   </div>
                 </div>
@@ -454,7 +454,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
                       <p className="text-gray-600">
-                        While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
+                        Though our sourcing focuses on LatAm, BYOT consolidates developers from any region into one compliant employment structure.
                       </p>
                     </div>
                   </div>
@@ -468,7 +468,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
                       <p className="text-gray-600">
-                        We assume employment liability and guarantee full compliance in every developer's home country.
+                        We assume employment liability and guarantee compliance in the developer's home country.
                       </p>
                     </div>
                   </div>
@@ -482,7 +482,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">30-Day Money-Back Guarantee</h4>
                       <p className="text-gray-600">
-                        Seamless transition or full refund within 30 days—no questions asked.
+                        Seamless transition or a full refund within 30 days. No questions asked.
                       </p>
                     </div>
                   </div>
