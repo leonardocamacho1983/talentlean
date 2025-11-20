@@ -395,8 +395,8 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Migrate & Consolidate Your Direct Hires
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn. Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
+
                 </p>
                 <p className="text-lg text-gray-900 font-semibold mb-6">
                   You keep the people you trust. We take over everything else.
