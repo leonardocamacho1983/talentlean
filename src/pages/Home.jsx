@@ -30,6 +30,55 @@ export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [hoveredCard, setHoveredCard] = React.useState(null);
 
+  // SEO: Set document title and meta tags
+  React.useEffect(() => {
+    // Set page title
+    document.title = "TalentLean - LatAm Staff Augmentation | Hire Remote Developers with EOR Compliance";
+    
+    // Set or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.name = 'description';
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Build and scale your LatAm tech team with TalentLean's AI-powered staff augmentation. Full EOR compliance, transparent pricing ($1,500/month promo), and 30-day money-back guarantee. Hire remote developers from Latin America with perfect time-zone alignment.";
+    
+    // Set or update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = 'keywords';
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.content = "LatAm developers, staff augmentation, Latin America hiring, remote developers, EOR compliance, payroll services, hire developers, LatAm tech talent, offshore development, nearshore staffing";
+    
+    // Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.content = "TalentLean - LatAm Staff Augmentation & Remote Developer Hiring";
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full EOR support, and 30-day money-back guarantee.";
+    
+    let ogType = document.querySelector('meta[property="og:type"]');
+    if (!ogType) {
+      ogType = document.createElement('meta');
+      ogType.setAttribute('property', 'og:type');
+      document.head.appendChild(ogType);
+    }
+    ogType.content = "website";
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -37,8 +86,94 @@ export default function Home() {
     }
   };
 
+  // Structured Data for SEO (Schema.org)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "TalentLean",
+        "url": "https://talentlean.com",
+        "logo": "https://talentlean.com/logo.png",
+        "description": "AI-powered LatAm staff augmentation and EOR services for hiring remote developers with full compliance.",
+        "foundingDate": "2025",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "areaServed": ["US", "CA", "GB", "AU"],
+          "availableLanguage": ["English", "Spanish"]
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebPage",
+        "name": "TalentLean - LatAm Staff Augmentation",
+        "description": "Build and scale your LatAm tech team with intelligence, price transparency and compliance. AI-powered staffing with full EOR support.",
+        "url": "https://talentlean.com",
+        "mainEntity": {
+          "@type": "Service",
+          "name": "LatAm Staff Augmentation",
+          "provider": {
+            "@type": "Organization",
+            "name": "TalentLean"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Latin America"
+          },
+          "description": "Hire full-time remote developers from Latin America with complete EOR compliance, payroll management, and legal protection.",
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "1500",
+              "priceCurrency": "USD",
+              "unitText": "per developer per month"
+            }
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is TalentLean's pricing model?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TalentLean charges a flat fee of $1,500/month per developer (launch promo price, regular $2,000) plus the developer's salary that you define. Complete transparency with no hidden costs or percentages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What countries does TalentLean operate in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TalentLean provides fully compliant EOR services across all Latin American countries, with expertise in hiring developers from Mexico, Brazil, Argentina, Colombia, Chile, and other LatAm nations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I convert staff augmentation developers to direct hires?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, after 6 months you can convert developers to direct hires with zero conversion fees."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -92,7 +227,7 @@ export default function Home() {
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
-            Build and Scale your LatAm tech team with <span className="text-teal-600">intelligence</span>, price transparency and compliance.
+            Build and Scale Your <span className="text-teal-600">LatAm Tech Team</span> with Intelligence, Price Transparency and Compliance
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             LatAm Staffing and Staff Augmentation powered by AI, human expertise, and full legal compliance.
@@ -139,7 +274,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                LatAm has world-class talent. You just need the right system to hire it.
+                LatAm Has World-Class Talent. You Just Need the Right System to Hire It.
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Hiring from Latin America is complex. Slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
