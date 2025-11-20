@@ -70,7 +70,7 @@ export default function Home() {
       ogDescription.setAttribute('property', 'og:description');
       document.head.appendChild(ogDescription);
     }
-    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full EOR support, and 30-day money-back guarantee.";
+    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full compliance support, and 30-day money-back guarantee.";
 
     let ogType = document.querySelector('meta[property="og:type"]');
     if (!ogType) {
@@ -283,8 +283,8 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Hiring from Latin America is complex. Slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                TalentLean eliminates that friction by combining AI-driven vetting, human orchestration, and compliant EOR infrastructure, with perfect time-zone alignment and regional expertise.
+              <p className="text-lg text-gray-600 leading-relaxed">TalentLean eliminates that friction by combining AI-driven vetting, human orchestration, and compliant   infrastructure, with perfect time-zone alignment and regional expertise.
+
               </p>
             </div>
           </div>
@@ -559,7 +559,7 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair. Always!
+          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair.
 
           </h2>
           <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
