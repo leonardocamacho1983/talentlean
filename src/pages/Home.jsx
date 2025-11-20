@@ -409,7 +409,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
-                      <p className="text-sm text-gray-600">We handle full employment transfer for your current direct hires and developers from outsourcing vendors, ensuring legally sound transitions in any country.</p>
+                      <p className="text-sm text-gray-600">We legally transition the developers you already trust on. Whether direct hires or vendor-based, we move them into TalentLean’s structure with a fast, compliant, country-ready process.</p>
                     </div>
                   </div>
 
