@@ -559,7 +559,7 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair. Always!
+          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair.
 
           </h2>
           <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
