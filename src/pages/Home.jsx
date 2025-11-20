@@ -223,9 +223,9 @@ export default function Home() {
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
-                aria-label="Contact founder">
+                aria-label="Meet an expert">
 
-                Talk to our Founder
+                Meet an Expert
               </Button>
             </div>
             <MobileMenu onNavigate={scrollToSection} />
@@ -247,9 +247,9 @@ export default function Home() {
               onClick={() => scrollToSection('cta')}
               size="lg"
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              aria-label="Contact our founder to get started">
+              aria-label="Meet an expert to get started">
 
-              Talk to our Founder
+              Meet an Expert
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
             <Button
@@ -377,9 +377,9 @@ export default function Home() {
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
-                aria-label="Contact our founder about staff augmentation">
+                aria-label="Meet an expert about staff augmentation">
 
-                Talk to our Founder
+                Meet an Expert
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
@@ -492,9 +492,9 @@ export default function Home() {
               <Button
                 onClick={() => scrollToSection('cta')}
                 className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-                aria-label="Contact our founder about team migration">
+                aria-label="Meet an expert about team migration">
 
-                Talk to our Founder
+                Meet an Expert
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
@@ -684,9 +684,9 @@ export default function Home() {
           <Button
             size="lg"
             className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            aria-label="Get started - contact our founder">
+            aria-label="Get started - meet an expert">
 
-            Talk to our Founder
+            Meet an Expert
             <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
           </Button>
         </div>
@@ -711,7 +711,7 @@ export default function Home() {
                 Migrate Team
               </button>
               <button onClick={() => scrollToSection('cta')} className="hover:text-white transition-colors">
-                Talk to our Founder
+                Meet an Expert
               </button>
             </div>
           </div>

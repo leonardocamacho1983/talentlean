@@ -331,7 +331,7 @@ export default function Pricing() {
                       </div>
 
                       <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
-                        Talk to our Founder
+                        Meet an Expert
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </div>
@@ -353,7 +353,7 @@ export default function Pricing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
-              Talk to our Founder
+              Meet an Expert
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8">
               View FAQ
@@ -375,7 +375,7 @@ export default function Pricing() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button className="hover:text-white transition-colors">Talk to our Founder</button>
+              <button className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
