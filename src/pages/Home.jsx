@@ -45,7 +45,7 @@ export default function Home() {
       document.head.appendChild(metaDescription);
     }
     metaDescription.content = "Build and scale your LatAm tech team with TalentLean's AI-powered staff augmentation. Full compliance, transparent pricing ($1,500/month promo), and 30-day money-back guarantee. Hire remote developers from Latin America with perfect time-zone alignment.";
-    
+
     // Set or update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -54,7 +54,7 @@ export default function Home() {
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.content = "LatAm developers, staff augmentation, Latin America hiring, remote developers, payroll services, hire developers, LatAm tech talent, offshore development, nearshore staffing";
-    
+
     // Open Graph tags
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (!ogTitle) {
@@ -63,7 +63,7 @@ export default function Home() {
       document.head.appendChild(ogTitle);
     }
     ogTitle.content = "TalentLean - LatAm Staff Augmentation & Remote Developer Hiring";
-    
+
     let ogDescription = document.querySelector('meta[property="og:description"]');
     if (!ogDescription) {
       ogDescription = document.createElement('meta');
@@ -71,7 +71,7 @@ export default function Home() {
       document.head.appendChild(ogDescription);
     }
     ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full EOR support, and 30-day money-back guarantee.";
-    
+
     let ogType = document.querySelector('meta[property="og:type"]');
     if (!ogType) {
       ogType = document.createElement('meta');
@@ -92,73 +92,73 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "name": "TalentLean",
-        "url": "https://talentlean.com",
-        "logo": "https://talentlean.com/logo.png",
-        "description": "AI-powered LatAm staff augmentation services for hiring remote developers with full compliance.",
-        "foundingDate": "2025",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Sales",
-          "areaServed": ["US", "CA", "GB", "AU"],
-          "availableLanguage": ["English", "Spanish"]
-        },
-        "sameAs": []
+    {
+      "@type": "Organization",
+      "name": "TalentLean",
+      "url": "https://talentlean.com",
+      "logo": "https://talentlean.com/logo.png",
+      "description": "AI-powered LatAm staff augmentation services for hiring remote developers with full compliance.",
+      "foundingDate": "2025",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales",
+        "areaServed": ["US", "CA", "GB", "AU"],
+        "availableLanguage": ["English", "Spanish"]
       },
-      {
-        "@type": "WebPage",
-        "name": "TalentLean - LatAm Staff Augmentation",
-        "description": "Build and scale your LatAm tech team with intelligence, price transparency and compliance. AI-powered staffing with full compliance support.",
-        "url": "https://talentlean.com",
-        "mainEntity": {
-          "@type": "Service",
-          "name": "LatAm Staff Augmentation",
-          "provider": {
-            "@type": "Organization",
-            "name": "TalentLean"
-          },
-          "areaServed": {
-            "@type": "Place",
-            "name": "Latin America"
-          },
-          "description": "Hire full-time remote developers from Latin America with complete compliance, payroll management, and legal protection.",
-          "offers": {
-            "@type": "Offer",
+      "sameAs": []
+    },
+    {
+      "@type": "WebPage",
+      "name": "TalentLean - LatAm Staff Augmentation",
+      "description": "Build and scale your LatAm tech team with intelligence, price transparency and compliance. AI-powered staffing with full compliance support.",
+      "url": "https://talentlean.com",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "LatAm Staff Augmentation",
+        "provider": {
+          "@type": "Organization",
+          "name": "TalentLean"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Latin America"
+        },
+        "description": "Hire full-time remote developers from Latin America with complete compliance, payroll management, and legal protection.",
+        "offers": {
+          "@type": "Offer",
+          "price": "1500",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
             "price": "1500",
             "priceCurrency": "USD",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "1500",
-              "priceCurrency": "USD",
-              "unitText": "per developer per month"
-            }
+            "unitText": "per developer per month"
           }
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is TalentLean's pricing model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TalentLean charges a flat fee of $1,500/month per developer (launch promo price, regular $2,000) plus the developer's compensation that you define. Complete transparency with no hidden costs or percentages."
         }
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is TalentLean's pricing model?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TalentLean charges a flat fee of $1,500/month per developer (launch promo price, regular $2,000) plus the developer's compensation that you define. Complete transparency with no hidden costs or percentages."
-            }
-            },
-          {
-            "@type": "Question",
-            "name": "What countries does TalentLean operate in?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TalentLean provides fully compliant employment services across all Latin American countries, with expertise in hiring developers from Mexico, Brazil, Argentina, Colombia, Chile, and other LatAm nations."
-            }
-            }
-        ]
-      }
-    ]
+        "@type": "Question",
+        "name": "What countries does TalentLean operate in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TalentLean provides fully compliant employment services across all Latin American countries, with expertise in hiring developers from Mexico, Brazil, Argentina, Colombia, Chile, and other LatAm nations."
+        }
+      }]
+
+    }]
+
   };
 
   return (
@@ -174,11 +174,11 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link 
-              to={createPageUrl("Home")} 
+            <Link
+              to={createPageUrl("Home")}
               className="text-2xl font-bold text-gray-900"
-              aria-label="TalentLean Home"
-            >
+              aria-label="TalentLean Home">
+
               Talent<span className="text-teal-600">Lean</span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
@@ -375,30 +375,30 @@ export default function Home() {
       </section>
 
       {/* BYOT - Bring Your Own Talent */}
-      <section id="byot" className="py-16 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
+      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-lg mb-4" aria-hidden="true">
-              <Globe2 className="w-7 h-7 text-teal-600" />
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
+              <Globe2 className="w-8 h-8 text-teal-600" />
             </div>
-            <h2 id="byot-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Bring Your Own Talent
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Global migration and compliance infrastructure for your existing team
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">We remove global hiring friction and safeguard every employment detail.
+
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
-            <Card className="lg:col-span-3 border-2 border-white shadow-xl bg-white">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <Card className="border-2 border-white shadow-xl bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Migrate & Consolidate Your Direct Hires
                 </h3>
-                <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                  Managing distributed developers creates hidden operational work. Payroll. Contracts. Local compliance. Administrative noise. Our BYOT service removes all of it. Consolidate your already-hired developers under TalentLean's compliant infrastructure and operate with zero overhead.
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Most companies underestimate the hidden operational load of managing distributed developers. Payroll, contracts, local compliance, risk exposure, administrative churn. Our BYOT service eliminates all of it. Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
                 </p>
-                <p className="text-base text-gray-900 font-semibold mb-4">
+                <p className="text-lg text-gray-900 font-semibold mb-6">
                   You keep the people you trust. We take over everything else.
                 </p>
 
@@ -409,7 +409,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
-                      <p className="text-sm text-gray-600">We manage the full employment transfer for your direct hires or vendor-based developers, ensuring compliant transitions in any country.</p>
+                      <p className="text-sm text-gray-600">We handle full employment transfer for your current direct hires and developers from outsourcing vendors, ensuring legally sound transitions in any country.</p>
                     </div>
                   </div>
 
@@ -419,7 +419,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Complete Payroll & Benefits Administration</h4>
-                      <p className="text-sm text-gray-600">We run payroll, taxes, benefits, and country-specific compliance so your team stays aligned with local regulations.</p>
+                      <p className="text-sm text-gray-600">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
                     </div>
                   </div>
 
@@ -429,7 +429,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Zero-Overhead Operations</h4>
-                      <p className="text-sm text-gray-600">Your team no longer handles contracts, payroll cycles, compliance checks, or local legal risk. We absorb all operational load.</p>
+                      <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
                     </div>
                   </div>
 
@@ -439,22 +439,22 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Reduced Migration Pricing</h4>
-                      <p className="text-sm text-gray-600">Preferential pricing for BYOT migrations. Lower cost than hiring net-new developers.</p>
+                      <p className="text-sm text-gray-600">Special pricing for BYOT consolidations, significantly lower than hiring net-new developers.</p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <div className="lg:col-span-2 space-y-4">
+            <div className="space-y-6">
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-4">
+                <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <UserCheck className="w-8 h-8 text-teal-600 flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
                       <p className="text-gray-600">
-                        Though our sourcing focuses on LatAm, BYOT consolidates developers from any region into one compliant employment structure.
+                        While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
                       </p>
                     </div>
                   </div>
@@ -462,13 +462,13 @@ export default function Home() {
               </Card>
 
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-4">
+                <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Shield className="w-8 h-8 text-teal-600 flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
                       <p className="text-gray-600">
-                        We assume employment liability and guarantee compliance in the developer's home country.
+                        We assume employment liability and guarantee full compliance in every developer's home country.
                       </p>
                     </div>
                   </div>
@@ -476,13 +476,13 @@ export default function Home() {
               </Card>
 
               <Card className="border-2 border-white shadow-lg bg-white">
-                <CardContent className="p-4">
+                <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">30-Day Money-Back Guarantee</h4>
                       <p className="text-gray-600">
-                        Seamless transition or a full refund within 30 days. No questions asked.
+                        Seamless transition or full refund within 30 days—no questions asked.
                       </p>
                     </div>
                   </div>
@@ -491,11 +491,11 @@ export default function Home() {
 
               <Button
                 onClick={() => scrollToSection('cta')}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                 aria-label="Meet an expert about team migration">
 
                 Meet an Expert
-                <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
           </div>
