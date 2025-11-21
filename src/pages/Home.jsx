@@ -220,11 +220,10 @@ export default function Home() {
                 Meet an Expert
               </Button>
               </div>
+              <MobileMenu onNavigate={scrollToSection} />
               </div>
               </div>
               </nav>
-
-              <MobileMenu onNavigate={scrollToSection} />
 
       {/* Hero Section */}
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8" aria-label="Hero section">

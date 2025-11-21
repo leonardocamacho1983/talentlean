@@ -100,7 +100,7 @@ export default function MobileMenu({ onNavigate }) {
               onClick={() => handleNavigate('cta')}
               className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full"
             >
-              Talk to our Founder
+              Meet an Expert
             </Button>
           </div>
         </nav>
