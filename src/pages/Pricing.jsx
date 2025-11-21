@@ -321,7 +321,9 @@ export default function Pricing() {
 
 
 
-                      <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                      <Button 
+                        onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                        className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                         Meet an Expert
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -343,7 +345,10 @@ export default function Pricing() {
             Your dedicated account manager is here to help you find the perfect solution for your hiring needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
+            <Button 
+              onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+              size="lg" 
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
               Meet an Expert
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8">

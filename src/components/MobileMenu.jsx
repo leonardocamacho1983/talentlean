@@ -97,7 +97,10 @@ export default function MobileMenu({ onNavigate }) {
           </button>
           <div className="pt-4 border-t border-gray-200">
             <Button
-              onClick={() => handleNavigate('cta')}
+              onClick={() => {
+                setIsOpen(false);
+                window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank');
+              }}
               className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full"
             >
               Meet an Expert
