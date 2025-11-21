@@ -51,7 +51,7 @@ export default function MobileMenu({ onNavigate }) {
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <div className="flex justify-between items-center p-6 border-b border-gray-200">
+        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-white">
           <span className="text-2xl font-bold text-gray-900">
             Talent<span className="text-teal-600">Lean</span>
           </span>
@@ -63,7 +63,7 @@ export default function MobileMenu({ onNavigate }) {
             <X className="w-6 h-6" />
           </button>
         </div>
-        <nav className="flex flex-col p-6 space-y-4">
+        <nav className="flex flex-col p-6 space-y-4 bg-white">
           <button
             onClick={() => handleNavigate('hero')}
             className="text-left text-gray-700 hover:text-teal-600 font-medium py-2 transition-colors"
