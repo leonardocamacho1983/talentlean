@@ -525,7 +525,7 @@ export default function Home() {
               icon: RefreshCw,
               number: "4",
               title: "Flexible Ownership",
-              description: "Hire directly after 6 months or migrate your existing team to us."
+              description: "Hire brand new talent or migrate your existing team to our compliance-ready and efficient model."
             }].
             map((step, index) =>
             <Card
