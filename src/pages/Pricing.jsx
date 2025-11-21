@@ -31,7 +31,7 @@ export default function Pricing() {
 
   // Staff Augmentation variables
   const [augmentationHires, setAugmentationHires] = useState(5);
-  const [developerSalary, setDeveloperSalary] = useState(4000);
+  const [developerSalary, setDeveloperSalary] = useState(4500);
   const [contractMonths, setContractMonths] = useState(12);
 
   // Scroll to top when component mounts
@@ -321,7 +321,9 @@ export default function Pricing() {
 
 
 
-                      <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                      <Button 
+                        onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                        className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                         Meet an Expert
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
@@ -343,7 +345,10 @@ export default function Pricing() {
             Your dedicated account manager is here to help you find the perfect solution for your hiring needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
+            <Button 
+              onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+              size="lg" 
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
               Meet an Expert
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8">
@@ -366,7 +371,7 @@ export default function Pricing() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button className="hover:text-white transition-colors">Meet an Expert</button>
+              <button onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">

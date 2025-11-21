@@ -45,13 +45,25 @@ export default function MobileMenu({ onNavigate }) {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`fixed top-16 right-0 bottom-0 w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 bottom-0 w-full bg-white shadow-xl z-[60] transform transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <nav className="flex flex-col p-6 space-y-4">
+        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-white">
+          <span className="text-2xl font-bold text-gray-900">
+            Talent<span className="text-teal-600">Lean</span>
+          </span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-gray-600 hover:text-gray-900"
+            aria-label="Close mobile menu"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        <nav className="flex flex-col p-6 space-y-4 bg-white">
           <button
             onClick={() => handleNavigate('hero')}
             className="text-left text-gray-700 hover:text-teal-600 font-medium py-2 transition-colors"
@@ -85,7 +97,10 @@ export default function MobileMenu({ onNavigate }) {
           </button>
           <div className="pt-4 border-t border-gray-200">
             <Button
-              onClick={() => handleNavigate('cta')}
+              onClick={() => {
+                setIsOpen(false);
+                window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank');
+              }}
               className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full"
             >
               Meet an Expert
