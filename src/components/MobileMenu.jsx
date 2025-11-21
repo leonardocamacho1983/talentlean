@@ -45,7 +45,7 @@ export default function MobileMenu({ onNavigate }) {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-full bg-white shadow-xl z-[60] transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-16 right-0 bottom-0 w-full bg-white shadow-xl z-[60] transform transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="navigation"
