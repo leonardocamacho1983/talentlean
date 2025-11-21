@@ -5,10 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  Calculator, 
-  Users, 
-  DollarSign, 
+import {
+  Calculator,
+  Users,
+  DollarSign,
   Calendar,
   CheckCircle2,
   ArrowRight,
@@ -17,21 +17,21 @@ import {
   UsersRound,
   BadgeCheck,
   Info,
-  Zap
-} from "lucide-react";
+  Zap } from
+"lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
 export default function Pricing() {
   const [serviceType, setServiceType] = useState("augmentation");
-  
+
   // Staffing Services variables
   const [staffingHires, setStaffingHires] = useState(3);
   const [avgSalary, setAvgSalary] = useState(5000);
-  
+
   // Staff Augmentation variables
   const [augmentationHires, setAugmentationHires] = useState(5);
-  const [developerSalary, setDeveloperSalary] = useState(6000);
+  const [developerSalary, setDeveloperSalary] = useState(4000);
   const [contractMonths, setContractMonths] = useState(12);
 
   // Scroll to top when component mounts
@@ -61,7 +61,7 @@ export default function Pricing() {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
+      maximumFractionDigits: 0
     }).format(amount);
   };
 
@@ -128,56 +128,56 @@ export default function Pricing() {
                           Number of Developers
                         </Label>
                         <div className="flex items-center gap-2">
-                          <Input 
-                            type="number"
-                            value={augmentationHires}
-                            onChange={(e) => setAugmentationHires(Math.max(1, parseInt(e.target.value) || 1))}
-                            className="w-20 text-center font-bold text-lg"
-                            min="1"
-                          />
+                          <Input
+                          type="number"
+                          value={augmentationHires}
+                          onChange={(e) => setAugmentationHires(Math.max(1, parseInt(e.target.value) || 1))}
+                          className="w-20 text-center font-bold text-lg"
+                          min="1" />
+
                           <span className="text-gray-500 text-sm">devs</span>
                         </div>
                       </div>
                       <Slider
-                        value={[augmentationHires]}
-                        onValueChange={(value) => setAugmentationHires(value[0])}
-                        min={1}
-                        max={100}
-                        step={1}
-                        className="w-full"
-                      />
+                      value={[augmentationHires]}
+                      onValueChange={(value) => setAugmentationHires(value[0])}
+                      min={1}
+                      max={100}
+                      step={1}
+                      className="w-full" />
+
                     </div>
 
                     {/* Developer Salary */}
                     <div className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <Label className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                          <DollarSign className="w-5 h-5 text-teal-600" />
-                          Monthly Compensation per Developer
-                        </Label>
+                        <Label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-lg font-semibold text-gray-900 flex items-center gap-2">Monthly Dev Compensation
+
+
+                      </Label>
                         <div className="flex items-center gap-2">
                           <span className="text-gray-500">$</span>
-                          <Input 
-                            type="number"
-                            value={developerSalary}
-                            onChange={(e) => setDeveloperSalary(Math.max(1000, parseInt(e.target.value) || 1000))}
-                            className="w-32 text-center font-bold text-lg"
-                            min="1000"
-                            step="500"
-                          />
+                          <Input
+                          type="number"
+                          value={developerSalary}
+                          onChange={(e) => setDeveloperSalary(Math.max(1000, parseInt(e.target.value) || 1000))}
+                          className="w-32 text-center font-bold text-lg"
+                          min="1000"
+                          step="500" />
+
                         </div>
                         </div>
                         <Slider
-                        value={[developerSalary]}
-                        onValueChange={(value) => setDeveloperSalary(value[0])}
-                        min={1000}
-                        max={20000}
-                        step={500}
-                        className="w-full"
-                        />
-                        <p className="text-sm text-gray-600 italic">
-                        You define the compensation—complete flexibility and control
-                        </p>
+                      value={[developerSalary]}
+                      onValueChange={(value) => setDeveloperSalary(value[0])}
+                      min={1000}
+                      max={20000}
+                      step={500}
+                      className="w-full" />
+
+                        <p className="text-sm text-gray-600 italic">You define the compensation. Complete flexibility and control
+
+                    </p>
                     </div>
 
                     {/* Contract Duration */}
@@ -188,24 +188,24 @@ export default function Pricing() {
                           Contract Duration
                         </Label>
                         <div className="flex items-center gap-2">
-                          <Input 
-                            type="number"
-                            value={contractMonths}
-                            onChange={(e) => setContractMonths(Math.max(1, parseInt(e.target.value) || 1))}
-                            className="w-20 text-center font-bold text-lg"
-                            min="1"
-                          />
+                          <Input
+                          type="number"
+                          value={contractMonths}
+                          onChange={(e) => setContractMonths(Math.max(1, parseInt(e.target.value) || 1))}
+                          className="w-20 text-center font-bold text-lg"
+                          min="1" />
+
                           <span className="text-gray-500 text-sm">months</span>
                         </div>
                       </div>
                       <Slider
-                        value={[contractMonths]}
-                        onValueChange={(value) => setContractMonths(value[0])}
-                        min={1}
-                        max={36}
-                        step={1}
-                        className="w-full"
-                      />
+                      value={[contractMonths]}
+                      onValueChange={(value) => setContractMonths(value[0])}
+                      min={1}
+                      max={36}
+                      step={1}
+                      className="w-full" />
+
                     </div>
 
                     {/* Info Box */}
@@ -374,6 +374,6 @@ export default function Pricing() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
