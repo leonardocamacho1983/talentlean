@@ -31,7 +31,7 @@ export default function Pricing() {
   
   // Staff Augmentation variables
   const [augmentationHires, setAugmentationHires] = useState(5);
-  const [developerSalary, setDeveloperSalary] = useState(6000);
+  const [developerSalary, setDeveloperSalary] = useState(4000);
   const [contractMonths, setContractMonths] = useState(12);
 
   // Scroll to top when component mounts
