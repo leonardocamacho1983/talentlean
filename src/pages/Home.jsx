@@ -32,6 +32,26 @@ export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [hoveredCard, setHoveredCard] = React.useState(null);
 
+  // Google Analytics
+  React.useEffect(() => {
+    // Add Google tag script
+    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js?id=G-LZND738LE0"]')) {
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LZND738LE0';
+      document.head.appendChild(gtagScript);
+
+      const gtagInlineScript = document.createElement('script');
+      gtagInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LZND738LE0');
+      `;
+      document.head.appendChild(gtagInlineScript);
+    }
+  }, []);
+
   // SEO: Set document title and meta tags
   React.useEffect(() => {
     // Set page title

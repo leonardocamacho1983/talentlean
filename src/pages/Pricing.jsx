@@ -34,6 +34,25 @@ export default function Pricing() {
   const [developerSalary, setDeveloperSalary] = useState(4500);
   const [contractMonths, setContractMonths] = useState(12);
 
+  // Google Analytics
+  useEffect(() => {
+    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js?id=G-LZND738LE0"]')) {
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LZND738LE0';
+      document.head.appendChild(gtagScript);
+
+      const gtagInlineScript = document.createElement('script');
+      gtagInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LZND738LE0');
+      `;
+      document.head.appendChild(gtagInlineScript);
+    }
+  }, []);
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
