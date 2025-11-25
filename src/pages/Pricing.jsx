@@ -34,22 +34,28 @@ export default function Pricing() {
   const [developerSalary, setDeveloperSalary] = useState(4500);
   const [contractMonths, setContractMonths] = useState(12);
 
-  // Google Analytics
+  // Google Tag Manager
   useEffect(() => {
-    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js?id=G-LZND738LE0"]')) {
-      const gtagScript = document.createElement('script');
-      gtagScript.async = true;
-      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LZND738LE0';
-      document.head.appendChild(gtagScript);
+    if (!document.querySelector('script[src*="googletagmanager.com/gtm.js?id=GTM-TND3K4R9"]')) {
+      // GTM Head Script
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TND3K4R9');
 
-      const gtagInlineScript = document.createElement('script');
-      gtagInlineScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LZND738LE0');
-      `;
-      document.head.appendChild(gtagInlineScript);
+      // GTM noscript iframe
+      if (!document.querySelector('iframe[src*="googletagmanager.com/ns.html?id=GTM-TND3K4R9"]')) {
+        const noscript = document.createElement('noscript');
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-TND3K4R9';
+        iframe.height = '0';
+        iframe.width = '0';
+        iframe.style.display = 'none';
+        iframe.style.visibility = 'hidden';
+        noscript.appendChild(iframe);
+        document.body.insertBefore(noscript, document.body.firstChild);
+      }
     }
   }, []);
 
