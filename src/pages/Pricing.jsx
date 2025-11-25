@@ -322,7 +322,7 @@ export default function Pricing() {
 
 
                       <Button 
-                        onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                        onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                         className="w-full bg-teal-600 hover:bg-teal-700 text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                         Meet an Expert
                         <ArrowRight className="ml-2 w-5 h-5" />
@@ -346,7 +346,7 @@ export default function Pricing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg" 
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8">
               Meet an Expert
@@ -371,7 +371,7 @@ export default function Pricing() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
+              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">

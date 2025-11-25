@@ -213,7 +213,7 @@ export default function Home() {
                 About
               </button>
               <Button
-                onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
                 aria-label="Meet an expert">
 
@@ -236,7 +236,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Button
-              onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
               className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               aria-label="Meet an expert to get started">
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
               
               <Button
-                onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
                 aria-label="Meet an expert about staff augmentation">
 
@@ -480,7 +480,7 @@ export default function Home() {
               </Card>
 
               <Button
-                onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                 aria-label="Meet an expert about team migration">
 
@@ -672,7 +672,7 @@ export default function Home() {
             Hire smarter, scale faster, and manage globally with clarity and confidence.
           </p>
           <Button
-            onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')}
+            onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
             size="lg"
             className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             aria-label="Get started - meet an expert">
@@ -701,7 +701,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
                 Migrate Team
               </button>
-              <button onClick={() => window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank')} className="hover:text-white transition-colors">
+              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">
                 Meet an Expert
               </button>
             </div>
