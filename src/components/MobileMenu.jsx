@@ -99,7 +99,7 @@ export default function MobileMenu({ onNavigate }) {
             <Button
               onClick={() => {
                 setIsOpen(false);
-                window.open('https://calendar.app.google/imJtVunsE9tYncQ79', '_blank');
+                window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank');
               }}
               className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full"
             >
