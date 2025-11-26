@@ -27,6 +27,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import MobileMenu from "../components/MobileMenu";
 import Favicon from "../components/Favicon";
+import PreloadHints from "../components/PreloadHints";
 
 export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -187,8 +188,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9]">
-      <Favicon />
+        <div className="min-h-screen bg-[#FAFAF9]">
+          <Favicon />
+          <PreloadHints />
       
       {/* Structured Data for SEO */}
       <script type="application/ld+json">
@@ -239,7 +241,7 @@ export default function Home() {
               </button>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
                 aria-label="Meet an expert">
 
                 Meet an Expert
@@ -250,6 +252,8 @@ export default function Home() {
               </div>
               </nav>
 
+      {/* Main Content */}
+      <main id="main-content">
       {/* Hero Section */}
       <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-20 pb-32 px-6 lg:px-8" aria-label="Hero section">
         <div className="max-w-5xl mx-auto text-center">
@@ -263,7 +267,7 @@ export default function Home() {
             <Button
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
               aria-label="Meet an expert to get started">
 
               Meet an Expert
@@ -273,7 +277,7 @@ export default function Home() {
               onClick={() => scrollToSection('byot')}
               size="lg"
               variant="outline"
-              className="border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300"
+              className="border-2 border-gray-300 hover:border-[#006F64] hover:text-[#006F64] rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
               aria-label="Learn about migrating your existing team">
 
               Migrate Your Team
@@ -305,10 +309,10 @@ export default function Home() {
               <h2 id="why-exist-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 LatAm Has World-Class Talent. You Just Need the Right System to Hire It.
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-[#4E5A64] mb-6 leading-relaxed">
                 Hiring from Latin America is complex. Slow vetting cycles, compliance uncertainty, and hidden costs make scaling teams painful.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">TalentLean eliminates that friction by combining AI-driven vetting, human orchestration, and compliant   infrastructure, with perfect time-zone alignment and regional expertise.
+              <p className="text-lg text-[#4E5A64] leading-relaxed">TalentLean eliminates that friction by combining AI-driven vetting, human orchestration, and compliant   infrastructure, with perfect time-zone alignment and regional expertise.
 
               </p>
             </div>
@@ -341,7 +345,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Compensation + <span className="font-bold text-red-600">USD 1,500/month</span> <span className="text-sm bg-red-50 text-red-700 px-2 py-1 rounded-full font-semibold">Launch Promo</span>
+                        Complete transparency: Compensation + <span className="font-bold text-[#C62828]">USD 1,500/month</span> <span className="text-sm bg-[#FDEAEA] text-[#C62828] px-2 py-1 rounded-full font-semibold">Launch Promo</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -362,33 +366,33 @@ export default function Home() {
               </Card>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100" aria-hidden="true">
-                <Users className="w-8 h-8 text-teal-600" />
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E6F4F1]" aria-hidden="true">
+                <Users className="w-8 h-8 text-[#006F64]" />
               </div>
-              <h2 id="augmentation-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 id="augmentation-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] mb-4">
                 Staff Augmentation for LatAm
               </h2>
-              <p className="text-xl text-teal-600 font-semibold mb-6">
+              <p className="text-xl text-[#006F64] font-semibold mb-6">
                 Build long-term, compliant, remote LatAm teams with confidence.
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-[#4E5A64] mb-8 leading-relaxed">
                 Hire full-time remote developers from Latin America under TalentLean's compliant employment structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
               
               {/* Launch Promotion Badge */}
-              <div className="bg-red-50 border-2 border-red-300 rounded-lg p-4 mb-6 flex items-start gap-3">
-                <Zap className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+              <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 mb-6 flex items-start gap-3">
+                <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <div className="font-bold text-red-900 mb-1">🎉 Launch Promotion: Save $500/month</div>
-                  <div className="text-sm text-gray-700">
-                    <span className="line-through text-gray-500">$2,000/month</span> → <span className="font-bold text-red-700">$1,500/month</span> per developer. Limited time offer!
+                  <div className="font-bold text-[#2B2E32] mb-1">🎉 Launch Promotion: Save $500/month</div>
+                  <div className="text-sm text-[#2B2E32]">
+                    <span className="line-through text-[#4E5A64]">$2,000/month</span> → <span className="font-bold text-[#C62828]">$1,500/month</span> per developer. Limited time offer!
                   </div>
                 </div>
               </div>
               
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all"
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
                 aria-label="Meet an expert about staff augmentation">
 
                 Meet an Expert
@@ -404,12 +408,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
-              <Globe2 className="w-8 h-8 text-teal-600" />
+              <Globe2 className="w-8 h-8 text-[#006F64]" />
             </div>
-            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] mb-4">
               Bring Your Own Talent
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">We remove global hiring friction and safeguard every employment detail.
+            <p className="text-lg text-[#4E5A64] max-w-2xl mx-auto leading-relaxed">We remove global hiring friction and safeguard every employment detail.
 
             </p>
           </div>
@@ -417,20 +421,20 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <Card className="border-2 border-white shadow-xl bg-white">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-[#2B2E32] mb-6">
                   Migrate & Consolidate Your Direct Hires
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
+                <p className="text-lg text-[#4E5A64] mb-6 leading-relaxed">Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
 
                 </p>
-                <p className="text-lg text-gray-900 font-semibold mb-6">
+                <p className="text-lg text-[#2B2E32] font-semibold mb-6">
                   You keep the people you trust. We take over everything else.
                 </p>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                      <span className="text-teal-600 font-bold text-sm">1</span>
+                    <div className="w-8 h-8 rounded-full bg-[#E6F4F1] flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#015E53] font-bold text-sm">1</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
@@ -439,22 +443,22 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                      <span className="text-teal-600 font-bold text-sm">2</span>
+                    <div className="w-8 h-8 rounded-full bg-[#E6F4F1] flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#015E53] font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Complete Payroll & Benefits Administration</h4>
-                      <p className="text-sm text-gray-600">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
+                      <h4 className="font-semibold text-[#2B2E32] mb-1">Complete Payroll & Benefits Administration</h4>
+                      <p className="text-sm text-[#4E5A64]">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                      <span className="text-teal-600 font-bold text-sm">3</span>
+                    <div className="w-8 h-8 rounded-full bg-[#E6F4F1] flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#015E53] font-bold text-sm">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Zero-Overhead Operations</h4>
-                      <p className="text-sm text-gray-600">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
+                      <h4 className="font-semibold text-[#2B2E32] mb-1">Zero-Overhead Operations</h4>
+                      <p className="text-sm text-[#4E5A64]">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
                     </div>
                   </div>
                 </div>
@@ -465,10 +469,10 @@ export default function Home() {
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <UserCheck className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <UserCheck className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Global Coverage</h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-bold text-[#2B2E32] mb-2">Global Coverage</h4>
+                      <p className="text-[#4E5A64]">
                         While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
                       </p>
                     </div>
@@ -479,10 +483,10 @@ export default function Home() {
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Shield className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                    <Shield className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Full Compliance Protection</h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-bold text-[#2B2E32] mb-2">Full Compliance Protection</h4>
+                      <p className="text-[#4E5A64]">
                         We assume employment liability and guarantee full compliance in every developer's home country.
                       </p>
                     </div>
@@ -493,10 +497,10 @@ export default function Home() {
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <BadgeCheck className="w-8 h-8 text-green-600 flex-shrink-0" />
+                    <BadgeCheck className="w-8 h-8 text-[#015E53] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">30-Day Money-Back Guarantee</h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-bold text-[#2B2E32] mb-2">30-Day Money-Back Guarantee</h4>
+                      <p className="text-[#4E5A64]">
                         Seamless transition or full refund within 30 days—no questions asked.
                       </p>
                     </div>
@@ -506,7 +510,7 @@ export default function Home() {
 
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
                 aria-label="Meet an expert about team migration">
 
                 Meet an Expert
@@ -520,10 +524,10 @@ export default function Home() {
       {/* How It Works */}
       <section id="how-it-works" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]" aria-labelledby="how-it-works-heading">
         <div className="max-w-6xl mx-auto">
-          <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
+          <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] text-center mb-4">
             The future of hiring is intelligent orchestration.
           </h2>
-          <p className="text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-[#4E5A64] mb-16 max-w-3xl mx-auto">
             Four seamless steps from candidate discovery to compliant employment.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -559,19 +563,19 @@ export default function Home() {
               onMouseLeave={() => setHoveredStep(null)}
               className={`border-2 transition-all duration-300 cursor-pointer ${
               hoveredStep === index ?
-              'border-teal-600 shadow-lg -translate-y-2' :
+              'border-[#006F64] shadow-lg -translate-y-2' :
               'border-gray-200 hover:border-gray-300'}`
               }>
 
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 font-bold text-xl mb-6 mx-auto">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#E6F4F1] text-[#015E53] font-bold text-xl mb-6 mx-auto">
                     {step.number}
                   </div>
                   <step.icon className="w-10 h-10 text-gray-900 mb-4 mx-auto" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                  <h3 className="text-xl font-bold text-[#2B2E32] mb-3 text-center">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
+                  <p className="text-[#4E5A64] text-center leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>
@@ -584,10 +588,10 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8">Transparent, predictable, and fair.
+          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] text-center mb-8">Transparent, predictable, and fair.
 
           </h2>
-          <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-[#4E5A64] mb-12 max-w-3xl mx-auto">
             No hidden fees. No surprises. You define the salary, we handle everything else.
           </p>
 
@@ -596,34 +600,34 @@ export default function Home() {
               onMouseEnter={() => setHoveredCard('augmentation')}
               onMouseLeave={() => setHoveredCard(null)}
               className={`border-2 transition-all duration-300 ${
-              hoveredCard === 'augmentation' ? 'border-teal-600 shadow-xl -translate-y-2' : 'border-gray-200'}`
+              hoveredCard === 'augmentation' ? 'border-[#006F64] shadow-xl -translate-y-2' : 'border-gray-200'}`
               }>
 
               <CardContent className="p-10">
-                <div className="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mb-6">
-                  <UsersRound className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6">
+                  <UsersRound className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
                   Staff Augmentation
                 </h3>
                 <div className="mb-4">
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-2xl text-gray-400 line-through">$2,000</span>
-                    <span className="text-4xl font-bold text-red-600">$1,500</span>
+                    <span className="text-2xl text-[#4E5A64] line-through">$2,000</span>
+                    <span className="text-4xl font-bold text-[#C62828]">$1,500</span>
                   </div>
-                  <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-3 py-1 mb-2">
-                    <Zap className="w-4 h-4 text-red-600" />
-                    <span className="text-xs font-bold text-red-700">LAUNCH PROMO</span>
+                  <div className="inline-flex items-center gap-2 bg-[#FDEAEA] border border-[#C62828] rounded-full px-3 py-1 mb-2">
+                    <Zap className="w-4 h-4 text-[#C62828]" aria-hidden="true" />
+                    <span className="text-xs font-bold text-[#C62828]">LAUNCH PROMO</span>
                   </div>
                   <p className="text-sm text-gray-500">
                     Per month per developer + Salary (you define)
                   </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-[#4E5A64] leading-relaxed mb-4">
                   Simple, transparent pricing. You define the developer's compensation—we add our flat monthly fee. No percentages, no hidden costs, complete clarity.
                 </p>
-                <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
-                  <BadgeCheck className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2">
+                  <BadgeCheck className="w-4 h-4" aria-hidden="true" />
                   <span className="font-medium">30-day money-back guarantee</span>
                 </div>
               </CardContent>
@@ -633,7 +637,7 @@ export default function Home() {
           {/* CTA to Calculator */}
           <div className="my-5 text-center">
             <Link to={createPageUrl("Pricing")}>
-              <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all" aria-label="Calculate your hiring costs">
+              <Button size="lg" className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2" aria-label="Calculate your hiring costs">
                 <Calculator className="w-5 h-5 mr-2" aria-hidden="true" />
                 Calculate Your Costs
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
@@ -649,37 +653,37 @@ export default function Home() {
       {/* Why Different */}
       <section id="why-different" className="py-24 px-6 lg:px-8 bg-[#FAFAF9]" aria-labelledby="why-different-heading">
         <div className="max-w-6xl mx-auto">
-          <h2 id="why-different-heading" className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+          <h2 id="why-different-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] text-center mb-16">
             Why companies choose TalentLean
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <Cpu className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6 mx-auto">
+                <Cpu className="w-10 h-10 text-[#006F64]" aria-hidden="true" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Precision</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">AI Precision</h3>
+              <p className="text-[#4E5A64] leading-relaxed">
                 Custom-trained models that understand your technical needs and LatAm talent landscape.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <Shield className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6 mx-auto">
+                <Shield className="w-10 h-10 text-[#006F64]" aria-hidden="true" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance First</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">Compliance First</h3>
+              <p className="text-[#4E5A64] leading-relaxed">
                 LatAm payroll, contracts, and legal protection built-in across all countries.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-teal-100 flex items-center justify-center mb-6 mx-auto">
-                <UserCheck className="w-10 h-10 text-teal-600" />
+              <div className="w-20 h-20 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6 mx-auto">
+                <UserCheck className="w-10 h-10 text-[#006F64]" aria-hidden="true" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Dedicated Account Manager</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">Dedicated Account Manager</h3>
+              <p className="text-[#4E5A64] leading-relaxed">
                 Your direct point of contact for onboarding, compliance questions, and ongoing support. Typical response time: one business day.
               </p>
             </div>
@@ -688,33 +692,34 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-teal-600 to-teal-700 text-white" aria-labelledby="cta-heading">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 id="cta-heading" className="text-4xl md:text-6xl font-bold mb-6">
-            Let's build your next great LatAm team.
-          </h2>
-          <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
-            Hire smarter, scale faster, and manage globally with clarity and confidence.
-          </p>
-          <Button
-            onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-            size="lg"
-            className="bg-white text-teal-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            aria-label="Get started - meet an expert">
+      <section id="cta" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-[#006F64] to-[#014D44] text-white" aria-labelledby="cta-heading">
+      <div className="max-w-4xl mx-auto text-center">
+      <h2 id="cta-heading" className="text-4xl md:text-6xl font-bold mb-6">
+        Let's build your next great LatAm team.
+      </h2>
+      <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
+        Hire smarter, scale faster, and manage globally with clarity and confidence.
+      </p>
+      <Button
+        onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+        size="lg"
+        className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+        aria-label="Get started - meet an expert">
 
-            Meet an Expert
-            <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-          </Button>
-        </div>
+        Meet an Expert
+        <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+      </Button>
+      </div>
       </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-6 lg:px-8" role="contentinfo" aria-label="Site footer">
+      <footer className="bg-gray-900 text-gray-300 py-12 px-6 lg:px-8" role="contentinfo" aria-label="Site footer">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <div className="text-xl font-bold text-white mb-2">
-                Talent<span className="text-teal-500">Lean</span>
+                Talent<span className="text-[#4FD1C5]">Lean</span>
               </div>
               <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
