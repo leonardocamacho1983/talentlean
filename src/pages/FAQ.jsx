@@ -182,6 +182,7 @@ export default function FAQ() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <Link to={createPageUrl("Pricing")} className="hover:text-white transition-colors">Pricing</Link>
+              <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">FAQ</Link>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
           </div>

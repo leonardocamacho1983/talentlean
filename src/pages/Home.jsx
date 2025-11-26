@@ -728,6 +728,9 @@ export default function Home() {
               <button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">
                 Pricing
               </button>
+              <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">
+                FAQ
+              </Link>
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
                 Migrate Team
               </button>
