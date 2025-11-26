@@ -380,9 +380,11 @@ export default function Pricing() {
               className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
               Meet an Expert
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-              View FAQ
-            </Button>
+            <Link to={createPageUrl("FAQ")}>
+              <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
+                View FAQ
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -400,6 +402,7 @@ export default function Pricing() {
             </div>
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
+              <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">FAQ</Link>
               <button className="hover:text-white transition-colors">About Us</button>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
