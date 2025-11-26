@@ -380,9 +380,11 @@ export default function Pricing() {
               className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
               Meet an Expert
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-              View FAQ
-            </Button>
+            <Link to={createPageUrl("FAQ")}>
+              <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
+                View FAQ
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
