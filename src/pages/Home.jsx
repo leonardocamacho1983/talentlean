@@ -724,10 +724,10 @@ export default function Home() {
               <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
             </div>
             <div className="flex gap-8 text-sm">
-              <button className="hover:text-white transition-colors">About Us</button>
-              <button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">
+              <button onClick={() => scrollToSection('why-different')} className="hover:text-white transition-colors">About Us</button>
+              <Link to={createPageUrl("Pricing")} className="hover:text-white transition-colors">
                 Pricing
-              </button>
+              </Link>
               <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">
                 FAQ
               </Link>
