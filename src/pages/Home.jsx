@@ -96,7 +96,7 @@ export default function Home() {
       ogDescription.setAttribute('property', 'og:description');
       document.head.appendChild(ogDescription);
     }
-    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full EOR support, and 30-day money-back guarantee.";
+    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full compliance support, and 30-day money-back guarantee.";
 
     let ogType = document.querySelector('meta[property="og:type"]');
     if (!ogType) {
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="min-h-screen bg-[#FAFAF9]">
           <Favicon />
           <PreloadHints />
-      
+
       {/* Structured Data for SEO */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}

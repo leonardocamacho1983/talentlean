@@ -2,6 +2,32 @@ import React from "react";
 
 export default function Favicon() {
   React.useEffect(() => {
+    // Function to generate a simple TL favicon using canvas
+    const generateFavicon = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 64;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+
+      // Background gradient (teal)
+      const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+      gradient.addColorStop(0, '#14b8a6'); // teal-500
+      gradient.addColorStop(1, '#0d9488'); // teal-600
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 64, 64);
+
+      // Draw "TL" text
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 32px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('TL', 32, 32);
+
+      return canvas.toDataURL('image/png');
+    };
+
+    const faviconUrl = generateFavicon();
+
     // Remove existing favicons
     const existingFavicons = document.querySelectorAll('link[rel*="icon"]');
     existingFavicons.forEach(link => link.remove());
@@ -10,7 +36,7 @@ export default function Favicon() {
     const appleTouchIcon = document.createElement('link');
     appleTouchIcon.rel = 'apple-touch-icon';
     appleTouchIcon.sizes = '180x180';
-    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690ccd809e130d361a8b8899/4b2d0e52b_apple-touch-icon.png';
+    appleTouchIcon.href = faviconUrl;
     document.head.appendChild(appleTouchIcon);
 
     // Add favicon 32x32
@@ -18,7 +44,7 @@ export default function Favicon() {
     favicon32.rel = 'icon';
     favicon32.type = 'image/png';
     favicon32.sizes = '32x32';
-    favicon32.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690ccd809e130d361a8b8899/eea4e0cda_favicon-32x32.png';
+    favicon32.href = faviconUrl;
     document.head.appendChild(favicon32);
 
     // Add favicon 16x16
@@ -26,7 +52,7 @@ export default function Favicon() {
     favicon16.rel = 'icon';
     favicon16.type = 'image/png';
     favicon16.sizes = '16x16';
-    favicon16.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690ccd809e130d361a8b8899/10d777bf8_favicon-16x16.png';
+    favicon16.href = faviconUrl;
     document.head.appendChild(favicon16);
   }, []);
 
