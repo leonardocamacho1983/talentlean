@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import path from 'path'
 
-// Plugin to inject preload hints for critical resources
+// Plugin to optimize critical CSS loading and preload hints
 function injectPreloadPlugin() {
   return {
     name: 'inject-preload',
@@ -11,11 +11,14 @@ function injectPreloadPlugin() {
       if (!bundle) return html;
 
       const preloadLinks = [];
+      let mainCssFile = null;
 
       // Find critical CSS and JS files
       for (const [fileName, chunk] of Object.entries(bundle)) {
-        // Preload main CSS with high priority
+        // Track main CSS file
         if (fileName.includes('index') && fileName.endsWith('.css')) {
+          mainCssFile = fileName;
+          // Preload main CSS with high priority
           preloadLinks.push(`<link rel="preload" href="/${fileName}" as="style" fetchpriority="high" />`);
         }
         // Preload main JS entry with high priority
@@ -26,6 +29,18 @@ function injectPreloadPlugin() {
         if (fileName.includes('react-vendor') && fileName.endsWith('.js')) {
           preloadLinks.push(`<link rel="modulepreload" href="/${fileName}" />`);
         }
+      }
+
+      // Convert blocking CSS to async loading
+      if (mainCssFile) {
+        const cssLinkPattern = new RegExp(`<link rel="stylesheet"[^>]*href="[^"]*${mainCssFile}"[^>]*>`, 'g');
+        html = html.replace(cssLinkPattern, (match) => {
+          // Convert to async loading with media="print" trick
+          return match.replace(
+            'rel="stylesheet"',
+            'rel="stylesheet" media="print" onload="this.media=\'all\';this.onload=null"'
+          ) + `\n    <noscript>${match}</noscript>`;
+        });
       }
 
       // Inject preload links after noscript fonts, before GTM script
