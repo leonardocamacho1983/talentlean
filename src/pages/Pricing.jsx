@@ -21,7 +21,7 @@ import {
 "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import PreloadHints from "../components/PreloadHints";
+import CanonicalURL from "../components/CanonicalURL";
 
 export default function Pricing() {
   const [serviceType, setServiceType] = useState("augmentation");
@@ -34,31 +34,6 @@ export default function Pricing() {
   const [augmentationHires, setAugmentationHires] = useState(5);
   const [developerSalary, setDeveloperSalary] = useState(4500);
   const [contractMonths, setContractMonths] = useState(12);
-
-  // Google Tag Manager
-  useEffect(() => {
-    if (!document.querySelector('script[src*="googletagmanager.com/gtm.js?id=GTM-TND3K4R9"]')) {
-      // GTM Head Script
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TND3K4R9');
-
-      // GTM noscript iframe
-      if (!document.querySelector('iframe[src*="googletagmanager.com/ns.html?id=GTM-TND3K4R9"]')) {
-        const noscript = document.createElement('noscript');
-        const iframe = document.createElement('iframe');
-        iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-TND3K4R9';
-        iframe.height = '0';
-        iframe.width = '0';
-        iframe.style.display = 'none';
-        iframe.style.visibility = 'hidden';
-        noscript.appendChild(iframe);
-        document.body.insertBefore(noscript, document.body.firstChild);
-      }
-    }
-  }, []);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -93,7 +68,7 @@ export default function Pricing() {
 
   return (
         <div className="min-h-screen bg-[#FAFAF9]">
-          <PreloadHints />
+          <CanonicalURL path="/Pricing" />
           {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import PreloadHints from "../components/PreloadHints";
+import CanonicalURL from "../components/CanonicalURL";
 
 export default function FAQ() {
   useEffect(() => {
@@ -79,8 +79,8 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
-      <PreloadHints />
-      
+      <CanonicalURL path="/FAQ" />
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
