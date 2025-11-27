@@ -3,6 +3,39 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import path from 'path'
 
+// Plugin to inject preload hints for critical resources
+function injectPreloadPlugin() {
+  return {
+    name: 'inject-preload',
+    transformIndexHtml(html, { bundle }) {
+      if (!bundle) return html;
+
+      const preloadLinks = [];
+
+      // Find critical CSS and JS files
+      for (const [fileName, chunk] of Object.entries(bundle)) {
+        // Preload main CSS with high priority
+        if (fileName.includes('index') && fileName.endsWith('.css')) {
+          preloadLinks.push(`<link rel="preload" href="/${fileName}" as="style" fetchpriority="high" />`);
+        }
+        // Preload main JS entry with high priority
+        if (fileName.includes('index') && fileName.endsWith('.js') && chunk.isEntry) {
+          preloadLinks.push(`<link rel="modulepreload" href="/${fileName}" fetchpriority="high" />`);
+        }
+        // Preload critical vendor chunks (react)
+        if (fileName.includes('react-vendor') && fileName.endsWith('.js')) {
+          preloadLinks.push(`<link rel="modulepreload" href="/${fileName}" />`);
+        }
+      }
+
+      // Inject preload links after noscript fonts, before GTM script
+      const insertAfter = '</noscript>';
+      const position = html.indexOf(insertAfter) + insertAfter.length;
+      return html.slice(0, position) + '\n    <!-- Critical Resource Preloads -->\n    ' + preloadLinks.join('\n    ') + html.slice(position);
+    }
+  };
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -12,6 +45,7 @@ export default defineConfig({
       legacySDKImports: process.env.BASE44_LEGACY_SDK_IMPORTS === 'true'
     }),
     react(),
+    injectPreloadPlugin(),
   ],
   resolve: {
     alias: {
