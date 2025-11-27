@@ -40,6 +40,23 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/Home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Pricing",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/FAQ",
+      "destination": "/faq",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
