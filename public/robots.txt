@@ -1,0 +1,9 @@
+# robots.txt for TalentLean
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://talentlean.com/sitemap.xml
+
+# Disallow admin or backend paths (if any in future)
+# Disallow: /admin/
