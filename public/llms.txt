@@ -1,0 +1,35 @@
+# TalentLean
+
+> TalentLean is an AI-powered Latin American staff augmentation platform that helps companies build and scale remote tech teams. We provide transparent flat-fee pricing, full EOR (Employer of Record) compliance, and expert vetting of LatAm developers across all major technology stacks.
+
+TalentLean specializes in nearshore talent sourcing from Latin America, offering mid-to-senior level engineers with expertise in full-stack, front-end, back-end, DevOps, QA, data, and mobile development. Our proprietary AI platform evaluates technical skills, code quality, English fluency, and soft skills, while human recruiters validate results to ensure the best candidate matches.
+
+Key differentiators include:
+- **Transparent Pricing**: Flat monthly service fee with no hidden mark-ups or percentages
+- **Full Legal Compliance**: We handle payroll, benefits, taxes, and serve as legal shield for clients
+- **AI-Powered Vetting**: Machine learning combined with expert recruiter validation
+- **Risk-Free Engagement**: 30-day money-back guarantee
+- **Dedicated Support**: Single point of contact for onboarding and ongoing issues
+
+## Main Pages
+
+- [Home](https://talentlean.com/): Landing page with service overview, how it works, benefits, and client testimonials
+- [Pricing](https://talentlean.com/Pricing): Interactive pricing calculator for staff augmentation and staffing services with transparent cost breakdowns
+- [FAQ](https://talentlean.com/FAQ): Frequently asked questions about services, pricing, vetting process, and compliance
+
+## Technical Information
+
+- **Platform**: React 18 with Vite build system
+- **UI Framework**: TailwindCSS with Radix UI components
+- **Lazy Loading**: Implemented for optimal performance
+- **SEO Optimized**: Comprehensive meta tags, sitemap, robots.txt, canonical URLs
+- **Performance**: 96/100 Lighthouse performance score
+
+## SEO & Discoverability
+
+- [Sitemap](https://talentlean.com/sitemap.xml): Complete list of all pages for search engine crawlers
+- [Robots.txt](https://talentlean.com/robots.txt): Crawler directives and sitemap reference
+
+## Optional
+
+Additional technical documentation and implementation details are available in the GitHub repository for developers and technical partners.
