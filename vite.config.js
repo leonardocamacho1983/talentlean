@@ -32,7 +32,7 @@ export default defineConfig({
           // Vendor chunk for node_modules
           if (id.includes('node_modules')) {
             // Separate large libraries
-            if (id.includes('react') || id.includes('react-dom')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
               return 'react-vendor';
             }
             if (id.includes('@radix-ui')) {
@@ -40,6 +40,12 @@ export default defineConfig({
             }
             if (id.includes('lucide-react')) {
               return 'icons-vendor';
+            }
+            if (id.includes('@tanstack/query') || id.includes('@tanstack/react-query')) {
+              return 'query-vendor';
+            }
+            if (id.includes('@vercel/analytics') || id.includes('@vercel/speed-insights')) {
+              return 'vercel-vendor';
             }
             // All other node_modules
             return 'vendor';
@@ -63,5 +69,14 @@ export default defineConfig({
 
     // CSS code splitting
     cssCodeSplit: true,
+
+    // CSS minification options
+    cssMinify: true,
+
+    // Enable tree-shaking for better optimization
+    reportCompressedSize: false, // Faster builds
+
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
   },
 });
