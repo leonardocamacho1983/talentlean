@@ -18,8 +18,8 @@ function injectPreloadPlugin() {
         // Track main CSS file
         if (fileName.includes('index') && fileName.endsWith('.css')) {
           mainCssFile = fileName;
-          // Preload main CSS with high priority
-          preloadLinks.push(`<link rel="preload" href="/${fileName}" as="style" fetchpriority="high" />`);
+          // Preload main CSS with high priority and crossorigin for CORS matching
+          preloadLinks.push(`<link rel="preload" href="/${fileName}" as="style" fetchpriority="high" crossorigin />`);
         }
         // Preload main JS entry with high priority
         if (fileName.includes('index') && fileName.endsWith('.js') && chunk.isEntry) {
