@@ -5,14 +5,34 @@
       "destination": "https://ghost.talentlean.com/"
     },
     {
+      "source": "/insights/",
+      "destination": "https://ghost.talentlean.com/"
+    },
+    {
       "source": "/insights/(.*)",
       "destination": "https://ghost.talentlean.com/$1"
     }
   ],
-
   "redirects": [
     {
-      "source": "https://insights.talentlean.com/:path*",
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "insights.talentlean.com"
+        }
+      ],
+      "destination": "https://talentlean.com/insights",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "insights.talentlean.com"
+        }
+      ],
       "destination": "https://talentlean.com/insights/:path*",
       "permanent": true
     }
