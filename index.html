@@ -12,6 +12,29 @@
     <meta name="author" content="TalentLean" />
     <meta name="theme-color" content="#14b8a6" />
 
+    <!-- Critical CSS - inline for instant render -->
+    <style>
+      /* Reset & Base */
+      *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:currentColor}
+      html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif;tab-size:4}
+      body{margin:0;line-height:inherit}
+
+      /* Loading spinner - prevents layout shift */
+      #root{min-height:100vh}
+      .fixed{position:fixed}
+      .inset-0{inset:0}
+      .flex{display:flex}
+      .items-center{align-items:center}
+      .justify-center{justify-content:center}
+
+      /* Hide scrollbar during initial load */
+      html{overflow-y:scroll;scrollbar-width:thin}
+      body{background-color:#fafaf9}
+
+      /* Prevent flash of unstyled content */
+      #root:empty{min-height:100vh;display:flex;align-items:center;justify-content:center}
+    </style>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://talentlean.com/" />
@@ -37,9 +60,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-    <!-- Fonts with font-display: swap for better performance - async loading -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    <!-- Critical font preload - only load what's needed -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" /></noscript>
     <!-- Google Tag Manager - Ultra-deferred for performance -->
     <script>
     window.dataLayer = window.dataLayer || [];
