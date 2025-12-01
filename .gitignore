@@ -28,3 +28,7 @@ dist-ssr
 *.sw?
 
 .env
+# Lighthouse reports
+lighthouse*.html
+lighthouse*.json
+talentlean-diagnosis.html
