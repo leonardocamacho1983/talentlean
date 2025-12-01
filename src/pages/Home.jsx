@@ -610,7 +610,7 @@ export default function Home() {
           {/* CTA to Calculator */}
           <div className="my-5 text-center">
             <Link to={createPageUrl("Pricing")}>
-              <Button size="lg" className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2" aria-label="Calculate your hiring costs">
+              <Button size="lg" className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
                 <Calculator className="w-5 h-5 mr-2" aria-hidden="true" />
                 Calculate Your Costs
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
