@@ -214,8 +214,7 @@ export default function Home() {
               </button>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-                aria-label="Meet an expert">
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
                 Meet an Expert
               </Button>
@@ -240,8 +239,7 @@ export default function Home() {
             <Button
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
-              className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-              aria-label="Meet an expert to get started">
+              className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
               Meet an Expert
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
@@ -365,8 +363,7 @@ export default function Home() {
               
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-                aria-label="Meet an expert about staff augmentation">
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
                 Meet an Expert
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
@@ -483,8 +480,7 @@ export default function Home() {
 
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-                aria-label="Meet an expert about team migration">
+                className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
                 Meet an Expert
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
@@ -676,8 +672,7 @@ export default function Home() {
       <Button
         onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
         size="lg"
-        className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-        aria-label="Get started - meet an expert">
+        className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
         Meet an Expert
         <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
