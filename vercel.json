@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/insights",
-      "destination": "https://ghost.talentlean.com/"
+      "destination": "https://ghost.talentlean.com/insights"
     },
     {
       "source": "/insights/",
-      "destination": "https://ghost.talentlean.com/"
+      "destination": "https://ghost.talentlean.com/insights/"
     },
     {
       "source": "/insights/(.*)",
-      "destination": "https://ghost.talentlean.com/$1"
+      "destination": "https://ghost.talentlean.com/insights/$1"
     }
   ],
   "redirects": [
