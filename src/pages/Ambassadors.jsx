@@ -174,14 +174,14 @@ export default function Ambassadors() {
             The TalentLean Ambassador Program
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Make introductions that matter. Help companies hire exceptional engineering talent and earn meaningful rewards for referrals that convert.
+            Make introductions that matter. Help companies hire exceptional engineering talent and earn meaningful rewards when referrals convert.
           </p>
           <Button
             onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFZMDcxsVY0QAY7qa-au-cBfJS8ecRfVf2GcVYxYC4mK_i6g/viewform', '_blank')}
             size="lg"
             className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 min-h-[44px] min-w-[44px]"
             aria-label="Apply to become a TalentLean Ambassador">
-            Apply as Ambassador
+            Apply to Become an Ambassador
             <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
           </Button>
         </div>
@@ -198,10 +198,10 @@ export default function Ambassadors() {
 
             <div className="space-y-6">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Scaling engineering teams is one of the hardest challenges in tech. If you know founders, operators, CTOs, or companies preparing to hire senior engineers, your introductions can directly shape their success — and generate meaningful income for you.
+                Scaling engineering teams is challenging. If someone knows founders, operators, CTOs, or companies hiring senior engineers, their introductions can shape company success and generate meaningful rewards.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
-                TalentLean Ambassadors earn rewards for every successful hire that comes from their introductions. No sales. No chasing. No obligation. Just high-quality intros when they make sense.
+                Ambassadors earn a share of TalentLean's placement fee for every successful hire. No sales pressure. Only relevant intros when they make sense.
               </p>
             </div>
           </div>
@@ -286,17 +286,17 @@ export default function Ambassadors() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link
-                to={createPageUrl("Home")}
+              <a
+                href="/talent"
                 className="text-teal-600 hover:text-teal-700 font-medium underline focus:outline-2 focus:outline-teal-600 focus:outline-offset-2">
-                Learn about our talent assessment process
-              </Link>
+                Learn about our talent assessment
+              </a>
               <span className="text-gray-300">•</span>
-              <Link
-                to={createPageUrl("Home")}
+              <a
+                href="/employers"
                 className="text-teal-600 hover:text-teal-700 font-medium underline focus:outline-2 focus:outline-teal-600 focus:outline-offset-2">
                 See how we work with companies
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -358,17 +358,11 @@ export default function Ambassadors() {
 
             <div className="space-y-6">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Ambassadors earn a share of TalentLean's placement fee for every successful hire. The more introductions you make — and the more hires that convert — the more you earn.
+                Ambassadors earn a percentage of TalentLean's placement fee for every successful hire. The percentage is defined individually with each ambassador.
               </p>
 
-              <div className="bg-gray-50 border-2 border-teal-100 rounded-lg p-6 my-6">
-                <p className="text-lg font-semibold text-gray-900 mb-2">
-                  Typical ambassador payouts range from <span className="text-teal-600">$2.5k to $12k per hire</span>, depending on the role's seniority and fee structure.
-                </p>
-              </div>
-
               <p className="text-xl text-gray-700 leading-relaxed font-semibold">
-                High-performing ambassadors unlock:
+                Benefits for ambassadors include:
               </p>
 
               <ul className="space-y-3 text-lg text-gray-700 ml-4">
@@ -378,20 +372,20 @@ export default function Ambassadors() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>Early access to market intelligence</span>
+                  <span>Early access to hiring intelligence</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>Priority notifications on companies preparing to hire</span>
+                  <span>Priority alerts when companies begin hiring</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>Exclusive TalentLean insights and benchmarks</span>
+                  <span>Exclusive insights and benchmarks</span>
                 </li>
               </ul>
 
               <p className="text-xl text-gray-700 leading-relaxed pt-6">
-                This is one of the simplest ways to monetize your network in tech without selling, pitching, or recruiting.
+                Meaningful rewards without sales activity or ongoing obligation.
               </p>
             </div>
           </div>
@@ -411,21 +405,21 @@ export default function Ambassadors() {
 
             <div className="space-y-6 mb-8">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Companies trust TalentLean because we connect them to rigorously vetted senior engineering talent. Our process balances speed with depth, enabling teams to hire quickly without compromising quality.
+                Companies trust TalentLean because we connect them to vetted senior engineering talent. Our strong assessment process and fast matching enable teams to hire quickly without compromising quality.
               </p>
 
               <p className="text-xl text-gray-700 leading-relaxed font-semibold">
-                We provide ambassadors with:
+                Ambassadors receive:
               </p>
 
               <ul className="space-y-3 text-lg text-gray-700 ml-4">
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>A transparent process for tracking referrals</span>
+                  <span>Referral tracking</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>Confirmation when intros move forward</span>
+                  <span>Progress visibility</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
@@ -433,13 +427,9 @@ export default function Ambassadors() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span>A team dedicated to supporting every step</span>
+                  <span>Dedicated support</span>
                 </li>
               </ul>
-
-              <p className="text-xl text-gray-700 leading-relaxed pt-4">
-                TalentLean's model is built for precision, efficiency, and long-term trust.
-              </p>
             </div>
           </div>
         </section>
@@ -463,6 +453,14 @@ export default function Ambassadors() {
             </Button>
           </div>
         </section>
+
+        {/* SEO Footnote Block */}
+        <p className="sr-only">
+          TalentLean Ambassador Program for tech leaders, founders, recruiters, and operators who want to refer companies hiring engineers
+          and earn rewards from successful engineering hiring referrals. TalentLean connects startups and global companies with vetted senior
+          software engineers, remote engineering teams, and high-performing technical talent. Ambassadors introduce companies needing
+          engineering recruitment support, senior engineer hiring, and global tech talent acquisition.
+        </p>
       </main>
 
       {/* Footer - reuse existing component */}
