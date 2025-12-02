@@ -144,11 +144,6 @@ export default function Ambassadors() {
                 Pricing
               </Link>
               <Link
-                to={createPageUrl("FAQ")}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-                FAQ
-              </Link>
-              <Link
                 to={createPageUrl("Ambassadors")}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Ambassadors
@@ -358,7 +353,7 @@ export default function Ambassadors() {
 
             <div className="space-y-6">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Ambassadors earn a percentage of TalentLean's placement fee for every successful hire. The percentage is defined individually with each ambassador.
+                Ambassadors earn a percentage of TalentLean's placement fee for every successful hire.
               </p>
 
               <p className="text-xl text-gray-700 leading-relaxed font-semibold">
@@ -486,6 +481,9 @@ export default function Ambassadors() {
               <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
                 Ambassadors
               </Link>
+              <a href="https://talentlean.com/insights/" className="hover:text-white transition-colors">
+                Insights
+              </a>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
