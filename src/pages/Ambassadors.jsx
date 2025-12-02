@@ -177,13 +177,12 @@ export default function Ambassadors() {
             Make introductions that matter. Help companies hire exceptional engineering talent and earn meaningful rewards.
           </p>
           <Button
-            asChild
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFZMDcxsVY0QAY7qa-au-cBfJS8ecRfVf2GcVYxYC4mK_i6g/viewform', '_blank')}
             size="lg"
-            className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 min-h-[44px] min-w-[44px]">
-            <Link to="/ambassadors/apply" aria-label="Apply to become a TalentLean Ambassador">
-              Apply as Ambassador
-              <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-            </Link>
+            className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 min-h-[44px] min-w-[44px]"
+            aria-label="Apply to become a TalentLean Ambassador">
+            Apply as Ambassador
+            <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
           </Button>
         </div>
       </header>
@@ -363,13 +362,12 @@ export default function Ambassadors() {
               Your introductions can accelerate careers and strengthen tech teams.
             </p>
             <Button
-              asChild
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfFZMDcxsVY0QAY7qa-au-cBfJS8ecRfVf2GcVYxYC4mK_i6g/viewform', '_blank')}
               size="lg"
-              className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-white focus:outline-offset-2 min-h-[44px] min-w-[44px]">
-              <Link to="/ambassadors/apply" aria-label="Apply now to the TalentLean Ambassador Program">
-                Apply Now
-                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-              </Link>
+              className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-white focus:outline-offset-2 min-h-[44px] min-w-[44px]"
+              aria-label="Apply now to the TalentLean Ambassador Program">
+              Apply Now
+              <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
         </section>
