@@ -14,7 +14,12 @@ export const AuthProvider = ({ children }) => {
   const [appPublicSettings, setAppPublicSettings] = useState(null); // Contains only { id, public_settings }
 
   useEffect(() => {
-    checkAppState();
+    // Defer auth check to allow initial render (improves FCP)
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => checkAppState(), { timeout: 100 });
+    } else {
+      setTimeout(checkAppState, 0);
+    }
   }, []);
 
   const checkAppState = async () => {

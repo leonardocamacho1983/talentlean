@@ -32,53 +32,10 @@ export default function Home() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [hoveredCard, setHoveredCard] = React.useState(null);
 
-  // SEO: Set document title and meta tags
+  // SEO: Set dynamic page title (meta tags are static in HTML for performance)
   React.useEffect(() => {
-    // Set page title
+    // Only update page title dynamically; all meta tags are in index.html for performance
     document.title = "TalentLean - LatAm Staff Augmentation | Hire Remote Developers with Full Compliance";
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = "Build and scale your LatAm tech team with TalentLean's AI-powered staff augmentation. Full compliance, transparent pricing ($1,500/month promo), and 30-day money-back guarantee. Hire remote developers from Latin America with perfect time-zone alignment.";
-
-    // Set or update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.content = "LatAm developers, staff augmentation, Latin America hiring, remote developers, payroll services, hire developers, LatAm tech talent, offshore development, nearshore staffing";
-
-    // Open Graph tags
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.content = "TalentLean - LatAm Staff Augmentation & Remote Developer Hiring";
-
-    let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      ogDescription = document.createElement('meta');
-      ogDescription.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.content = "Hire compliant, remote LatAm developers with transparent pricing. AI-powered vetting, full compliance support, and 30-day money-back guarantee.";
-
-    let ogType = document.querySelector('meta[property="og:type"]');
-    if (!ogType) {
-      ogType = document.createElement('meta');
-      ogType.setAttribute('property', 'og:type');
-      document.head.appendChild(ogType);
-    }
-    ogType.content = "website";
   }, []);
 
   const scrollToSection = (sectionId) => {

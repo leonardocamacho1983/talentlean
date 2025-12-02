@@ -8,86 +8,10 @@ import CanonicalURL from "../components/CanonicalURL";
 import MobileMenu from "../components/MobileMenu";
 
 export default function Ambassadors() {
-  // SEO: Set document title and meta tags
+  // SEO: Set dynamic page title (meta tags are static in HTML for performance)
   React.useEffect(() => {
-    // Set page title
+    // Only update page title dynamically; all meta tags are in index.html for performance
     document.title = "TalentLean Ambassador Program. Refer great companies. Earn meaningful rewards.";
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = "Join the TalentLean Ambassador Program. Introduce companies hiring senior engineering talent. Earn rewards for successful placements. Built for tech leaders, founders and operators.";
-
-    // Set or update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.content = "talentlean ambassador, referral program tech hiring, engineering recruitment, tech ambassador program, refer companies hiring engineers";
-
-    // Open Graph tags
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.content = "TalentLean Ambassador Program";
-
-    let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      ogDescription = document.createElement('meta');
-      ogDescription.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.content = "Help companies hire exceptional engineering talent. Earn rewards for impactful introductions.";
-
-    let ogType = document.querySelector('meta[property="og:type"]');
-    if (!ogType) {
-      ogType = document.createElement('meta');
-      ogType.setAttribute('property', 'og:type');
-      document.head.appendChild(ogType);
-    }
-    ogType.content = "website";
-
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (!ogUrl) {
-      ogUrl = document.createElement('meta');
-      ogUrl.setAttribute('property', 'og:url');
-      document.head.appendChild(ogUrl);
-    }
-    ogUrl.content = "https://www.talentlean.com/ambassadors";
-
-    let ogImage = document.querySelector('meta[property="og:image"]');
-    if (!ogImage) {
-      ogImage = document.createElement('meta');
-      ogImage.setAttribute('property', 'og:image');
-      document.head.appendChild(ogImage);
-    }
-    ogImage.content = "https://www.talentlean.com/og-image.svg";
-
-    let ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
-    if (!ogImageAlt) {
-      ogImageAlt = document.createElement('meta');
-      ogImageAlt.setAttribute('property', 'og:image:alt');
-      document.head.appendChild(ogImageAlt);
-    }
-    ogImageAlt.content = "TalentLean Ambassador illustration";
-
-    // Set robots meta tag
-    let metaRobots = document.querySelector('meta[name="robots"]');
-    if (!metaRobots) {
-      metaRobots = document.createElement('meta');
-      metaRobots.name = 'robots';
-      document.head.appendChild(metaRobots);
-    }
-    metaRobots.content = "index, follow";
   }, []);
 
   // Structured Data for SEO (Schema.org)

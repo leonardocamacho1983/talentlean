@@ -8,15 +8,8 @@ import CanonicalURL from "../components/CanonicalURL";
 export default function FAQ() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Only update page title dynamically; all meta tags are in index.html for performance
     document.title = "FAQ - TalentLean | LatAm Staff Augmentation";
-    
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = "Frequently asked questions about TalentLean's LatAm staff augmentation services, pricing, compliance, and hiring process.";
   }, []);
 
   const faqs = [
