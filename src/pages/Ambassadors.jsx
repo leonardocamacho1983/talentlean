@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ArrowRight, CheckCircle2, Users, Award, TrendingUp } from "lucide-react";
 import CanonicalURL from "../components/CanonicalURL";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Ambassadors() {
   // SEO: Set document title and meta tags
@@ -62,6 +63,31 @@ export default function Ambassadors() {
       document.head.appendChild(ogUrl);
     }
     ogUrl.content = "https://www.talentlean.com/ambassadors";
+
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogImage) {
+      ogImage = document.createElement('meta');
+      ogImage.setAttribute('property', 'og:image');
+      document.head.appendChild(ogImage);
+    }
+    ogImage.content = "https://www.talentlean.com/og-image.svg";
+
+    let ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
+    if (!ogImageAlt) {
+      ogImageAlt = document.createElement('meta');
+      ogImageAlt.setAttribute('property', 'og:image:alt');
+      document.head.appendChild(ogImageAlt);
+    }
+    ogImageAlt.content = "TalentLean Ambassador illustration";
+
+    // Set robots meta tag
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.content = "index, follow";
   }, []);
 
   // Structured Data for SEO (Schema.org)
@@ -93,6 +119,54 @@ export default function Ambassadors() {
         Skip to content
       </a>
 
+      {/* Navigation Header */}
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link
+              to={createPageUrl("Home")}
+              className="text-2xl font-bold text-gray-900 transition-colors hover:text-gray-700"
+              aria-label="TalentLean Home">
+              Talent<span className="text-teal-600">Lean</span>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link
+                to={createPageUrl("Home")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Home
+              </Link>
+              <Link
+                to={createPageUrl("Pricing")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Pricing
+              </Link>
+              <Link
+                to={createPageUrl("FAQ")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link
+                to={createPageUrl("Ambassadors")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Ambassadors
+              </Link>
+              <Button
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+                aria-label="Schedule a meeting with a TalentLean expert">
+                Meet an Expert
+              </Button>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu onNavigate={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-teal-50/30 pt-32 pb-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
@@ -106,7 +180,7 @@ export default function Ambassadors() {
             asChild
             size="lg"
             className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 min-h-[44px] min-w-[44px]">
-            <Link to="/ambassadors/apply">
+            <Link to="/ambassadors/apply" aria-label="Apply to become a TalentLean Ambassador">
               Apply as Ambassador
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Link>
@@ -292,7 +366,7 @@ export default function Ambassadors() {
               asChild
               size="lg"
               className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-white focus:outline-offset-2 min-h-[44px] min-w-[44px]">
-              <Link to="/ambassadors/apply">
+              <Link to="/ambassadors/apply" aria-label="Apply now to the TalentLean Ambassador Program">
                 Apply Now
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Link>

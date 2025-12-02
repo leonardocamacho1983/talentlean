@@ -92,6 +92,20 @@ export default function MobileMenu({ onNavigate }) {
           >
             Pricing
           </Link>
+          <Link
+            to={createPageUrl("FAQ")}
+            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+            onClick={() => setIsOpen(false)}
+          >
+            FAQ
+          </Link>
+          <Link
+            to={createPageUrl("Ambassadors")}
+            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Ambassadors
+          </Link>
           <button
             onClick={() => handleNavigate('why-different')}
             className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
