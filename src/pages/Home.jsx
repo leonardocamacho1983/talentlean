@@ -195,12 +195,6 @@ export default function Home() {
 
                 Staff Augmentation
               </button>
-              <button
-                onClick={() => scrollToSection('byot')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                Migrate Your Team
-              </button>
               <Link to={createPageUrl("Pricing")}
               className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
 
@@ -221,7 +215,7 @@ export default function Home() {
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
-                Meet an Expert
+                Talk to Us
               </Button>
               </div>
               <MobileMenu onNavigate={scrollToSection} />
@@ -246,7 +240,7 @@ export default function Home() {
               size="lg"
               className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
-              Meet an Expert
+              Talk to Us
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
@@ -699,13 +693,13 @@ export default function Home() {
                 Ambassadors
               </Link>
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
-                Migrate Team
+                Bring Your Own Talent
               </button>
               <a href="https://talentlean.com/insights/" className="hover:text-white transition-colors">
                 Insights
               </a>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">
-                Meet an Expert
+                Talk to Us
               </button>
             </div>
           </div>

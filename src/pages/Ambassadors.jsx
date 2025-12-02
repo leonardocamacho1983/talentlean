@@ -151,8 +151,8 @@ export default function Ambassadors() {
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-                aria-label="Schedule a meeting with a TalentLean expert">
-                Meet an Expert
+                aria-label="Talk to us at TalentLean">
+                Talk to Us
               </Button>
             </div>
 
@@ -484,6 +484,9 @@ export default function Ambassadors() {
               <a href="https://talentlean.com/insights/" className="hover:text-white transition-colors">
                 Insights
               </a>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">
+                Bring Your Own Talent
+              </button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
