@@ -206,6 +206,16 @@ export default function Home() {
 
                 Pricing
               </Link>
+              <Link to={createPageUrl("FAQ")}
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")}
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+
+                Ambassadors
+              </Link>
               <button
                 onClick={() => scrollToSection('why-different')}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
@@ -698,6 +708,9 @@ export default function Home() {
               </button>
               <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">
                 FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
+                Ambassadors
               </Link>
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
                 Migrate Team
