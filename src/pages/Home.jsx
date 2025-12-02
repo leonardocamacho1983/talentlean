@@ -206,11 +206,6 @@ export default function Home() {
 
                 Pricing
               </Link>
-              <Link to={createPageUrl("FAQ")}
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                FAQ
-              </Link>
               <Link to={createPageUrl("Ambassadors")}
               className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
 
@@ -245,7 +240,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             LatAm Staffing and Staff Augmentation powered by AI, human expertise, and full legal compliance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+          <div className="flex justify-center">
             <Button
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
@@ -253,15 +248,6 @@ export default function Home() {
 
               Meet an Expert
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-            </Button>
-            <Button
-              onClick={() => scrollToSection('byot')}
-              size="lg"
-              variant="outline"
-              className="border-2 border-gray-300 hover:border-[#006F64] hover:text-[#006F64] rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-              aria-label="Learn about migrating your existing team">
-
-              Migrate Your Team
             </Button>
           </div>
           
@@ -715,6 +701,9 @@ export default function Home() {
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
                 Migrate Team
               </button>
+              <a href="https://talentlean.com/insights/" className="hover:text-white transition-colors">
+                Insights
+              </a>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">
                 Meet an Expert
               </button>
