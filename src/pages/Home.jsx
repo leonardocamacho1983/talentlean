@@ -234,7 +234,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             LatAm Staffing and Staff Augmentation powered by AI, human expertise, and full legal compliance.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-8">
             <Button
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
@@ -244,13 +244,14 @@ export default function Home() {
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
-          
+
           {/* Money-Back Guarantee Badge */}
-          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-4">
-            <BadgeCheck className="w-5 h-5 text-green-600" />
-            <span className="text-sm font-semibold text-green-900">30-Day Money-Back Guarantee</span>
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-4">
+              <BadgeCheck className="w-5 h-5 text-green-600" />
+              <span className="text-sm font-semibold text-green-900">30-Day Money-Back Guarantee</span>
+            </div>
           </div>
-          
           <p className="text-sm text-gray-500">
             From recruitment to payroll, TalentLean makes LatAm hiring seamless—and human.
           </p>
