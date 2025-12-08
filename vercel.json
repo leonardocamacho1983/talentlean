@@ -1,12 +1,12 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/insights/?",
-      "dest": "https://ghost.talentlean.com/insights"
+      "source": "/insights",
+      "destination": "https://ghost.talentlean.com/insights"
     },
     {
-      "src": "/insights/(.*)",
-      "dest": "https://ghost.talentlean.com/insights/$1"
+      "source": "/insights/:path*",
+      "destination": "https://ghost.talentlean.com/insights/:path*"
     }
   ],
   "redirects": [
