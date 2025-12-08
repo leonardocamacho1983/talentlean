@@ -8,5 +8,7 @@
       "source": "/insights/:path*",
       "destination": "https://ghost.talentlean.com/:path*"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
