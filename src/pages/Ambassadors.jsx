@@ -405,7 +405,7 @@ export default function Ambassadors() {
               <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
                 Ambassadors
               </Link>
-              <a href="/insights" className="hover:text-white transition-colors" onClick={(e) => { window.location.href = '/insights'; }}>
+              <a href="/insights" className="hover:text-white transition-colors">
                 Insights
               </a>
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">

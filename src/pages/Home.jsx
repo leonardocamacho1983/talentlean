@@ -653,7 +653,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
                 Bring Your Own Talent
               </button>
-              <a href="/insights" className="hover:text-white transition-colors" onClick={(e) => { window.location.href = '/insights'; }}>
+              <a href="/insights" className="hover:text-white transition-colors">
                 Insights
               </a>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">

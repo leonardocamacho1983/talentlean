@@ -378,6 +378,9 @@ export default function Pricing() {
             <div className="flex gap-8 text-sm">
               <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">Home</Link>
               <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">FAQ</Link>
+              <a href="/insights" className="hover:text-white transition-colors">
+                Insights
+              </a>
               <button className="hover:text-white transition-colors">About Us</button>
               <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
             </div>
