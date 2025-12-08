@@ -1,20 +1,14 @@
 {
-  "rewrites": {
-    "beforeFiles": [
-      {
-        "source": "/insights",
-        "destination": "https://ghost.talentlean.com/insights"
-      },
-      {
-        "source": "/insights/",
-        "destination": "https://ghost.talentlean.com/insights/"
-      },
-      {
-        "source": "/insights/:path*",
-        "destination": "https://ghost.talentlean.com/insights/:path*"
-      }
-    ]
-  },
+  "routes": [
+    {
+      "src": "/insights/?",
+      "dest": "https://ghost.talentlean.com/insights"
+    },
+    {
+      "src": "/insights/(.*)",
+      "dest": "https://ghost.talentlean.com/insights/$1"
+    }
+  ],
   "redirects": [
     {
       "source": "/",
