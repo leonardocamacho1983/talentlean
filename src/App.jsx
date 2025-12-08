@@ -8,7 +8,6 @@ import NavigationTracker from '@/lib/NavigationTracker'
 import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
-import InsightsRedirect from './lib/InsightsRedirect';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
@@ -56,9 +55,6 @@ const AuthenticatedApp = () => {
           {Object.entries(Pages).map(([path, Page]) => (
             <Route key={path} path={`/${path}`} element={<Page />} />
           ))}
-          {/* Force full page reload for /insights to trigger Vercel rewrites */}
-          <Route path="/insights" element={<InsightsRedirect />} />
-          <Route path="/insights/*" element={<InsightsRedirect />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>

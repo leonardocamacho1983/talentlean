@@ -136,6 +136,23 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/insights': {
+        target: 'https://ghost.talentlean.com',
+        changeOrigin: true,
+        rewrite: (path) => path,
+        ws: true,
+        cookieDomainRewrite: {
+          'ghost.talentlean.com': 'localhost'
+        },
+        headers: {
+          'X-Forwarded-Proto': 'https',
+          'X-Forwarded-Host': 'ghost.talentlean.com'
+        }
+      }
+    }
+  },
   build: {
     // Enable source maps for debugging but compress them
     sourcemap: true,
