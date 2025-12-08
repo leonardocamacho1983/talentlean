@@ -2,35 +2,11 @@
   "rewrites": [
     {
       "source": "/insights",
-      "destination": "https://ghost.talentlean.com/insights"
+      "destination": "https://ghost.talentlean.com/"
     },
     {
       "source": "/insights/:path*",
-      "destination": "https://ghost.talentlean.com/insights/:path*"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "insights.talentlean.com"
-        }
-      ],
-      "destination": "https://talentlean.com/insights",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "insights.talentlean.com"
-        }
-      ],
-      "destination": "https://talentlean.com/",
-      "permanent": true
+      "destination": "https://ghost.talentlean.com/:path*"
     }
   ]
 }
