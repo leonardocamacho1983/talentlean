@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/insights",
+      "destination": "https://ghost.talentlean.com/"
+    },
+    {
       "source": "/insights/:path*",
       "destination": "https://ghost.talentlean.com/:path*"
     }
