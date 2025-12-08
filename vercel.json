@@ -29,7 +29,7 @@
           "value": "insights.talentlean.com"
         }
       ],
-      "destination": "https://talentlean.com/insights/:path*",
+      "destination": "https://talentlean.com/",
       "permanent": true
     }
   ]
