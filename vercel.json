@@ -8,11 +8,5 @@
       "source": "/insights/:path*",
       "destination": "https://ghost.talentlean.com/:path*"
     }
-  ],
-  "routes": [
-    {
-      "src": "/insights(?:/.*)?",
-      "dest": "/insights"
-    }
   ]
 }
