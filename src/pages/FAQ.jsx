@@ -153,9 +153,9 @@ export default function FAQ() {
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg"
               className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-white focus:outline-offset-2"
-              aria-label="Meet an expert"
+              aria-label="Talk to us"
             >
-              Meet an Expert
+              Talk to us
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
@@ -179,7 +179,7 @@ export default function FAQ() {
               <a href="/insights" className="hover:text-white transition-colors">
                 Insights
               </a>
-              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
+              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Talk to us</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
