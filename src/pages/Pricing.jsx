@@ -328,7 +328,7 @@ export default function Pricing() {
                       <Button 
                         onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                         className="w-full bg-[#006F64] hover:bg-[#014D44] text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-                        Meet an Expert
+                        Talk to us
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </div>
@@ -353,7 +353,7 @@ export default function Pricing() {
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg" 
               className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-              Meet an Expert
+              Talk to us
             </Button>
             <Link to={createPageUrl("FAQ")}>
               <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
@@ -382,7 +382,7 @@ export default function Pricing() {
                 Insights
               </a>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
+              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Talk to us</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
