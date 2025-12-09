@@ -120,7 +120,7 @@ export default function MobileMenu({ onNavigate }) {
               }}
               className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
             >
-              Talk to us
+              Meet an Expert
             </Button>
           </div>
         </nav>
