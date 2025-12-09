@@ -405,8 +405,8 @@ export default function Ambassadors() {
               <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
                 Ambassadors
               </Link>
-              <a href="/insights" className="hover:text-white transition-colors">
-                Insights
+              <a href="https://blog.talentlean.com" className="hover:text-white transition-colors">
+                Blog
               </a>
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">
                 Bring Your Own Talent
