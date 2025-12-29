@@ -627,7 +627,7 @@ export default function Home() {
                 {/* Trust/Compliance Badge */}
                 <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
                   <Shield className="w-4 h-4" aria-hidden="true" />
-                  <span className="font-medium">Compliant in all LatAm countries without all the headaches. Safe and simple.</span>
+                  <span className="font-medium">Compliant in all LatAm countries without all the headaches.</span>
                 </div>
 
                 {/* Primary CTA */}
