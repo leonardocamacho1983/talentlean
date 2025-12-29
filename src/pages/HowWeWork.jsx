@@ -108,7 +108,7 @@ export default function HowWeWork() {
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">96,000+ vetted professionals</h3>
-                      <p className="text-[#4E5A64]">Far beyond the few thousand developers offered by other platforms</p>
+                      <p className="text-base text-[#4E5A64]">Far beyond the few thousand developers offered by other platforms</p>
                     </div>
                   </div>
                 </CardContent>
@@ -119,7 +119,7 @@ export default function HowWeWork() {
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Full role coverage</h3>
-                      <p className="text-[#4E5A64]">Engineering, data, QA, design and leadership</p>
+                      <p className="text-base text-[#4E5A64]">Engineering, data, QA, design and leadership</p>
                     </div>
                   </div>
                 </CardContent>
@@ -130,7 +130,7 @@ export default function HowWeWork() {
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Continuous vetting</h3>
-                      <p className="text-[#4E5A64]">Ongoing skill assessments and real-world performance calibration</p>
+                      <p className="text-base text-[#4E5A64]">Ongoing skill assessments and real-world performance calibration</p>
                     </div>
                   </div>
                 </CardContent>
@@ -141,7 +141,7 @@ export default function HowWeWork() {
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Scale-ready</h3>
-                      <p className="text-[#4E5A64]">From single senior hires to multi-team scale-ups</p>
+                      <p className="text-base text-[#4E5A64]">From single senior hires to multi-team scale-ups</p>
                     </div>
                   </div>
                 </CardContent>
@@ -162,7 +162,7 @@ export default function HowWeWork() {
                     <Brain className="w-8 h-8 text-[#006F64] flex-shrink-0" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Objective, skill-by-skill scoring</h3>
-                      <p className="text-[#4E5A64]">Red-flag analysis across technical and soft skills</p>
+                      <p className="text-base text-[#4E5A64]">Red-flag analysis across technical and soft skills</p>
                     </div>
                   </div>
                 </CardContent>
@@ -173,7 +173,7 @@ export default function HowWeWork() {
                     <Target className="w-8 h-8 text-[#006F64] flex-shrink-0" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Recruiters refine job descriptions</h3>
-                      <p className="text-[#4E5A64]">Ensure cultural fit and role alignment</p>
+                      <p className="text-base text-[#4E5A64]">Ensure cultural fit and role alignment</p>
                     </div>
                   </div>
                 </CardContent>
@@ -184,7 +184,7 @@ export default function HowWeWork() {
                     <Zap className="w-8 h-8 text-[#006F64] flex-shrink-0" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Faster shortlisting</h3>
-                      <p className="text-[#4E5A64]">Without sacrificing depth or quality</p>
+                      <p className="text-base text-[#4E5A64]">Without sacrificing depth or quality</p>
                     </div>
                   </div>
                 </CardContent>
@@ -201,7 +201,7 @@ export default function HowWeWork() {
                 Our AI vetting engine transcribes asynchronous interviews and scores candidates across technical domains like Python/Django, cloud platforms, CI/CD and SQL, as well as soft skills such as communication and autonomy.
               </p>
               <p className="text-lg text-[#4E5A64] leading-relaxed">
-                It flags strengths and concerns for our experienced recruiters, who then conduct behavioural interviews and calibrate the results.
+                Our talent specialists then personally review every match to guarantee precision and cultural fit through behavioural interviews.
               </p>
             </div>
           </div>
@@ -219,29 +219,35 @@ export default function HowWeWork() {
               Not Just a Marketplace—A Partner
             </h2>
             <p className="text-lg text-[#4E5A64] max-w-3xl mx-auto leading-relaxed mb-8">
-              We are not a self-service marketplace. Your recruiters maintain control of compensation while we handle the rest: employment contracts, payroll, benefits, taxes and compliance. Every client has a dedicated customer success manager with engineering leadership experience to ensure ongoing team performance.
+              We are not a self-service marketplace. Your recruiters maintain control of compensation while we handle all operational complexity—contract creation, multi-country compliance, monthly payroll processing, and dedicated account management. Every client has a customer success manager with engineering leadership experience.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="border-2 border-[#E6F4F1] shadow-md hover:shadow-xl transition-shadow">
               <CardContent className="p-6 text-center">
-                <Shield className="w-12 h-12 text-[#006F64] mx-auto mb-4" />
+                <div className="w-12 h-12 rounded-full bg-[#E6F4F1] flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-[#006F64]" />
+                </div>
                 <h3 className="font-bold text-[#2B2E32] mb-3">End-to-end compliance</h3>
-                <p className="text-[#4E5A64]">Payroll and benefits management handled completely</p>
+                <p className="text-base text-[#4E5A64]">Payroll and benefits management handled completely</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#E6F4F1] shadow-md hover:shadow-xl transition-shadow">
               <CardContent className="p-6 text-center">
-                <Award className="w-12 h-12 text-[#006F64] mx-auto mb-4" />
+                <div className="w-12 h-12 rounded-full bg-[#E6F4F1] flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-[#006F64]" />
+                </div>
                 <h3 className="font-bold text-[#2B2E32] mb-3">Dedicated success manager</h3>
-                <p className="text-[#4E5A64]">Your single point of contact with engineering expertise</p>
+                <p className="text-base text-[#4E5A64]">Your single point of contact with engineering expertise</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#E6F4F1] shadow-md hover:shadow-xl transition-shadow">
               <CardContent className="p-6 text-center">
-                <Layers className="w-12 h-12 text-[#006F64] mx-auto mb-4" />
+                <div className="w-12 h-12 rounded-full bg-[#E6F4F1] flex items-center justify-center mx-auto mb-4">
+                  <Layers className="w-6 h-6 text-[#006F64]" />
+                </div>
                 <h3 className="font-bold text-[#2B2E32] mb-3">Zero operational burden</h3>
-                <p className="text-[#4E5A64]">No load on internal HR and finance teams</p>
+                <p className="text-base text-[#4E5A64]">No load on internal HR and finance teams</p>
               </CardContent>
             </Card>
           </div>
@@ -331,21 +337,21 @@ export default function HowWeWork() {
               <CardContent className="p-8">
                 <div className="text-5xl font-bold text-[#006F64] mb-3">24h</div>
                 <p className="text-lg font-semibold text-[#2B2E32] mb-2">First resumes delivered</p>
-                <p className="text-[#4E5A64]">Within 24 hours of your request</p>
+                <p className="text-base text-[#4E5A64]">Within 24 hours of your request</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#006F64] shadow-lg text-center">
               <CardContent className="p-8">
                 <div className="text-5xl font-bold text-[#006F64] mb-3">~80%</div>
                 <p className="text-lg font-semibold text-[#2B2E32] mb-2">Interview acceptance rate</p>
-                <p className="text-[#4E5A64]">Of candidates we present are interviewed</p>
+                <p className="text-base text-[#4E5A64]">Of candidates we present are interviewed</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#006F64] shadow-lg text-center">
               <CardContent className="p-8">
-                <div className="text-5xl font-bold text-[#006F64] mb-3">Faster</div>
+                <div className="text-5xl font-bold text-[#006F64] mb-3">3x Faster</div>
                 <p className="text-lg font-semibold text-[#2B2E32] mb-2">Reduced time-to-hire</p>
-                <p className="text-[#4E5A64]">Compared with traditional staff augmentation</p>
+                <p className="text-base text-[#4E5A64]">Average 2 weeks vs. 6+ weeks industry standard</p>
               </CardContent>
             </Card>
           </div>
@@ -360,7 +366,7 @@ export default function HowWeWork() {
               Why TalentLean Wins
             </h2>
             <p className="text-lg text-[#4E5A64] max-w-3xl mx-auto leading-relaxed">
-              Many platforms filter millions of profiles to produce a shortlist of about six thousand developers. TalentLean is different:
+              Many platforms filter millions of profiles to produce a shortlist of over 6,000 developers. TalentLean is different:
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -456,7 +462,7 @@ export default function HowWeWork() {
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
             className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
           >
-            Book Your Strategy Call
+            Book a Strategy Call
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>
