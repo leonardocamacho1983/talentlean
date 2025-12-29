@@ -41,23 +41,26 @@ export default function HowWeWork() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <Link to={createPageUrl("Home")} className="text-gray-700 hover:text-teal-600 transition-colors">
+              <Link to={createPageUrl("Home")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Home
               </Link>
-              <Link to={createPageUrl("Pricing")} className="text-gray-700 hover:text-teal-600 transition-colors">
+              <Link to={createPageUrl("Pricing")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Pricing
               </Link>
-              <Link to={createPageUrl("HowWeWork")} className="text-gray-700 hover:text-teal-600 transition-colors font-semibold">
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 How we Work
               </Link>
-              <Link to={createPageUrl("FAQ")} className="text-gray-700 hover:text-teal-600 transition-colors">
+              <Link to={createPageUrl("FAQ")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Ambassadors
               </Link>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="bg-[#006F64] hover:bg-[#014D44] text-white px-6 py-2 rounded-full font-medium transition-colors"
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
               >
-                Talk to us
+                Talk to Us
               </Button>
             </div>
 

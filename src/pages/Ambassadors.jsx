@@ -68,6 +68,16 @@ export default function Ambassadors() {
                 Pricing
               </Link>
               <Link
+                to={createPageUrl("HowWeWork")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                How we Work
+              </Link>
+              <Link
+                to={createPageUrl("FAQ")}
+                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link
                 to={createPageUrl("Ambassadors")}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Ambassadors

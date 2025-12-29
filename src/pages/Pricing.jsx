@@ -22,6 +22,7 @@ import {
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import CanonicalURL from "../components/CanonicalURL";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Pricing() {
   const [serviceType, setServiceType] = useState("augmentation");
@@ -76,11 +77,34 @@ export default function Pricing() {
             <Link to={createPageUrl("Home")} className="text-2xl font-bold text-gray-900">
               Talent<span className="text-teal-600">Lean</span>
             </Link>
-            <Link to={createPageUrl("Home")}>
-              <Button variant="outline" className="rounded-full">
-                Back to Home
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link to={createPageUrl("Home")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Home
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Pricing
+              </Link>
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Ambassadors
+              </Link>
+              <Button
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+              >
+                Talk to Us
               </Button>
-            </Link>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu />
           </div>
         </div>
       </nav>
