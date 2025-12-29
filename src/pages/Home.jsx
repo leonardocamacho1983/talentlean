@@ -627,27 +627,17 @@ export default function Home() {
                 {/* Trust/Compliance Badge */}
                 <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
                   <Shield className="w-4 h-4" aria-hidden="true" />
-                  <span className="font-medium">Compliant in all LatAm countries without all the headaches.</span>
+                  <span className="font-medium">Compliant in all LatAm countries. Zero headaches.</span>
                 </div>
 
                 {/* Primary CTA */}
                 <Button
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                  className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 mb-3"
+                  className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
                 >
-                  Get a Quote
+                  Request Custom Quote
                   <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
                 </Button>
-
-                {/* Secondary CTA - Talk to Expert */}
-                <div className="text-center">
-                  <button
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                    className="text-sm text-[#006F64] hover:text-[#014D44] font-medium underline"
-                  >
-                    or talk to a migration expert
-                  </button>
-                </div>
               </CardContent>
             </Card>
           </div>
