@@ -265,7 +265,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Compensation + <span className="font-bold text-[#C62828]">USD 1,500/month</span> <span className="text-sm bg-[#FDEAEA] text-[#C62828] px-2 py-1 rounded-full font-semibold">Launch Promo</span>
+                        Complete transparency: Compensation + <span className="font-bold text-[#C62828]">USD 1,500/month</span> <span className="text-sm bg-[#FDEAEA] text-[#C62828] px-2 py-1 rounded-full font-semibold">New Year Promo</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -298,8 +298,8 @@ export default function Home() {
               <p className="text-lg text-[#4E5A64] mb-8 leading-relaxed">
                 Hire full-time remote developers from Latin America under TalentLean's compliant employment structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
-              
-              {/* Launch Promotion Badge */}
+
+              {/* New Year Promotion Badge */}
               <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 mb-6 flex items-start gap-3">
                 <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
