@@ -435,6 +435,16 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* CTA Button */}
+              <div className="mt-8">
+                <Link to={createPageUrl("HowWeWork")} className="block">
+                  <Button className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-medium">
+                    How we Work
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
