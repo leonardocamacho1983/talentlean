@@ -71,10 +71,10 @@ export default function HowWeWork() {
       <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-[#2B2E32] mb-6 leading-tight">
-            Build High-Performance Tech Teams with AI, Human Expertise & LATAM's Largest Talent Network
+            Build High Performance Tech Teams with AI, Human Expertise & LATAM's Largest Talent Network
           </h1>
           <p className="text-xl text-[#4E5A64] mb-8 max-w-4xl mx-auto leading-relaxed">
-            Combine a network of 96,000+ pre-vetted LATAM professionals with AI-driven vetting and human recruiting expertise to build your engineering team quickly and confidently.
+            Combine a network of 96,000+ pre vetted LATAM professionals with AI driven vetting and human recruiting expertise to build your engineering team quickly and confidently.
           </p>
           <Button
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
@@ -216,10 +216,10 @@ export default function HowWeWork() {
               <Handshake className="w-8 h-8 text-[#006F64]" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2B2E32] mb-6">
-              Not Just a Marketplace—A Partner
+              Not Just a Marketplace: A Partner
             </h2>
             <p className="text-lg text-[#4E5A64] max-w-3xl mx-auto leading-relaxed mb-8">
-              We are not a self-service marketplace. Your recruiters maintain control of compensation while we handle all operational complexity—contract creation, multi-country compliance, monthly payroll processing, and dedicated account management. Every client has a customer success manager with engineering leadership experience.
+              We are not a self-service marketplace. Your recruiters maintain control of compensation while we handle all operational complexity: contract creation, multi-country compliance, monthly payroll processing, and dedicated account management. Every client has a customer success manager with engineering leadership experience.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -268,52 +268,76 @@ export default function HowWeWork() {
               Submit your role description and get the first resumes within 24 hours. Here's how:
             </p>
           </div>
-          <div className="space-y-6">
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Define requirements</h3>
-                <p className="text-[#4E5A64] leading-relaxed">You outline the role, skill sets, seniority and culture</p>
-              </div>
-            </div>
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#2B2E32] mb-2">AI & recruiter search</h3>
-                <p className="text-[#4E5A64] leading-relaxed">Our AI vetting engine and recruiters identify the best candidates</p>
-              </div>
-            </div>
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Interview & assessment</h3>
-                <p className="text-[#4E5A64] leading-relaxed">Candidates complete asynchronous interviews; our AI scores them and recruiters conduct follow-ups</p>
-              </div>
-            </div>
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Shortlist & selection</h3>
-                <p className="text-[#4E5A64] leading-relaxed">You receive a tailored shortlist and choose who to interview</p>
-              </div>
-            </div>
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                5
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Onboarding & compliance</h3>
-                <p className="text-[#4E5A64] leading-relaxed">We handle all employment contracts, payroll and local labour laws</p>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-2 border-white shadow-lg bg-white">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Define requirements</h3>
+                    <p className="text-base text-[#4E5A64] leading-relaxed">You outline the role, skill sets, seniority and culture</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-white shadow-lg bg-white">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#2B2E32] mb-2">AI & recruiter search</h3>
+                    <p className="text-base text-[#4E5A64] leading-relaxed">Our AI vetting engine and recruiters identify the best candidates</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-white shadow-lg bg-white">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Interview & assessment</h3>
+                    <p className="text-base text-[#4E5A64] leading-relaxed">Candidates complete asynchronous interviews; our AI scores them and recruiters conduct follow-ups</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-white shadow-lg bg-white">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                    4
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Shortlist & selection</h3>
+                    <p className="text-base text-[#4E5A64] leading-relaxed">You receive a tailored shortlist and choose who to interview</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-white shadow-lg bg-white md:col-span-2">
+              <CardContent className="p-6">
+                <div className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#006F64] text-white flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                    5
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Onboarding & compliance</h3>
+                    <p className="text-base text-[#4E5A64] leading-relaxed">We handle all employment contracts, payroll and local labour laws</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
