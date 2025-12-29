@@ -534,7 +534,7 @@ export default function Home() {
 
               <CardContent className="p-10">
                 <div className="w-14 h-14 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6">
-                  <UsersRound className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
+                  <Calculator className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
                   Staff Augmentation
@@ -597,7 +597,7 @@ export default function Home() {
             >
               <CardContent className="p-10">
                 <div className="w-14 h-14 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6">
-                  <Globe2 className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
+                  <Shield className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
                   Bring Your Own Talent
@@ -608,6 +608,12 @@ export default function Home() {
                 <p className="text-[#4E5A64] leading-relaxed mb-6">
                   Migrate your existing employees or contractors into our compliant infrastructure. Keep your team, eliminate the operational burden, reduce risk.
                 </p>
+
+                {/* Trust/Compliance Badge */}
+                <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
+                  <Shield className="w-4 h-4" aria-hidden="true" />
+                  <span className="font-medium">Compliant in 18+ Latin American countries</span>
+                </div>
 
                 {/* CTA Button */}
                 <Button
