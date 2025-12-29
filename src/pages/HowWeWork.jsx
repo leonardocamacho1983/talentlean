@@ -18,6 +18,7 @@ import {
   Layers
 } from "lucide-react";
 import CanonicalURL from "../components/CanonicalURL";
+import MobileMenu from "../components/MobileMenu";
 
 export default function HowWeWork() {
   useEffect(() => {
@@ -29,14 +30,51 @@ export default function HowWeWork() {
     <div className="min-h-screen bg-white">
       <CanonicalURL />
 
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <Link to={createPageUrl("Home")} className="text-2xl font-bold text-gray-900">
+              Talent<span className="text-teal-600">Lean</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link to={createPageUrl("Home")} className="text-gray-700 hover:text-teal-600 transition-colors">
+                Home
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="text-gray-700 hover:text-teal-600 transition-colors">
+                Pricing
+              </Link>
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-700 hover:text-teal-600 transition-colors font-semibold">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="text-gray-700 hover:text-teal-600 transition-colors">
+                FAQ
+              </Link>
+              <Button
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                className="bg-[#006F64] hover:bg-[#014D44] text-white px-6 py-2 rounded-full font-medium transition-colors"
+              >
+                Talk to us
+              </Button>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu />
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-[#2B2E32] mb-6 leading-tight">
-            Build High‑Performance Tech Teams with AI, Human Expertise & LATAM's Largest Talent Network
+            Build High-Performance Tech Teams with AI, Human Expertise & LATAM's Largest Talent Network
           </h1>
           <p className="text-xl text-[#4E5A64] mb-8 max-w-4xl mx-auto leading-relaxed">
-            Combine a network of 96,000+ pre‑vetted LATAM professionals with AI‑driven vetting and human recruiting expertise to build your engineering team quickly and confidently.
+            Combine a network of 96,000+ pre-vetted LATAM professionals with AI-driven vetting and human recruiting expertise to build your engineering team quickly and confidently.
           </p>
           <Button
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
@@ -60,7 +98,7 @@ export default function HowWeWork() {
                 The Largest Curated LATAM Network
               </h2>
               <p className="text-lg text-[#4E5A64] leading-relaxed mb-6">
-                Behind every TalentLean engagement is a living talent infrastructure of more than 96,000 pre‑vetted engineers, designers, QA specialists, data professionals and technical leaders across Latin America. This is not a marketplace; it's a continuously curated network built to support long‑term, high‑performance engineering teams.
+                Behind every TalentLean engagement is a living talent infrastructure of more than 96,000 pre-vetted engineers, designers, QA specialists, data professionals and technical leaders across Latin America. This is not a marketplace; it's a continuously curated network built to support long-term, high-performance engineering teams.
               </p>
             </div>
             <div className="space-y-4">
@@ -92,7 +130,7 @@ export default function HowWeWork() {
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-[#2B2E32] mb-2">Continuous vetting</h3>
-                      <p className="text-[#4E5A64]">Ongoing skill assessments and real‑world performance calibration</p>
+                      <p className="text-[#4E5A64]">Ongoing skill assessments and real-world performance calibration</p>
                     </div>
                   </div>
                 </CardContent>
@@ -102,8 +140,8 @@ export default function HowWeWork() {
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-[#006F64] flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-bold text-[#2B2E32] mb-2">Scale‑ready</h3>
-                      <p className="text-[#4E5A64]">From single senior hires to multi‑team scale‑ups</p>
+                      <h3 className="font-bold text-[#2B2E32] mb-2">Scale-ready</h3>
+                      <p className="text-[#4E5A64]">From single senior hires to multi-team scale-ups</p>
                     </div>
                   </div>
                 </CardContent>
@@ -123,8 +161,8 @@ export default function HowWeWork() {
                   <div className="flex items-start gap-4">
                     <Brain className="w-8 h-8 text-[#006F64] flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-[#2B2E32] mb-2">Objective, skill‑by‑skill scoring</h3>
-                      <p className="text-[#4E5A64]">Red‑flag analysis across technical and soft skills</p>
+                      <h3 className="font-bold text-[#2B2E32] mb-2">Objective, skill-by-skill scoring</h3>
+                      <p className="text-[#4E5A64]">Red-flag analysis across technical and soft skills</p>
                     </div>
                   </div>
                 </CardContent>
@@ -181,14 +219,14 @@ export default function HowWeWork() {
               Not Just a Marketplace—A Partner
             </h2>
             <p className="text-lg text-[#4E5A64] max-w-3xl mx-auto leading-relaxed mb-8">
-              We are not a self‑service marketplace. Your recruiters maintain control of compensation while we handle the rest: employment contracts, payroll, benefits, taxes and compliance. Every client has a dedicated customer success manager with engineering leadership experience to ensure ongoing team performance.
+              We are not a self-service marketplace. Your recruiters maintain control of compensation while we handle the rest: employment contracts, payroll, benefits, taxes and compliance. Every client has a dedicated customer success manager with engineering leadership experience to ensure ongoing team performance.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="border-2 border-[#E6F4F1] shadow-md hover:shadow-xl transition-shadow">
               <CardContent className="p-6 text-center">
                 <Shield className="w-12 h-12 text-[#006F64] mx-auto mb-4" />
-                <h3 className="font-bold text-[#2B2E32] mb-3">End‑to‑end compliance</h3>
+                <h3 className="font-bold text-[#2B2E32] mb-3">End-to-end compliance</h3>
                 <p className="text-[#4E5A64]">Payroll and benefits management handled completely</p>
               </CardContent>
             </Card>
@@ -249,7 +287,7 @@ export default function HowWeWork() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#2B2E32] mb-2">Interview & assessment</h3>
-                <p className="text-[#4E5A64] leading-relaxed">Candidates complete asynchronous interviews; our AI scores them and recruiters conduct follow‑ups</p>
+                <p className="text-[#4E5A64] leading-relaxed">Candidates complete asynchronous interviews; our AI scores them and recruiters conduct follow-ups</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -306,7 +344,7 @@ export default function HowWeWork() {
             <Card className="border-2 border-[#006F64] shadow-lg text-center">
               <CardContent className="p-8">
                 <div className="text-5xl font-bold text-[#006F64] mb-3">Faster</div>
-                <p className="text-lg font-semibold text-[#2B2E32] mb-2">Reduced time‑to‑hire</p>
+                <p className="text-lg font-semibold text-[#2B2E32] mb-2">Reduced time-to-hire</p>
                 <p className="text-[#4E5A64]">Compared with traditional staff augmentation</p>
               </CardContent>
             </Card>
@@ -350,7 +388,7 @@ export default function HowWeWork() {
                   <div>
                     <h3 className="text-xl font-bold text-[#2B2E32] mb-3">Depth</h3>
                     <p className="text-[#4E5A64] leading-relaxed">
-                      AI‑driven scoring plus human calibration vs. résumé filters
+                      AI-driven scoring plus human calibration vs. résumé filters
                     </p>
                   </div>
                 </div>
@@ -380,7 +418,7 @@ export default function HowWeWork() {
                   <div>
                     <h3 className="text-xl font-bold text-[#2B2E32] mb-3">Partnership</h3>
                     <p className="text-[#4E5A64] leading-relaxed">
-                      Compliance, payroll and benefits handled end‑to‑end vs. marketplaces that stop at matching
+                      Compliance, payroll and benefits handled end-to-end vs. marketplaces that stop at matching
                     </p>
                   </div>
                 </div>
@@ -423,6 +461,53 @@ export default function HowWeWork() {
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-300 py-12 px-6 lg:px-8" role="contentinfo" aria-label="Site footer">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Branding */}
+            <div className="text-center md:text-left">
+              <div className="text-xl font-bold text-white mb-2">
+                Talent<span className="text-[#4FD1C5]">Lean</span>
+              </div>
+              <p className="text-sm">The Human Intelligence Behind LatAm Hiring.</p>
+            </div>
+
+            {/* Navigation */}
+            <nav className="flex flex-wrap justify-center gap-6 text-sm" aria-label="Footer navigation">
+              <Link to={createPageUrl("Home")} className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="hover:text-white transition-colors">
+                Pricing
+              </Link>
+              <Link to={createPageUrl("HowWeWork")} className="hover:text-white transition-colors">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="hover:text-white transition-colors">
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
+                Ambassadors
+              </Link>
+              <a
+                href="https://talentlean.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Blog
+              </a>
+            </nav>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+            <p>© 2025 TalentLean. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
