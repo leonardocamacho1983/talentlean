@@ -602,27 +602,52 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
                   Bring Your Own Talent
                 </h3>
-                <p className="text-lg text-[#006F64] font-semibold mb-4">
-                  Already have a team? We'll handle compliance, payroll, and legal—so you don't have to.
-                </p>
-                <p className="text-[#4E5A64] leading-relaxed mb-6">
+
+                {/* Pricing Indicator Block - matches Staff Aug structure */}
+                <div className="mb-4">
+                  <p className="text-2xl font-bold text-[#2B2E32] mb-2">
+                    Custom Pricing
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Based on team size and services needed
+                  </p>
+                </div>
+
+                {/* Credibility Line - matches Staff Aug */}
+                <div className="mb-4">
+                  <p className="text-base font-semibold text-[#2B2E32]">
+                    Keep your team. Eliminate all compliance headaches.
+                  </p>
+                </div>
+
+                <p className="text-[#4E5A64] leading-relaxed mb-4">
                   Migrate your existing employees or contractors into our compliant infrastructure. Keep your team, eliminate the operational burden, reduce risk.
                 </p>
 
                 {/* Trust/Compliance Badge */}
                 <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
                   <Shield className="w-4 h-4" aria-hidden="true" />
-                  <span className="font-medium">Compliant in 18+ Latin American countries</span>
+                  <span className="font-medium">Compliant in all LatAm countries without all the headaches. Safe and simple.</span>
                 </div>
 
-                {/* CTA Button */}
+                {/* Primary CTA */}
                 <Button
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                  className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+                  className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2 mb-3"
                 >
                   Get a Quote
                   <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
                 </Button>
+
+                {/* Secondary CTA - Talk to Expert */}
+                <div className="text-center">
+                  <button
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                    className="text-sm text-[#006F64] hover:text-[#014D44] font-medium underline"
+                  >
+                    or talk to a migration expert
+                  </button>
+                </div>
               </CardContent>
             </Card>
           </div>
