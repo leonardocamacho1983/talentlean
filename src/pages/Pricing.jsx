@@ -256,7 +256,7 @@ export default function Pricing() {
                       <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 flex items-start gap-3">
                         <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <div>
-                          <div className="font-bold text-[#2B2E32] mb-1">🎉 Launch Promotion: Save $500/month</div>
+                          <div className="font-bold text-[#2B2E32] mb-1">🎉 New Year Promo: Save $500/month</div>
                           <div className="text-sm text-[#2B2E32]">
                             <span className="line-through text-[#4E5A64]">${STANDARD_FEE}/month</span> → <span className="font-bold text-[#C62828]">${PROMO_FEE}/month</span> per developer
                           </div>

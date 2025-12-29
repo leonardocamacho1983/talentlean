@@ -302,7 +302,7 @@ export default function Home() {
               <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 mb-6 flex items-start gap-3">
                 <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <div className="font-bold text-[#2B2E32] mb-1">🎉 Launch Promotion: Save $500/month</div>
+                  <div className="font-bold text-[#2B2E32] mb-1">🎉 New Year Promo: Save $500/month</div>
                   <div className="text-sm text-[#2B2E32]">
                     <span className="line-through text-[#4E5A64]">$2,000/month</span> → <span className="font-bold text-[#C62828]">$1,500/month</span> per developer. Limited time offer!
                   </div>
@@ -534,7 +534,7 @@ export default function Home() {
                   </div>
                   <div className="inline-flex items-center gap-2 bg-[#FDEAEA] border border-[#C62828] rounded-full px-3 py-1 mb-2">
                     <Zap className="w-4 h-4 text-[#C62828]" aria-hidden="true" />
-                    <span className="text-xs font-bold text-[#C62828]">LAUNCH PROMO</span>
+                    <span className="text-xs font-bold text-[#C62828]">NEW YEAR PROMO</span>
                   </div>
                   <p className="text-sm text-gray-500">
                     Per month per developer + Salary (you define)
