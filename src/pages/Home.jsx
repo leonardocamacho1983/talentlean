@@ -140,43 +140,28 @@ export default function Home() {
               Talent<span className="text-teal-600">Lean</span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              <Link to={createPageUrl("Home")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Home
-              </button>
-
-              <button
-                onClick={() => scrollToSection('augmentation')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                Staff Augmentation
-              </button>
-              <Link to={createPageUrl("Pricing")}
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Pricing
               </Link>
-              <Link to={createPageUrl("Ambassadors")}
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Ambassadors
               </Link>
-              <button
-                onClick={() => scrollToSection('why-different')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                About
-              </button>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-
                 Talk to Us
               </Button>
-              </div>
-              <MobileMenu onNavigate={scrollToSection} />
+            </div>
+            <MobileMenu />
               </div>
               </div>
               </nav>

@@ -4,13 +4,8 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
-export default function MobileMenu({ onNavigate }) {
+export default function MobileMenu() {
   const [isOpen, setIsOpen] = React.useState(false);
-
-  const handleNavigate = (sectionId) => {
-    setIsOpen(false);
-    onNavigate(sectionId);
-  };
 
   React.useEffect(() => {
     if (isOpen) {
@@ -67,30 +62,26 @@ export default function MobileMenu({ onNavigate }) {
           </button>
         </div>
         <nav className="flex flex-col p-6 space-y-4 bg-white" role="navigation">
-          <button
-            onClick={() => handleNavigate('hero')}
+          <Link
+            to={createPageUrl("Home")}
             className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+            onClick={() => setIsOpen(false)}
           >
             Home
-          </button>
-          <button
-            onClick={() => handleNavigate('augmentation')}
-            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-          >
-            Staff Augmentation
-          </button>
-          <button
-            onClick={() => handleNavigate('byot')}
-            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-          >
-            Migrate Your Team
-          </button>
+          </Link>
           <Link
             to={createPageUrl("Pricing")}
             className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
             onClick={() => setIsOpen(false)}
           >
             Pricing
+          </Link>
+          <Link
+            to={createPageUrl("HowWeWork")}
+            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+            onClick={() => setIsOpen(false)}
+          >
+            How we Work
           </Link>
           <Link
             to={createPageUrl("FAQ")}
@@ -106,12 +97,6 @@ export default function MobileMenu({ onNavigate }) {
           >
             Ambassadors
           </Link>
-          <button
-            onClick={() => handleNavigate('why-different')}
-            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
-          >
-            About
-          </button>
           <div className="pt-4 border-t border-gray-200">
             <Button
               onClick={() => {
