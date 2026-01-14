@@ -56,6 +56,9 @@ export default function HowWeWork() {
               <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Ambassadors
               </Link>
+              <Link to={createPageUrl("Community")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Community
+              </Link>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
