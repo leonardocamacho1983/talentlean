@@ -7,6 +7,10 @@
     {
       "source": "/insights/:path*",
       "destination": "https://ghost.talentlean.com/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
