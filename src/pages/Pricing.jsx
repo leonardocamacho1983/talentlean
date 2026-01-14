@@ -22,6 +22,7 @@ import {
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import CanonicalURL from "../components/CanonicalURL";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Pricing() {
   const [serviceType, setServiceType] = useState("augmentation");
@@ -76,11 +77,37 @@ export default function Pricing() {
             <Link to={createPageUrl("Home")} className="text-2xl font-bold text-gray-900">
               Talent<span className="text-teal-600">Lean</span>
             </Link>
-            <Link to={createPageUrl("Home")}>
-              <Button variant="outline" className="rounded-full">
-                Back to Home
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link to={createPageUrl("Home")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Home
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Pricing
+              </Link>
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Ambassadors
+              </Link>
+              <Link to={createPageUrl("Community")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Community
+              </Link>
+              <Button
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+              >
+                Talk to Us
               </Button>
-            </Link>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu />
           </div>
         </div>
       </nav>
@@ -252,11 +279,11 @@ export default function Pricing() {
                   </CardHeader>
                   <CardContent className="p-8">
                     <div className="space-y-6">
-                      {/* Launch Promotion Alert */}
+                      {/* New Year Promotion Alert */}
                       <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 flex items-start gap-3">
                         <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <div>
-                          <div className="font-bold text-[#2B2E32] mb-1">🎉 Launch Promotion: Save $500/month</div>
+                          <div className="font-bold text-[#2B2E32] mb-1">🎉 New Year Promo: Save $500/month</div>
                           <div className="text-sm text-[#2B2E32]">
                             <span className="line-through text-[#4E5A64]">${STANDARD_FEE}/month</span> → <span className="font-bold text-[#C62828]">${PROMO_FEE}/month</span> per developer
                           </div>
@@ -328,7 +355,7 @@ export default function Pricing() {
                       <Button 
                         onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                         className="w-full bg-[#006F64] hover:bg-[#014D44] text-white py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-                        Meet an Expert
+                        Talk to us
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </div>
@@ -353,7 +380,7 @@ export default function Pricing() {
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
               size="lg" 
               className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-              Meet an Expert
+              Talk to us
             </Button>
             <Link to={createPageUrl("FAQ")}>
               <Button size="lg" variant="outline" className="rounded-full px-8 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
@@ -382,7 +409,7 @@ export default function Pricing() {
                 Blog
               </a>
               <button className="hover:text-white transition-colors">About Us</button>
-              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Meet an Expert</button>
+              <button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')} className="hover:text-white transition-colors">Talk to us</button>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">

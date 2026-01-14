@@ -21,7 +21,8 @@ import {
   Clock,
   MapPin,
   UserCheck,
-  Zap } from
+  Zap,
+  TrendingUp } from
 "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -139,43 +140,31 @@ export default function Home() {
               Talent<span className="text-teal-600">Lean</span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              <Link to={createPageUrl("Home")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Home
-              </button>
-
-              <button
-                onClick={() => scrollToSection('augmentation')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                Staff Augmentation
-              </button>
-              <Link to={createPageUrl("Pricing")}
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              </Link>
+              <Link to={createPageUrl("Pricing")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Pricing
               </Link>
-              <Link to={createPageUrl("Ambassadors")}
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
+              <Link to={createPageUrl("HowWeWork")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                How we Work
+              </Link>
+              <Link to={createPageUrl("FAQ")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                FAQ
+              </Link>
+              <Link to={createPageUrl("Ambassadors")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Ambassadors
               </Link>
-              <button
-                onClick={() => scrollToSection('why-different')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-
-                About
-              </button>
+              <Link to={createPageUrl("Community")} className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                Community
+              </Link>
               <Button
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-6 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-
                 Talk to Us
               </Button>
-              </div>
-              <MobileMenu onNavigate={scrollToSection} />
+            </div>
+            <MobileMenu />
               </div>
               </div>
               </nav>
@@ -264,7 +253,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <span className="text-lg text-gray-700">
-                        Complete transparency: Compensation + <span className="font-bold text-[#C62828]">USD 1,500/month</span> <span className="text-sm bg-[#FDEAEA] text-[#C62828] px-2 py-1 rounded-full font-semibold">Launch Promo</span>
+                        Complete transparency: Compensation + <span className="font-bold text-[#C62828]">USD 1,500/month</span> <span className="text-sm bg-[#FDEAEA] text-[#C62828] px-2 py-1 rounded-full font-semibold">New Year Promo</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -297,12 +286,12 @@ export default function Home() {
               <p className="text-lg text-[#4E5A64] mb-8 leading-relaxed">
                 Hire full-time remote developers from Latin America under TalentLean's compliant employment structure. We manage payroll, benefits, taxes, and legal compliance in every LatAm jurisdiction—so you can focus on scaling your business with perfectly aligned time zones.
               </p>
-              
-              {/* Launch Promotion Badge */}
+
+              {/* New Year Promotion Badge */}
               <div className="bg-[#FDEAEA] border-2 border-[#C62828] rounded-lg p-4 mb-6 flex items-start gap-3">
                 <Zap className="w-6 h-6 text-[#C62828] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <div className="font-bold text-[#2B2E32] mb-1">🎉 Launch Promotion: Save $500/month</div>
+                  <div className="font-bold text-[#2B2E32] mb-1">🎉 New Year Promo: Save $500/month</div>
                   <div className="text-sm text-[#2B2E32]">
                     <span className="line-through text-[#4E5A64]">$2,000/month</span> → <span className="font-bold text-[#C62828]">$1,500/month</span> per developer. Limited time offer!
                   </div>
@@ -313,7 +302,7 @@ export default function Home() {
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
                 className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-5 shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
-                Meet an Expert
+                Talk to us
                 <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
@@ -321,42 +310,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BYOT - Bring Your Own Talent */}
-      <section id="byot" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="byot-heading">
+      {/* Talent Network Section */}
+      <section id="talent-network" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-blue-50" aria-labelledby="talent-network-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg mb-6" aria-hidden="true">
-              <Globe2 className="w-8 h-8 text-[#006F64]" />
+              <Users className="w-8 h-8 text-[#006F64]" />
             </div>
-            <h2 id="byot-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] mb-4">
-              Bring Your Own Talent
+            <h2 id="talent-network-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] mb-4">
+              Latin America's Largest Tech Talent Network
             </h2>
-            <p className="text-lg text-[#4E5A64] max-w-2xl mx-auto leading-relaxed">We remove global hiring friction and safeguard every employment detail.
-
+            <p className="text-lg text-[#4E5A64] max-w-2xl mx-auto leading-relaxed">
+              The foundation behind every TalentLean engagement.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* LEFT CARD - Main Message */}
             <Card className="border-2 border-white shadow-xl bg-white">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-[#2B2E32] mb-6">
-                  Migrate & Consolidate Your Direct Hires
+                  The Living Infrastructure for LatAm Tech Hiring
                 </h3>
-                <p className="text-lg text-[#4E5A64] mb-6 leading-relaxed">Consolidate your already-hired developers under TalentLean's compliant employment infrastructure and operate with zero overhead.
-
+                <p className="text-lg text-[#4E5A64] mb-6 leading-relaxed">
+                  Behind every TalentLean engagement is a deeply vetted, continuously curated network of technology professionals across Latin America. This is not a marketplace. It is a living talent infrastructure built to support long-term, high-performance engineering teams.
                 </p>
                 <p className="text-lg text-[#2B2E32] font-semibold mb-6">
-                  You keep the people you trust. We take over everything else.
+                  96,000+ professionals. Continuously assessed. Ready to scale.
                 </p>
 
+                {/* Numbered Capabilities */}
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-[#E6F4F1] flex items-center justify-center flex-shrink-0">
                       <span className="text-[#015E53] font-bold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Legal Transfer & Consolidation</h4>
-                      <p className="text-sm text-gray-600">We legally transition the developers you already trust on. Whether direct hires or vendor-based, we move them into TalentLean’s structure with a fast, compliant, country-ready process.</p>
+                      <h4 className="font-semibold text-[#2B2E32] mb-1">96,000+ Vetted Professionals</h4>
+                      <p className="text-sm text-[#4E5A64]">
+                        Engineers, designers, QA specialists, data professionals, architects, and technical leaders continuously assessed for skill depth, communication, and delivery experience.
+                      </p>
                     </div>
                   </div>
 
@@ -365,8 +358,10 @@ export default function Home() {
                       <span className="text-[#015E53] font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#2B2E32] mb-1">Complete Payroll & Benefits Administration</h4>
-                      <p className="text-sm text-[#4E5A64]">We manage payroll, taxes, mandatory benefits, and country-specific compliance so your team stays protected and fully aligned with local regulations.</p>
+                      <h4 className="font-semibold text-[#2B2E32] mb-1">Continuous Vetting & Performance Calibration</h4>
+                      <p className="text-sm text-[#4E5A64]">
+                        Ongoing skill assessment and real-world delivery experience validation across all major technical roles and disciplines.
+                      </p>
                     </div>
                   </div>
 
@@ -375,23 +370,26 @@ export default function Home() {
                       <span className="text-[#015E53] font-bold text-sm">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#2B2E32] mb-1">Zero-Overhead Operations</h4>
-                      <p className="text-sm text-[#4E5A64]">Your HR team no longer needs to maintain contracts, monitor compliance changes, run payroll cycles, or manage local legal risks. We absorb the entire operational burden.</p>
+                      <h4 className="font-semibold text-[#2B2E32] mb-1">Time-Zone Aligned & Scale-Ready</h4>
+                      <p className="text-sm text-[#4E5A64]">
+                        Perfect overlap for North American teams, supporting everything from single senior hires to multi-team scale-ups.
+                      </p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
+            {/* RIGHT COLUMN - 3 Feature Cards */}
             <div className="space-y-6">
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <UserCheck className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
+                    <Briefcase className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-[#2B2E32] mb-2">Global Coverage</h4>
+                      <h4 className="font-bold text-[#2B2E32] mb-2">Full Role Coverage</h4>
                       <p className="text-[#4E5A64]">
-                        While our sourcing strength is LatAm, BYOT migrations cover any region. Consolidate developers from any country into one unified, compliant employment structure.
+                        Engineering, data, QA, design, and technical leadership roles across all major stacks and frameworks.
                       </p>
                     </div>
                   </div>
@@ -401,11 +399,11 @@ export default function Home() {
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Shield className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
+                    <MapPin className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-[#2B2E32] mb-2">Full Compliance Protection</h4>
+                      <h4 className="font-bold text-[#2B2E32] mb-2">LatAm Expertise</h4>
                       <p className="text-[#4E5A64]">
-                        We assume employment liability and guarantee full compliance in every developer's home country.
+                        Deep regional knowledge across Mexico, Brazil, Argentina, Colombia, Chile, and all Latin American countries.
                       </p>
                     </div>
                   </div>
@@ -415,24 +413,26 @@ export default function Home() {
               <Card className="border-2 border-white shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <BadgeCheck className="w-8 h-8 text-[#015E53] flex-shrink-0" aria-hidden="true" />
+                    <RefreshCw className="w-8 h-8 text-[#006F64] flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h4 className="font-bold text-[#2B2E32] mb-2">30-Day Money-Back Guarantee</h4>
+                      <h4 className="font-bold text-[#2B2E32] mb-2">Flexible Models</h4>
                       <p className="text-[#4E5A64]">
-                        Seamless transition or full refund within 30 days—no questions asked.
+                        Supports both staff augmentation and talent migration approaches—whatever fits your needs.
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Button
-                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
-                className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-
-                Meet an Expert
-                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-              </Button>
+              {/* CTA Button */}
+              <div className="mt-8">
+                <Link to={createPageUrl("HowWeWork")} className="block">
+                  <Button className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-medium">
+                    How we Work
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -504,7 +504,7 @@ export default function Home() {
 
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 lg:px-8 bg-white" aria-labelledby="pricing-heading">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-[#2B2E32] text-center mb-8">Transparent, predictable, and fair.
 
           </h2>
@@ -512,7 +512,7 @@ export default function Home() {
             No hidden fees. No surprises. You define the salary, we handle everything else.
           </p>
 
-          <div className="max-w-md mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card
               onMouseEnter={() => setHoveredCard('augmentation')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -522,7 +522,7 @@ export default function Home() {
 
               <CardContent className="p-10">
                 <div className="w-14 h-14 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6">
-                  <UsersRound className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
+                  <Calculator className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
                   Staff Augmentation
@@ -534,35 +534,100 @@ export default function Home() {
                   </div>
                   <div className="inline-flex items-center gap-2 bg-[#FDEAEA] border border-[#C62828] rounded-full px-3 py-1 mb-2">
                     <Zap className="w-4 h-4 text-[#C62828]" aria-hidden="true" />
-                    <span className="text-xs font-bold text-[#C62828]">LAUNCH PROMO</span>
+                    <span className="text-xs font-bold text-[#C62828]">NEW YEAR PROMO</span>
                   </div>
                   <p className="text-sm text-gray-500">
                     Per month per developer + Salary (you define)
                   </p>
                 </div>
+                {/* Network Credibility */}
+                <div className="mb-4">
+                  <p className="text-base font-semibold text-[#2B2E32]">
+                    Access to 96,000+ pre-vetted LatAm tech professionals
+                  </p>
+                </div>
                 <p className="text-[#4E5A64] leading-relaxed mb-4">
-                  Simple, transparent pricing. You define the developer's compensation—we add our flat monthly fee. No percentages, no hidden costs, complete clarity.
+                  Hire full-time developers from the largest vetted talent network in Latin America. You define compensation—we add our flat fee. Complete transparency, full compliance, zero hassle.
                 </p>
-                <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2">
+                <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
                   <BadgeCheck className="w-4 h-4" aria-hidden="true" />
                   <span className="font-medium">30-day money-back guarantee</span>
                 </div>
+
+                {/* Primary CTA - Calculate Costs */}
+                <Link to={createPageUrl("Pricing")} className="block mb-3">
+                  <Button className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
+                    <Calculator className="w-5 h-5 mr-2" aria-hidden="true" />
+                    Calculate Your Costs
+                    <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+                  </Button>
+                </Link>
+
+                {/* Secondary CTA - Talk to Expert */}
+                <div className="text-center">
+                  <button
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                    className="text-sm text-[#006F64] hover:text-[#014D44] font-medium underline"
+                  >
+                    or talk to an expert
+                  </button>
+                </div>
               </CardContent>
             </Card>
-          </div>
 
-          {/* CTA to Calculator */}
-          <div className="my-5 text-center">
-            <Link to={createPageUrl("Pricing")}>
-              <Button size="lg" className="bg-[#006F64] hover:bg-[#014D44] text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
-                <Calculator className="w-5 h-5 mr-2" aria-hidden="true" />
-                Calculate Your Costs
-                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-              </Button>
-            </Link>
-            <p className="text-sm text-gray-500 mt-4">
-              Interactive calculator with complete pricing transparency
-            </p>
+            {/* BYOT Offer Card */}
+            <Card
+              onMouseEnter={() => setHoveredCard('byot')}
+              onMouseLeave={() => setHoveredCard(null)}
+              className={`border-2 transition-all duration-300 ${
+                hoveredCard === 'byot' ? 'border-[#006F64] shadow-xl -translate-y-2' : 'border-gray-200'
+              }`}
+            >
+              <CardContent className="p-10">
+                <div className="w-14 h-14 rounded-full bg-[#E6F4F1] flex items-center justify-center mb-6">
+                  <Shield className="w-7 h-7 text-[#006F64]" aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2B2E32] mb-4">
+                  Bring Your Own Talent
+                </h3>
+
+                {/* Pricing Indicator Block - matches Staff Aug structure */}
+                <div className="mb-4">
+                  <p className="text-2xl font-bold text-[#2B2E32] mb-2">
+                    Custom Pricing
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Based on team size and services needed
+                  </p>
+                </div>
+
+                {/* Credibility Line - matches Staff Aug */}
+                <div className="mb-4">
+                  <p className="text-base font-semibold text-[#2B2E32]">
+                    Keep your team. Eliminate all compliance headaches.
+                  </p>
+                </div>
+
+                <p className="text-[#4E5A64] leading-relaxed mb-4">
+                  Migrate your existing employees or contractors into our compliant infrastructure. Keep your team, eliminate the operational burden, reduce risk.
+                </p>
+
+                {/* Trust/Compliance Badge */}
+                <div className="flex items-center gap-2 text-sm text-[#015E53] bg-[#E6F4F1] border border-[#015E53] rounded-lg px-3 py-2 mb-4">
+                  <Shield className="w-4 h-4" aria-hidden="true" />
+                  <span className="font-medium">Compliant in all LatAm countries. Zero headaches.</span>
+                </div>
+
+                {/* Primary CTA */}
+                <Button
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tn_Tmo9Pacv8oMb1kWQcBb8V3MJ3Qo3gGsR9m0T4RpO5LMrM3dNW7iWYVweYJBeoof7J_rtC-', '_blank')}
+                  className="w-full bg-[#006F64] hover:bg-[#014D44] text-white rounded-full py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+                >
+                  Request Custom Quote
+                  <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -622,7 +687,7 @@ export default function Home() {
         size="lg"
         className="bg-white text-[#006F64] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2">
 
-        Meet an Expert
+        Talk to us
         <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
       </Button>
       </div>
@@ -650,7 +715,7 @@ export default function Home() {
               <Link to={createPageUrl("Ambassadors")} className="hover:text-white transition-colors">
                 Ambassadors
               </Link>
-              <button onClick={() => scrollToSection('byot')} className="hover:text-white transition-colors">
+              <button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">
                 Bring Your Own Talent
               </button>
               <a href="https://blog.talentlean.com" className="hover:text-white transition-colors">

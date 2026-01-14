@@ -7,12 +7,16 @@ import Home from './pages/Home';
 const Pricing = lazy(() => import('./pages/Pricing'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const Ambassadors = lazy(() => import('./pages/Ambassadors'));
+const HowWeWork = lazy(() => import('./pages/HowWeWork'));
+const Community = lazy(() => import('./pages/Community'));
 
 export const PAGES = {
     "Home": Home,
     "Pricing": Pricing,
     "FAQ": FAQ,
     "Ambassadors": Ambassadors,
+    "HowWeWork": HowWeWork,
+    "Community": Community,
 }
 
 export const pagesConfig = {
