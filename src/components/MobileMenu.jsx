@@ -97,6 +97,13 @@ export default function MobileMenu() {
           >
             Ambassadors
           </Link>
+          <Link
+            to={createPageUrl("Community")}
+            className="text-left text-[#2B2E32] hover:text-[#006F64] font-medium py-2 transition-colors focus:outline-2 focus:outline-[#006F64] focus:outline-offset-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Community
+          </Link>
           <div className="pt-4 border-t border-gray-200">
             <Button
               onClick={() => {
